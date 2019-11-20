@@ -1,0 +1,1904 @@
+=================FLAGS==================
+lr: 0.1
+batch_size: 128
+test_batch_size: 256
+resume: False
+log: logs/log-resnet32_rp,rp_cifar100_1._2_11201910.log
+arch: resnet32_rp,rp_cifar100
+algo: resnet32_rp,rp_cifar100_1._2_11201910
+kl_w: 1.0
+parallel: 2
+========================================
+==> Preparing data..
+==> Building model..
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 16, 32, 32]             432
+       BatchNorm2d-2           [-1, 16, 32, 32]              32
+              ReLU-3           [-1, 16, 32, 32]               0
+            Conv2d-4           [-1, 16, 32, 32]           2,304
+       BatchNorm2d-5           [-1, 16, 32, 32]              32
+              ReLU-6           [-1, 16, 32, 32]               0
+            Conv2d-7           [-1, 16, 32, 32]           2,304
+       BatchNorm2d-8           [-1, 16, 32, 32]              32
+              ReLU-9           [-1, 16, 32, 32]               0
+       BasicBlock-10           [-1, 16, 32, 32]               0
+           Conv2d-11           [-1, 16, 32, 32]           2,304
+      BatchNorm2d-12           [-1, 16, 32, 32]              32
+             ReLU-13           [-1, 16, 32, 32]               0
+           Conv2d-14           [-1, 16, 32, 32]           2,304
+      BatchNorm2d-15           [-1, 16, 32, 32]              32
+             ReLU-16           [-1, 16, 32, 32]               0
+       BasicBlock-17           [-1, 16, 32, 32]               0
+           Conv2d-18           [-1, 16, 32, 32]           2,304
+      BatchNorm2d-19           [-1, 16, 32, 32]              32
+             ReLU-20           [-1, 16, 32, 32]               0
+           Conv2d-21           [-1, 16, 32, 32]           2,304
+      BatchNorm2d-22           [-1, 16, 32, 32]              32
+             ReLU-23           [-1, 16, 32, 32]               0
+       BasicBlock-24           [-1, 16, 32, 32]               0
+           Conv2d-25           [-1, 16, 32, 32]           2,304
+      BatchNorm2d-26           [-1, 16, 32, 32]              32
+             ReLU-27           [-1, 16, 32, 32]               0
+           Conv2d-28           [-1, 16, 32, 32]           2,304
+      BatchNorm2d-29           [-1, 16, 32, 32]              32
+             ReLU-30           [-1, 16, 32, 32]               0
+       BasicBlock-31           [-1, 16, 32, 32]               0
+           Conv2d-32           [-1, 16, 32, 32]           2,304
+      BatchNorm2d-33           [-1, 16, 32, 32]              32
+             ReLU-34           [-1, 16, 32, 32]               0
+           Conv2d-35           [-1, 16, 32, 32]           2,304
+      BatchNorm2d-36           [-1, 16, 32, 32]              32
+             ReLU-37           [-1, 16, 32, 32]               0
+       BasicBlock-38           [-1, 16, 32, 32]               0
+           Conv2d-39           [-1, 32, 16, 16]           4,608
+      BatchNorm2d-40           [-1, 32, 16, 16]              64
+             ReLU-41           [-1, 32, 16, 16]               0
+           Conv2d-42           [-1, 32, 16, 16]           9,216
+      BatchNorm2d-43           [-1, 32, 16, 16]              64
+           Conv2d-44           [-1, 32, 16, 16]             512
+      BatchNorm2d-45           [-1, 32, 16, 16]              64
+             ReLU-46           [-1, 32, 16, 16]               0
+       BasicBlock-47           [-1, 32, 16, 16]               0
+           Conv2d-48           [-1, 32, 16, 16]           9,216
+      BatchNorm2d-49           [-1, 32, 16, 16]              64
+             ReLU-50           [-1, 32, 16, 16]               0
+           Conv2d-51           [-1, 32, 16, 16]           9,216
+      BatchNorm2d-52           [-1, 32, 16, 16]              64
+             ReLU-53           [-1, 32, 16, 16]               0
+       BasicBlock-54           [-1, 32, 16, 16]               0
+           Conv2d-55           [-1, 32, 16, 16]           9,216
+      BatchNorm2d-56           [-1, 32, 16, 16]              64
+             ReLU-57           [-1, 32, 16, 16]               0
+           Conv2d-58           [-1, 32, 16, 16]           9,216
+      BatchNorm2d-59           [-1, 32, 16, 16]              64
+             ReLU-60           [-1, 32, 16, 16]               0
+       BasicBlock-61           [-1, 32, 16, 16]               0
+           Conv2d-62           [-1, 32, 16, 16]           9,216
+      BatchNorm2d-63           [-1, 32, 16, 16]              64
+             ReLU-64           [-1, 32, 16, 16]               0
+           Conv2d-65           [-1, 32, 16, 16]           9,216
+      BatchNorm2d-66           [-1, 32, 16, 16]              64
+             ReLU-67           [-1, 32, 16, 16]               0
+       BasicBlock-68           [-1, 32, 16, 16]               0
+           Conv2d-69           [-1, 32, 16, 16]           9,216
+      BatchNorm2d-70           [-1, 32, 16, 16]              64
+             ReLU-71           [-1, 32, 16, 16]               0
+           Conv2d-72           [-1, 32, 16, 16]           9,216
+      BatchNorm2d-73           [-1, 32, 16, 16]              64
+             ReLU-74           [-1, 32, 16, 16]               0
+       BasicBlock-75           [-1, 32, 16, 16]               0
+           Conv2d-76             [-1, 64, 8, 8]          18,432
+      BatchNorm2d-77             [-1, 64, 8, 8]             128
+             ReLU-78             [-1, 64, 8, 8]               0
+           Conv2d-79             [-1, 64, 8, 8]          36,864
+      BatchNorm2d-80             [-1, 64, 8, 8]             128
+           Conv2d-81             [-1, 64, 8, 8]           2,048
+      BatchNorm2d-82             [-1, 64, 8, 8]             128
+             ReLU-83             [-1, 64, 8, 8]               0
+       BasicBlock-84             [-1, 64, 8, 8]               0
+           Conv2d-85             [-1, 64, 8, 8]          36,864
+      BatchNorm2d-86             [-1, 64, 8, 8]             128
+             ReLU-87             [-1, 64, 8, 8]               0
+           Conv2d-88             [-1, 64, 8, 8]          36,864
+      BatchNorm2d-89             [-1, 64, 8, 8]             128
+             ReLU-90             [-1, 64, 8, 8]               0
+       BasicBlock-91             [-1, 64, 8, 8]               0
+           Conv2d-92             [-1, 64, 8, 8]          36,864
+      BatchNorm2d-93             [-1, 64, 8, 8]             128
+             ReLU-94             [-1, 64, 8, 8]               0
+           Conv2d-95             [-1, 64, 8, 8]          36,864
+      BatchNorm2d-96             [-1, 64, 8, 8]             128
+             ReLU-97             [-1, 64, 8, 8]               0
+       BasicBlock-98             [-1, 64, 8, 8]               0
+           Conv2d-99             [-1, 64, 8, 8]          36,864
+     BatchNorm2d-100             [-1, 64, 8, 8]             128
+            ReLU-101             [-1, 64, 8, 8]               0
+          Conv2d-102             [-1, 64, 8, 8]          36,864
+     BatchNorm2d-103             [-1, 64, 8, 8]             128
+            ReLU-104             [-1, 64, 8, 8]               0
+      BasicBlock-105             [-1, 64, 8, 8]               0
+          Conv2d-106             [-1, 64, 8, 8]          36,864
+     BatchNorm2d-107             [-1, 64, 8, 8]             128
+            ReLU-108             [-1, 64, 8, 8]               0
+          Conv2d-109             [-1, 64, 8, 8]          36,864
+     BatchNorm2d-110             [-1, 64, 8, 8]             128
+            ReLU-111             [-1, 64, 8, 8]               0
+      BasicBlock-112             [-1, 64, 8, 8]               0
+AdaptiveAvgPool2d-113             [-1, 64, 1, 1]               0
+          Linear-114                  [-1, 100]           6,500
+    ResNet_Cifar-115                  [-1, 100]               0
+================================================================
+W/O cls params num: 472,756 (0.00 M)
+Total params num: 472,756 (0.00 M)
+Trainable params num: 472,756 (0.00 M)
+Non-trainable params num: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 8.22
+Params size (MB): 1.00
+Estimated Total Size (MB): 9.00
+W/O cls FLOPs: 0.14G
+Number of FLOPs: 0.14G
+----------------------------------------------------------------
+
+Epoch: 0 2019-11-20 19:10:31
+11-20 19:10:32 Epoch 0: 0/782 Loss_ai: [0.02, 0.02] Loss_soft: [5.131] Loss: 5.164 | Lr: 0.1000 | Accs: [0.0]
+11-20 19:10:34 Epoch 0: 100/782 Loss_ai: [0.01, 0.01] Loss_soft: [4.342] Loss: 4.357 | Lr: 0.1000 | Accs: [2.27]
+11-20 19:10:37 Epoch 0: 200/782 Loss_ai: [0.02, 0.02] Loss_soft: [4.178] Loss: 4.222 | Lr: 0.1000 | Accs: [3.24]
+11-20 19:10:40 Epoch 0: 300/782 Loss_ai: [0.02, 0.02] Loss_soft: [4.115] Loss: 4.162 | Lr: 0.1000 | Accs: [3.92]
+11-20 19:10:43 Epoch 0: 400/782 Loss_ai: [0.03, 0.03] Loss_soft: [4.252] Loss: 4.310 | Lr: 0.1000 | Accs: [4.49]
+11-20 19:10:46 Epoch 0: 500/782 Loss_ai: [0.03, 0.03] Loss_soft: [3.791] Loss: 3.860 | Lr: 0.1000 | Accs: [5.15]
+11-20 19:10:49 Epoch 0: 600/782 Loss_ai: [0.04, 0.04] Loss_soft: [3.712] Loss: 3.785 | Lr: 0.1000 | Accs: [5.85]
+11-20 19:10:52 Epoch 0: 700/782 Loss_ai: [0.04, 0.04] Loss_soft: [3.716] Loss: 3.795 | Lr: 0.1000 | Accs: [6.55]
+Test: best_accs: [10.3] best_epoches: [0] top1s: [10.3] top5s: [32.63] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 1 2019-11-20 19:10:55
+11-20 19:10:55 Epoch 1: 0/782 Loss_ai: [0.05, 0.05] Loss_soft: [3.337] Loss: 3.433 | Lr: 0.1000 | Accs: [15.62]
+11-20 19:10:58 Epoch 1: 100/782 Loss_ai: [0.06, 0.06] Loss_soft: [3.918] Loss: 4.039 | Lr: 0.1000 | Accs: [12.03]
+11-20 19:11:01 Epoch 1: 200/782 Loss_ai: [0.03, 0.03] Loss_soft: [3.37] Loss: 3.439 | Lr: 0.1000 | Accs: [13.09]
+11-20 19:11:04 Epoch 1: 300/782 Loss_ai: [0.07, 0.07] Loss_soft: [3.632] Loss: 3.781 | Lr: 0.1000 | Accs: [13.89]
+11-20 19:11:07 Epoch 1: 400/782 Loss_ai: [0.05, 0.05] Loss_soft: [3.138] Loss: 3.230 | Lr: 0.1000 | Accs: [14.47]
+11-20 19:11:09 Epoch 1: 500/782 Loss_ai: [0.07, 0.07] Loss_soft: [3.415] Loss: 3.555 | Lr: 0.1000 | Accs: [15.14]
+11-20 19:11:12 Epoch 1: 600/782 Loss_ai: [0.05, 0.05] Loss_soft: [3.293] Loss: 3.390 | Lr: 0.1000 | Accs: [15.69]
+11-20 19:11:15 Epoch 1: 700/782 Loss_ai: [0.06, 0.06] Loss_soft: [3.212] Loss: 3.322 | Lr: 0.1000 | Accs: [16.47]
+Test: best_accs: [20.77] best_epoches: [1] top1s: [20.77] top5s: [48.72] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 2 2019-11-20 19:11:19
+11-20 19:11:19 Epoch 2: 0/782 Loss_ai: [0.06, 0.06] Loss_soft: [2.9] Loss: 3.013 | Lr: 0.1000 | Accs: [26.56]
+11-20 19:11:22 Epoch 2: 100/782 Loss_ai: [0.09, 0.09] Loss_soft: [3.064] Loss: 3.244 | Lr: 0.1000 | Accs: [23.03]
+11-20 19:11:25 Epoch 2: 200/782 Loss_ai: [0.06, 0.06] Loss_soft: [2.922] Loss: 3.048 | Lr: 0.1000 | Accs: [23.18]
+11-20 19:11:28 Epoch 2: 300/782 Loss_ai: [0.07, 0.08] Loss_soft: [2.944] Loss: 3.094 | Lr: 0.1000 | Accs: [23.97]
+11-20 19:11:31 Epoch 2: 400/782 Loss_ai: [0.07, 0.07] Loss_soft: [2.582] Loss: 2.716 | Lr: 0.1000 | Accs: [24.59]
+11-20 19:11:34 Epoch 2: 500/782 Loss_ai: [0.07, 0.07] Loss_soft: [2.317] Loss: 2.451 | Lr: 0.1000 | Accs: [25.3]
+11-20 19:11:37 Epoch 2: 600/782 Loss_ai: [0.07, 0.07] Loss_soft: [2.91] Loss: 3.051 | Lr: 0.1000 | Accs: [25.89]
+11-20 19:11:40 Epoch 2: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [3.315] Loss: 3.523 | Lr: 0.1000 | Accs: [26.35]
+Test: best_accs: [28.27] best_epoches: [2] top1s: [28.27] top5s: [60.86] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 3 2019-11-20 19:11:44
+11-20 19:11:44 Epoch 3: 0/782 Loss_ai: [0.07, 0.07] Loss_soft: [2.521] Loss: 2.663 | Lr: 0.1000 | Accs: [38.28]
+11-20 19:11:47 Epoch 3: 100/782 Loss_ai: [0.13, 0.13] Loss_soft: [2.578] Loss: 2.831 | Lr: 0.1000 | Accs: [31.91]
+11-20 19:11:50 Epoch 3: 200/782 Loss_ai: [0.1, 0.1] Loss_soft: [2.713] Loss: 2.906 | Lr: 0.1000 | Accs: [32.4]
+11-20 19:11:53 Epoch 3: 300/782 Loss_ai: [0.11, 0.11] Loss_soft: [2.607] Loss: 2.820 | Lr: 0.1000 | Accs: [32.56]
+11-20 19:11:56 Epoch 3: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [2.463] Loss: 2.657 | Lr: 0.1000 | Accs: [33.15]
+11-20 19:11:59 Epoch 3: 500/782 Loss_ai: [0.12, 0.11] Loss_soft: [2.289] Loss: 2.520 | Lr: 0.1000 | Accs: [33.59]
+11-20 19:12:02 Epoch 3: 600/782 Loss_ai: [0.1, 0.1] Loss_soft: [2.31] Loss: 2.505 | Lr: 0.1000 | Accs: [34.2]
+11-20 19:12:05 Epoch 3: 700/782 Loss_ai: [0.11, 0.11] Loss_soft: [2.394] Loss: 2.618 | Lr: 0.1000 | Accs: [34.75]
+Test: best_accs: [36.27] best_epoches: [3] top1s: [36.27] top5s: [69.84] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 4 2019-11-20 19:12:08
+11-20 19:12:09 Epoch 4: 0/782 Loss_ai: [0.09, 0.09] Loss_soft: [2.327] Loss: 2.510 | Lr: 0.1000 | Accs: [41.41]
+11-20 19:12:11 Epoch 4: 100/782 Loss_ai: [0.09, 0.09] Loss_soft: [2.182] Loss: 2.358 | Lr: 0.1000 | Accs: [39.0]
+11-20 19:12:15 Epoch 4: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [2.359] Loss: 2.601 | Lr: 0.1000 | Accs: [39.77]
+11-20 19:12:17 Epoch 4: 300/782 Loss_ai: [0.13, 0.12] Loss_soft: [2.022] Loss: 2.267 | Lr: 0.1000 | Accs: [40.07]
+11-20 19:12:20 Epoch 4: 400/782 Loss_ai: [0.11, 0.1] Loss_soft: [2.102] Loss: 2.308 | Lr: 0.1000 | Accs: [40.39]
+11-20 19:12:23 Epoch 4: 500/782 Loss_ai: [0.11, 0.11] Loss_soft: [2.169] Loss: 2.386 | Lr: 0.1000 | Accs: [40.78]
+11-20 19:12:26 Epoch 4: 600/782 Loss_ai: [0.09, 0.09] Loss_soft: [2.149] Loss: 2.334 | Lr: 0.1000 | Accs: [40.86]
+11-20 19:12:29 Epoch 4: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.967] Loss: 2.166 | Lr: 0.1000 | Accs: [41.14]
+Test: best_accs: [41.15] best_epoches: [4] top1s: [41.15] top5s: [73.0] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 5 2019-11-20 19:12:33
+11-20 19:12:33 Epoch 5: 0/782 Loss_ai: [0.13, 0.12] Loss_soft: [2.311] Loss: 2.559 | Lr: 0.1000 | Accs: [39.06]
+11-20 19:12:36 Epoch 5: 100/782 Loss_ai: [0.08, 0.08] Loss_soft: [1.868] Loss: 2.027 | Lr: 0.1000 | Accs: [44.46]
+11-20 19:12:39 Epoch 5: 200/782 Loss_ai: [0.11, 0.1] Loss_soft: [2.129] Loss: 2.339 | Lr: 0.1000 | Accs: [44.94]
+11-20 19:12:42 Epoch 5: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [2.197] Loss: 2.475 | Lr: 0.1000 | Accs: [45.25]
+11-20 19:12:45 Epoch 5: 400/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.841] Loss: 2.076 | Lr: 0.1000 | Accs: [45.5]
+11-20 19:12:48 Epoch 5: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [2.316] Loss: 2.557 | Lr: 0.1000 | Accs: [45.51]
+11-20 19:12:51 Epoch 5: 600/782 Loss_ai: [0.13, 0.13] Loss_soft: [2.259] Loss: 2.520 | Lr: 0.1000 | Accs: [45.88]
+11-20 19:12:54 Epoch 5: 700/782 Loss_ai: [0.11, 0.11] Loss_soft: [2.093] Loss: 2.310 | Lr: 0.1000 | Accs: [46.13]
+Test: best_accs: [45.0] best_epoches: [5] top1s: [45.0] top5s: [77.39] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 6 2019-11-20 19:12:58
+11-20 19:12:58 Epoch 6: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.779] Loss: 2.013 | Lr: 0.1000 | Accs: [50.78]
+11-20 19:13:01 Epoch 6: 100/782 Loss_ai: [0.13, 0.13] Loss_soft: [2.175] Loss: 2.439 | Lr: 0.1000 | Accs: [48.27]
+11-20 19:13:04 Epoch 6: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.74] Loss: 1.976 | Lr: 0.1000 | Accs: [48.57]
+11-20 19:13:07 Epoch 6: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [2.021] Loss: 2.308 | Lr: 0.1000 | Accs: [48.92]
+11-20 19:13:10 Epoch 6: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.633] Loss: 1.856 | Lr: 0.1000 | Accs: [49.27]
+11-20 19:13:13 Epoch 6: 500/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.936] Loss: 2.171 | Lr: 0.1000 | Accs: [49.24]
+11-20 19:13:16 Epoch 6: 600/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.78] Loss: 2.034 | Lr: 0.1000 | Accs: [49.38]
+11-20 19:13:19 Epoch 6: 700/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.887] Loss: 2.147 | Lr: 0.1000 | Accs: [49.4]
+Test: best_accs: [46.75] best_epoches: [6] top1s: [46.75] top5s: [78.65] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 7 2019-11-20 19:13:23
+11-20 19:13:23 Epoch 7: 0/782 Loss_ai: [0.12, 0.14] Loss_soft: [1.436] Loss: 1.704 | Lr: 0.1000 | Accs: [59.38]
+11-20 19:13:26 Epoch 7: 100/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.645] Loss: 1.863 | Lr: 0.1000 | Accs: [51.49]
+11-20 19:13:29 Epoch 7: 200/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.756] Loss: 1.953 | Lr: 0.1000 | Accs: [51.69]
+11-20 19:13:32 Epoch 7: 300/782 Loss_ai: [0.18, 0.18] Loss_soft: [1.955] Loss: 2.309 | Lr: 0.1000 | Accs: [51.61]
+11-20 19:13:35 Epoch 7: 400/782 Loss_ai: [0.15, 0.16] Loss_soft: [1.892] Loss: 2.201 | Lr: 0.1000 | Accs: [51.75]
+11-20 19:13:38 Epoch 7: 500/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.523] Loss: 1.783 | Lr: 0.1000 | Accs: [52.01]
+11-20 19:13:41 Epoch 7: 600/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.825] Loss: 2.021 | Lr: 0.1000 | Accs: [52.06]
+11-20 19:13:44 Epoch 7: 700/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.689] Loss: 1.963 | Lr: 0.1000 | Accs: [52.11]
+Test: best_accs: [50.24] best_epoches: [7] top1s: [50.24] top5s: [81.13] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 8 2019-11-20 19:13:48
+11-20 19:13:48 Epoch 8: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.604] Loss: 1.800 | Lr: 0.1000 | Accs: [54.69]
+11-20 19:13:51 Epoch 8: 100/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.601] Loss: 1.851 | Lr: 0.1000 | Accs: [53.49]
+11-20 19:13:54 Epoch 8: 200/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.855] Loss: 2.111 | Lr: 0.1000 | Accs: [53.84]
+11-20 19:13:57 Epoch 8: 300/782 Loss_ai: [0.1, 0.09] Loss_soft: [1.742] Loss: 1.935 | Lr: 0.1000 | Accs: [53.91]
+11-20 19:14:00 Epoch 8: 400/782 Loss_ai: [0.09, 0.09] Loss_soft: [1.753] Loss: 1.936 | Lr: 0.1000 | Accs: [53.95]
+11-20 19:14:03 Epoch 8: 500/782 Loss_ai: [0.1, 0.13] Loss_soft: [1.584] Loss: 1.814 | Lr: 0.1000 | Accs: [53.98]
+11-20 19:14:06 Epoch 8: 600/782 Loss_ai: [0.1, 0.09] Loss_soft: [1.25] Loss: 1.435 | Lr: 0.1000 | Accs: [54.09]
+11-20 19:14:09 Epoch 8: 700/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.511] Loss: 1.741 | Lr: 0.1000 | Accs: [54.35]
+Test: best_accs: [50.65] best_epoches: [8] top1s: [50.65] top5s: [81.61] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 9 2019-11-20 19:14:13
+11-20 19:14:13 Epoch 9: 0/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.707] Loss: 2.001 | Lr: 0.1000 | Accs: [54.69]
+11-20 19:14:16 Epoch 9: 100/782 Loss_ai: [0.15, 0.17] Loss_soft: [1.51] Loss: 1.826 | Lr: 0.1000 | Accs: [55.52]
+11-20 19:14:19 Epoch 9: 200/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.515] Loss: 1.760 | Lr: 0.1000 | Accs: [55.66]
+11-20 19:14:22 Epoch 9: 300/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.344] Loss: 1.565 | Lr: 0.1000 | Accs: [56.12]
+11-20 19:14:25 Epoch 9: 400/782 Loss_ai: [0.15, 0.14] Loss_soft: [2.014] Loss: 2.304 | Lr: 0.1000 | Accs: [55.93]
+11-20 19:14:28 Epoch 9: 500/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.689] Loss: 1.908 | Lr: 0.1000 | Accs: [55.98]
+11-20 19:14:31 Epoch 9: 600/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.645] Loss: 1.897 | Lr: 0.1000 | Accs: [55.9]
+11-20 19:14:33 Epoch 9: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.634] Loss: 1.832 | Lr: 0.1000 | Accs: [55.89]
+Test: best_accs: [50.65] best_epoches: [8] top1s: [50.55] top5s: [81.05] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 10 2019-11-20 19:14:37
+11-20 19:14:37 Epoch 10: 0/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.477] Loss: 1.740 | Lr: 0.1000 | Accs: [59.38]
+11-20 19:14:40 Epoch 10: 100/782 Loss_ai: [0.14, 0.16] Loss_soft: [1.588] Loss: 1.888 | Lr: 0.1000 | Accs: [57.78]
+11-20 19:14:43 Epoch 10: 200/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.366] Loss: 1.594 | Lr: 0.1000 | Accs: [57.99]
+11-20 19:14:46 Epoch 10: 300/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.674] Loss: 1.966 | Lr: 0.1000 | Accs: [57.19]
+11-20 19:14:48 Epoch 10: 400/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.949] Loss: 2.180 | Lr: 0.1000 | Accs: [56.86]
+11-20 19:14:51 Epoch 10: 500/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.513] Loss: 1.760 | Lr: 0.1000 | Accs: [57.03]
+11-20 19:14:54 Epoch 10: 600/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.359] Loss: 1.626 | Lr: 0.1000 | Accs: [56.92]
+11-20 19:14:58 Epoch 10: 700/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.48] Loss: 1.719 | Lr: 0.1000 | Accs: [57.04]
+Test: best_accs: [50.93] best_epoches: [10] top1s: [50.93] top5s: [82.0] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 11 2019-11-20 19:15:01
+11-20 19:15:01 Epoch 11: 0/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.418] Loss: 1.714 | Lr: 0.1000 | Accs: [60.16]
+11-20 19:15:04 Epoch 11: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.521] Loss: 1.722 | Lr: 0.1000 | Accs: [58.53]
+11-20 19:15:07 Epoch 11: 200/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.404] Loss: 1.666 | Lr: 0.1000 | Accs: [58.68]
+11-20 19:15:10 Epoch 11: 300/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.413] Loss: 1.645 | Lr: 0.1000 | Accs: [58.6]
+11-20 19:15:13 Epoch 11: 400/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.467] Loss: 1.730 | Lr: 0.1000 | Accs: [58.76]
+11-20 19:15:16 Epoch 11: 500/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.674] Loss: 1.943 | Lr: 0.1000 | Accs: [58.78]
+11-20 19:15:19 Epoch 11: 600/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.624] Loss: 1.855 | Lr: 0.1000 | Accs: [58.71]
+11-20 19:15:22 Epoch 11: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [1.507] Loss: 1.681 | Lr: 0.1000 | Accs: [58.56]
+Test: best_accs: [53.34] best_epoches: [11] top1s: [53.34] top5s: [82.58] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 12 2019-11-20 19:15:26
+11-20 19:15:26 Epoch 12: 0/782 Loss_ai: [0.16, 0.14] Loss_soft: [1.292] Loss: 1.590 | Lr: 0.1000 | Accs: [59.38]
+11-20 19:15:29 Epoch 12: 100/782 Loss_ai: [0.14, 0.16] Loss_soft: [1.232] Loss: 1.531 | Lr: 0.1000 | Accs: [59.0]
+11-20 19:15:32 Epoch 12: 200/782 Loss_ai: [0.1, 0.11] Loss_soft: [1.555] Loss: 1.763 | Lr: 0.1000 | Accs: [59.2]
+11-20 19:15:35 Epoch 12: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.239] Loss: 1.480 | Lr: 0.1000 | Accs: [59.41]
+11-20 19:15:38 Epoch 12: 400/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.499] Loss: 1.781 | Lr: 0.1000 | Accs: [59.56]
+11-20 19:15:41 Epoch 12: 500/782 Loss_ai: [0.16, 0.15] Loss_soft: [1.33] Loss: 1.638 | Lr: 0.1000 | Accs: [59.77]
+11-20 19:15:44 Epoch 12: 600/782 Loss_ai: [0.09, 0.09] Loss_soft: [1.615] Loss: 1.802 | Lr: 0.1000 | Accs: [59.9]
+11-20 19:15:47 Epoch 12: 700/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.357] Loss: 1.589 | Lr: 0.1000 | Accs: [59.8]
+Test: best_accs: [53.34] best_epoches: [11] top1s: [51.61] top5s: [82.17] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 13 2019-11-20 19:15:51
+11-20 19:15:51 Epoch 13: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.481] Loss: 1.722 | Lr: 0.1000 | Accs: [53.12]
+11-20 19:15:54 Epoch 13: 100/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.587] Loss: 1.804 | Lr: 0.1000 | Accs: [60.36]
+11-20 19:15:57 Epoch 13: 200/782 Loss_ai: [0.09, 0.08] Loss_soft: [1.249] Loss: 1.419 | Lr: 0.1000 | Accs: [60.2]
+11-20 19:16:00 Epoch 13: 300/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.209] Loss: 1.436 | Lr: 0.1000 | Accs: [60.34]
+11-20 19:16:03 Epoch 13: 400/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.416] Loss: 1.718 | Lr: 0.1000 | Accs: [60.33]
+11-20 19:16:06 Epoch 13: 500/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.177] Loss: 1.408 | Lr: 0.1000 | Accs: [60.25]
+11-20 19:16:09 Epoch 13: 600/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.427] Loss: 1.670 | Lr: 0.1000 | Accs: [60.25]
+11-20 19:16:12 Epoch 13: 700/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.235] Loss: 1.531 | Lr: 0.1000 | Accs: [60.32]
+Test: best_accs: [53.65] best_epoches: [13] top1s: [53.65] top5s: [83.09] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 14 2019-11-20 19:16:16
+11-20 19:16:16 Epoch 14: 0/782 Loss_ai: [0.09, 0.1] Loss_soft: [1.275] Loss: 1.468 | Lr: 0.1000 | Accs: [63.28]
+11-20 19:16:19 Epoch 14: 100/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.554] Loss: 1.802 | Lr: 0.1000 | Accs: [61.51]
+11-20 19:16:22 Epoch 14: 200/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.283] Loss: 1.549 | Lr: 0.1000 | Accs: [61.24]
+11-20 19:16:25 Epoch 14: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.292] Loss: 1.536 | Lr: 0.1000 | Accs: [61.47]
+11-20 19:16:28 Epoch 14: 400/782 Loss_ai: [0.09, 0.09] Loss_soft: [1.243] Loss: 1.427 | Lr: 0.1000 | Accs: [61.51]
+11-20 19:16:31 Epoch 14: 500/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.425] Loss: 1.678 | Lr: 0.1000 | Accs: [61.38]
+11-20 19:16:34 Epoch 14: 600/782 Loss_ai: [0.16, 0.16] Loss_soft: [1.328] Loss: 1.639 | Lr: 0.1000 | Accs: [61.45]
+11-20 19:16:37 Epoch 14: 700/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.555] Loss: 1.802 | Lr: 0.1000 | Accs: [61.39]
+Test: best_accs: [53.65] best_epoches: [13] top1s: [53.15] top5s: [83.12] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 15 2019-11-20 19:16:40
+11-20 19:16:41 Epoch 15: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.302] Loss: 1.534 | Lr: 0.1000 | Accs: [64.06]
+11-20 19:16:44 Epoch 15: 100/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.102] Loss: 1.350 | Lr: 0.1000 | Accs: [62.06]
+11-20 19:16:47 Epoch 15: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.232] Loss: 1.466 | Lr: 0.1000 | Accs: [62.14]
+11-20 19:16:50 Epoch 15: 300/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.461] Loss: 1.766 | Lr: 0.1000 | Accs: [61.9]
+11-20 19:16:53 Epoch 15: 400/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.358] Loss: 1.632 | Lr: 0.1000 | Accs: [61.79]
+11-20 19:16:56 Epoch 15: 500/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.445] Loss: 1.706 | Lr: 0.1000 | Accs: [61.56]
+11-20 19:16:59 Epoch 15: 600/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.613] Loss: 1.869 | Lr: 0.1000 | Accs: [61.67]
+11-20 19:17:02 Epoch 15: 700/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.153] Loss: 1.407 | Lr: 0.1000 | Accs: [61.58]
+Test: best_accs: [55.93] best_epoches: [15] top1s: [55.93] top5s: [84.42] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 16 2019-11-20 19:17:05
+11-20 19:17:05 Epoch 16: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.267] Loss: 1.505 | Lr: 0.1000 | Accs: [63.28]
+11-20 19:17:08 Epoch 16: 100/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.352] Loss: 1.638 | Lr: 0.1000 | Accs: [63.64]
+11-20 19:17:11 Epoch 16: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.189] Loss: 1.436 | Lr: 0.1000 | Accs: [63.07]
+11-20 19:17:14 Epoch 16: 300/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.107] Loss: 1.382 | Lr: 0.1000 | Accs: [62.94]
+11-20 19:17:17 Epoch 16: 400/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.28] Loss: 1.546 | Lr: 0.1000 | Accs: [62.89]
+11-20 19:17:20 Epoch 16: 500/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.16] Loss: 1.384 | Lr: 0.1000 | Accs: [62.69]
+11-20 19:17:23 Epoch 16: 600/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.394] Loss: 1.628 | Lr: 0.1000 | Accs: [62.66]
+11-20 19:17:26 Epoch 16: 700/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.396] Loss: 1.640 | Lr: 0.1000 | Accs: [62.68]
+Test: best_accs: [56.12] best_epoches: [16] top1s: [56.12] top5s: [85.13] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 17 2019-11-20 19:17:30
+11-20 19:17:30 Epoch 17: 0/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.179] Loss: 1.405 | Lr: 0.1000 | Accs: [67.97]
+11-20 19:17:33 Epoch 17: 100/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.42] Loss: 1.658 | Lr: 0.1000 | Accs: [63.68]
+11-20 19:17:36 Epoch 17: 200/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.748] Loss: 2.019 | Lr: 0.1000 | Accs: [63.18]
+11-20 19:17:39 Epoch 17: 300/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.307] Loss: 1.507 | Lr: 0.1000 | Accs: [63.25]
+11-20 19:17:42 Epoch 17: 400/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.39] Loss: 1.660 | Lr: 0.1000 | Accs: [63.46]
+11-20 19:17:45 Epoch 17: 500/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.215] Loss: 1.495 | Lr: 0.1000 | Accs: [63.31]
+11-20 19:17:48 Epoch 17: 600/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.581] Loss: 1.865 | Lr: 0.1000 | Accs: [63.21]
+11-20 19:17:51 Epoch 17: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.437] Loss: 1.640 | Lr: 0.1000 | Accs: [63.08]
+Test: best_accs: [56.12] best_epoches: [16] top1s: [54.99] top5s: [83.45] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 18 2019-11-20 19:17:55
+11-20 19:17:55 Epoch 18: 0/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.448] Loss: 1.742 | Lr: 0.1000 | Accs: [62.5]
+11-20 19:17:58 Epoch 18: 100/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.187] Loss: 1.421 | Lr: 0.1000 | Accs: [63.9]
+11-20 19:18:01 Epoch 18: 200/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.033] Loss: 1.308 | Lr: 0.1000 | Accs: [64.31]
+11-20 19:18:04 Epoch 18: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.461] Loss: 1.749 | Lr: 0.1000 | Accs: [64.41]
+11-20 19:18:07 Epoch 18: 400/782 Loss_ai: [0.1, 0.09] Loss_soft: [1.237] Loss: 1.431 | Lr: 0.1000 | Accs: [64.38]
+11-20 19:18:10 Epoch 18: 500/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.313] Loss: 1.594 | Lr: 0.1000 | Accs: [64.39]
+11-20 19:18:13 Epoch 18: 600/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.082] Loss: 1.324 | Lr: 0.1000 | Accs: [64.11]
+11-20 19:18:16 Epoch 18: 700/782 Loss_ai: [0.13, 0.16] Loss_soft: [1.254] Loss: 1.540 | Lr: 0.1000 | Accs: [64.05]
+Test: best_accs: [56.51] best_epoches: [18] top1s: [56.51] top5s: [85.23] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 19 2019-11-20 19:18:20
+11-20 19:18:20 Epoch 19: 0/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.382] Loss: 1.628 | Lr: 0.1000 | Accs: [57.81]
+11-20 19:18:23 Epoch 19: 100/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.397] Loss: 1.656 | Lr: 0.1000 | Accs: [65.45]
+11-20 19:18:26 Epoch 19: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.197] Loss: 1.442 | Lr: 0.1000 | Accs: [65.06]
+11-20 19:18:29 Epoch 19: 300/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.226] Loss: 1.461 | Lr: 0.1000 | Accs: [64.67]
+11-20 19:18:32 Epoch 19: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.195] Loss: 1.414 | Lr: 0.1000 | Accs: [64.58]
+11-20 19:18:35 Epoch 19: 500/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.035] Loss: 1.286 | Lr: 0.1000 | Accs: [64.57]
+11-20 19:18:38 Epoch 19: 600/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.383] Loss: 1.608 | Lr: 0.1000 | Accs: [64.41]
+11-20 19:18:41 Epoch 19: 700/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.064] Loss: 1.291 | Lr: 0.1000 | Accs: [64.37]
+Test: best_accs: [56.51] best_epoches: [18] top1s: [56.32] top5s: [85.05] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 20 2019-11-20 19:18:45
+11-20 19:18:45 Epoch 20: 0/782 Loss_ai: [0.18, 0.16] Loss_soft: [1.158] Loss: 1.495 | Lr: 0.1000 | Accs: [60.16]
+11-20 19:18:48 Epoch 20: 100/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.537] Loss: 1.821 | Lr: 0.1000 | Accs: [65.3]
+11-20 19:18:51 Epoch 20: 200/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.329] Loss: 1.575 | Lr: 0.1000 | Accs: [64.69]
+11-20 19:18:54 Epoch 20: 300/782 Loss_ai: [0.1, 0.09] Loss_soft: [1.038] Loss: 1.230 | Lr: 0.1000 | Accs: [64.47]
+11-20 19:18:57 Epoch 20: 400/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.178] Loss: 1.408 | Lr: 0.1000 | Accs: [64.61]
+11-20 19:19:00 Epoch 20: 500/782 Loss_ai: [0.11, 0.1] Loss_soft: [1.135] Loss: 1.346 | Lr: 0.1000 | Accs: [64.53]
+11-20 19:19:03 Epoch 20: 600/782 Loss_ai: [0.08, 0.09] Loss_soft: [1.073] Loss: 1.249 | Lr: 0.1000 | Accs: [64.51]
+11-20 19:19:06 Epoch 20: 700/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.945] Loss: 1.159 | Lr: 0.1000 | Accs: [64.56]
+Test: best_accs: [57.08] best_epoches: [20] top1s: [57.08] top5s: [85.46] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 21 2019-11-20 19:19:10
+11-20 19:19:10 Epoch 21: 0/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.475] Loss: 1.768 | Lr: 0.1000 | Accs: [56.25]
+11-20 19:19:13 Epoch 21: 100/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.287] Loss: 1.588 | Lr: 0.1000 | Accs: [65.3]
+11-20 19:19:16 Epoch 21: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.976] Loss: 1.211 | Lr: 0.1000 | Accs: [65.68]
+11-20 19:19:19 Epoch 21: 300/782 Loss_ai: [0.1, 0.09] Loss_soft: [1.223] Loss: 1.422 | Lr: 0.1000 | Accs: [65.98]
+11-20 19:19:22 Epoch 21: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.284] Loss: 1.511 | Lr: 0.1000 | Accs: [66.07]
+11-20 19:19:25 Epoch 21: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.04] Loss: 1.288 | Lr: 0.1000 | Accs: [65.76]
+11-20 19:19:28 Epoch 21: 600/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.15] Loss: 1.416 | Lr: 0.1000 | Accs: [65.49]
+11-20 19:19:31 Epoch 21: 700/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.078] Loss: 1.320 | Lr: 0.1000 | Accs: [65.45]
+Test: best_accs: [57.08] best_epoches: [20] top1s: [56.36] top5s: [84.57] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 22 2019-11-20 19:19:34
+11-20 19:19:35 Epoch 22: 0/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.599] Loss: 1.868 | Lr: 0.1000 | Accs: [54.69]
+11-20 19:19:38 Epoch 22: 100/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.175] Loss: 1.416 | Lr: 0.1000 | Accs: [65.45]
+11-20 19:19:41 Epoch 22: 200/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.303] Loss: 1.528 | Lr: 0.1000 | Accs: [65.29]
+11-20 19:19:44 Epoch 22: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.111] Loss: 1.392 | Lr: 0.1000 | Accs: [65.43]
+11-20 19:19:47 Epoch 22: 400/782 Loss_ai: [0.12, 0.14] Loss_soft: [1.219] Loss: 1.476 | Lr: 0.1000 | Accs: [65.59]
+11-20 19:19:50 Epoch 22: 500/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.51] Loss: 1.813 | Lr: 0.1000 | Accs: [65.46]
+11-20 19:19:53 Epoch 22: 600/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.509] Loss: 1.781 | Lr: 0.1000 | Accs: [65.43]
+11-20 19:19:56 Epoch 22: 700/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.131] Loss: 1.414 | Lr: 0.1000 | Accs: [65.42]
+Test: best_accs: [57.08] best_epoches: [20] top1s: [55.88] top5s: [85.14] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 23 2019-11-20 19:19:59
+11-20 19:19:59 Epoch 23: 0/782 Loss_ai: [0.11, 0.1] Loss_soft: [1.226] Loss: 1.435 | Lr: 0.1000 | Accs: [65.62]
+11-20 19:20:02 Epoch 23: 100/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.842] Loss: 1.104 | Lr: 0.1000 | Accs: [65.75]
+11-20 19:20:05 Epoch 23: 200/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.188] Loss: 1.477 | Lr: 0.1000 | Accs: [65.62]
+11-20 19:20:08 Epoch 23: 300/782 Loss_ai: [0.18, 0.19] Loss_soft: [1.345] Loss: 1.712 | Lr: 0.1000 | Accs: [65.8]
+11-20 19:20:11 Epoch 23: 400/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.976] Loss: 1.186 | Lr: 0.1000 | Accs: [65.85]
+11-20 19:20:14 Epoch 23: 500/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.896] Loss: 1.119 | Lr: 0.1000 | Accs: [65.77]
+11-20 19:20:18 Epoch 23: 600/782 Loss_ai: [0.17, 0.18] Loss_soft: [1.094] Loss: 1.446 | Lr: 0.1000 | Accs: [65.85]
+11-20 19:20:21 Epoch 23: 700/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.991] Loss: 1.239 | Lr: 0.1000 | Accs: [65.91]
+Test: best_accs: [57.35] best_epoches: [23] top1s: [57.35] top5s: [85.45] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 24 2019-11-20 19:20:24
+11-20 19:20:24 Epoch 24: 0/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.082] Loss: 1.309 | Lr: 0.1000 | Accs: [71.09]
+11-20 19:20:27 Epoch 24: 100/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.081] Loss: 1.367 | Lr: 0.1000 | Accs: [67.07]
+11-20 19:20:30 Epoch 24: 200/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.253] Loss: 1.523 | Lr: 0.1000 | Accs: [66.76]
+11-20 19:20:33 Epoch 24: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.451] Loss: 1.730 | Lr: 0.1000 | Accs: [66.31]
+11-20 19:20:36 Epoch 24: 400/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.288] Loss: 1.535 | Lr: 0.1000 | Accs: [66.19]
+11-20 19:20:39 Epoch 24: 500/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.32] Loss: 1.593 | Lr: 0.1000 | Accs: [66.19]
+11-20 19:20:42 Epoch 24: 600/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.516] Loss: 1.769 | Lr: 0.1000 | Accs: [66.14]
+11-20 19:20:45 Epoch 24: 700/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.236] Loss: 1.479 | Lr: 0.1000 | Accs: [66.18]
+Test: best_accs: [57.71] best_epoches: [24] top1s: [57.71] top5s: [86.21] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 25 2019-11-20 19:20:49
+11-20 19:20:49 Epoch 25: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.021] Loss: 1.218 | Lr: 0.1000 | Accs: [75.78]
+11-20 19:20:52 Epoch 25: 100/782 Loss_ai: [0.18, 0.18] Loss_soft: [1.241] Loss: 1.597 | Lr: 0.1000 | Accs: [66.77]
+11-20 19:20:55 Epoch 25: 200/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.038] Loss: 1.314 | Lr: 0.1000 | Accs: [66.62]
+11-20 19:20:58 Epoch 25: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.239] Loss: 1.479 | Lr: 0.1000 | Accs: [66.9]
+11-20 19:21:01 Epoch 25: 400/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.171] Loss: 1.455 | Lr: 0.1000 | Accs: [66.87]
+11-20 19:21:04 Epoch 25: 500/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.965] Loss: 1.238 | Lr: 0.1000 | Accs: [66.58]
+11-20 19:21:07 Epoch 25: 600/782 Loss_ai: [0.14, 0.16] Loss_soft: [1.049] Loss: 1.352 | Lr: 0.1000 | Accs: [66.52]
+11-20 19:21:10 Epoch 25: 700/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.455] Loss: 1.707 | Lr: 0.1000 | Accs: [66.59]
+Test: best_accs: [57.71] best_epoches: [24] top1s: [56.25] top5s: [83.99] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 26 2019-11-20 19:21:14
+11-20 19:21:14 Epoch 26: 0/782 Loss_ai: [0.18, 0.17] Loss_soft: [1.325] Loss: 1.678 | Lr: 0.1000 | Accs: [64.84]
+11-20 19:21:17 Epoch 26: 100/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.845] Loss: 1.113 | Lr: 0.1000 | Accs: [66.68]
+11-20 19:21:20 Epoch 26: 200/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.338] Loss: 1.576 | Lr: 0.1000 | Accs: [66.71]
+11-20 19:21:23 Epoch 26: 300/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.474] Loss: 1.705 | Lr: 0.1000 | Accs: [66.46]
+11-20 19:21:26 Epoch 26: 400/782 Loss_ai: [0.16, 0.15] Loss_soft: [1.098] Loss: 1.406 | Lr: 0.1000 | Accs: [66.79]
+11-20 19:21:29 Epoch 26: 500/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.187] Loss: 1.469 | Lr: 0.1000 | Accs: [66.59]
+11-20 19:21:32 Epoch 26: 600/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.213] Loss: 1.494 | Lr: 0.1000 | Accs: [66.55]
+11-20 19:21:35 Epoch 26: 700/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.089] Loss: 1.366 | Lr: 0.1000 | Accs: [66.48]
+Test: best_accs: [59.46] best_epoches: [26] top1s: [59.46] top5s: [87.31] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 27 2019-11-20 19:21:39
+11-20 19:21:39 Epoch 27: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.086] Loss: 1.325 | Lr: 0.1000 | Accs: [72.66]
+11-20 19:21:42 Epoch 27: 100/782 Loss_ai: [0.15, 0.13] Loss_soft: [1.191] Loss: 1.471 | Lr: 0.1000 | Accs: [67.88]
+11-20 19:21:45 Epoch 27: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.171] Loss: 1.410 | Lr: 0.1000 | Accs: [67.6]
+11-20 19:21:48 Epoch 27: 300/782 Loss_ai: [0.14, 0.12] Loss_soft: [1.063] Loss: 1.324 | Lr: 0.1000 | Accs: [67.51]
+11-20 19:21:51 Epoch 27: 400/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.206] Loss: 1.444 | Lr: 0.1000 | Accs: [67.13]
+11-20 19:21:54 Epoch 27: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.495] Loss: 1.731 | Lr: 0.1000 | Accs: [67.09]
+11-20 19:21:57 Epoch 27: 600/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.96] Loss: 1.203 | Lr: 0.1000 | Accs: [67.21]
+11-20 19:22:00 Epoch 27: 700/782 Loss_ai: [0.17, 0.16] Loss_soft: [1.196] Loss: 1.522 | Lr: 0.1000 | Accs: [67.18]
+Test: best_accs: [59.6] best_epoches: [27] top1s: [59.6] top5s: [87.54] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 28 2019-11-20 19:22:04
+11-20 19:22:04 Epoch 28: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.252] Loss: 1.497 | Lr: 0.1000 | Accs: [63.28]
+11-20 19:22:07 Epoch 28: 100/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.959] Loss: 1.145 | Lr: 0.1000 | Accs: [67.55]
+11-20 19:22:10 Epoch 28: 200/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.876] Loss: 1.088 | Lr: 0.1000 | Accs: [68.03]
+11-20 19:22:13 Epoch 28: 300/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.101] Loss: 1.330 | Lr: 0.1000 | Accs: [67.83]
+11-20 19:22:16 Epoch 28: 400/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.095] Loss: 1.335 | Lr: 0.1000 | Accs: [67.42]
+11-20 19:22:19 Epoch 28: 500/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.268] Loss: 1.539 | Lr: 0.1000 | Accs: [67.31]
+11-20 19:22:22 Epoch 28: 600/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.886] Loss: 1.116 | Lr: 0.1000 | Accs: [67.41]
+11-20 19:22:25 Epoch 28: 700/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.463] Loss: 1.749 | Lr: 0.1000 | Accs: [67.34]
+Test: best_accs: [59.6] best_epoches: [27] top1s: [57.87] top5s: [85.82] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 29 2019-11-20 19:22:29
+11-20 19:22:29 Epoch 29: 0/782 Loss_ai: [0.09, 0.09] Loss_soft: [1.18] Loss: 1.359 | Lr: 0.1000 | Accs: [66.41]
+11-20 19:22:32 Epoch 29: 100/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.161] Loss: 1.411 | Lr: 0.1000 | Accs: [67.77]
+11-20 19:22:35 Epoch 29: 200/782 Loss_ai: [0.15, 0.16] Loss_soft: [1.119] Loss: 1.425 | Lr: 0.1000 | Accs: [67.74]
+11-20 19:22:38 Epoch 29: 300/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.152] Loss: 1.354 | Lr: 0.1000 | Accs: [67.48]
+11-20 19:22:41 Epoch 29: 400/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.274] Loss: 1.578 | Lr: 0.1000 | Accs: [67.68]
+11-20 19:22:44 Epoch 29: 500/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.974] Loss: 1.201 | Lr: 0.1000 | Accs: [67.5]
+11-20 19:22:47 Epoch 29: 600/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.253] Loss: 1.524 | Lr: 0.1000 | Accs: [67.46]
+11-20 19:22:50 Epoch 29: 700/782 Loss_ai: [0.18, 0.15] Loss_soft: [1.184] Loss: 1.517 | Lr: 0.1000 | Accs: [67.64]
+Test: best_accs: [59.6] best_epoches: [27] top1s: [57.9] top5s: [85.94] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 30 2019-11-20 19:22:54
+11-20 19:22:54 Epoch 30: 0/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.917] Loss: 1.218 | Lr: 0.1000 | Accs: [77.34]
+11-20 19:22:57 Epoch 30: 100/782 Loss_ai: [0.17, 0.17] Loss_soft: [1.207] Loss: 1.538 | Lr: 0.1000 | Accs: [67.79]
+11-20 19:23:00 Epoch 30: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.095] Loss: 1.341 | Lr: 0.1000 | Accs: [68.14]
+11-20 19:23:03 Epoch 30: 300/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.931] Loss: 1.148 | Lr: 0.1000 | Accs: [68.32]
+11-20 19:23:06 Epoch 30: 400/782 Loss_ai: [0.18, 0.17] Loss_soft: [1.128] Loss: 1.476 | Lr: 0.1000 | Accs: [68.05]
+11-20 19:23:09 Epoch 30: 500/782 Loss_ai: [0.13, 0.15] Loss_soft: [1.173] Loss: 1.455 | Lr: 0.1000 | Accs: [67.96]
+11-20 19:23:12 Epoch 30: 600/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.996] Loss: 1.269 | Lr: 0.1000 | Accs: [67.86]
+11-20 19:23:15 Epoch 30: 700/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.361] Loss: 1.661 | Lr: 0.1000 | Accs: [67.71]
+Test: best_accs: [59.6] best_epoches: [27] top1s: [59.45] top5s: [87.11] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 31 2019-11-20 19:23:18
+11-20 19:23:19 Epoch 31: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.164] Loss: 1.400 | Lr: 0.1000 | Accs: [63.28]
+11-20 19:23:22 Epoch 31: 100/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.087] Loss: 1.336 | Lr: 0.1000 | Accs: [68.21]
+11-20 19:23:25 Epoch 31: 200/782 Loss_ai: [0.16, 0.17] Loss_soft: [1.191] Loss: 1.515 | Lr: 0.1000 | Accs: [68.26]
+11-20 19:23:28 Epoch 31: 300/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.204] Loss: 1.460 | Lr: 0.1000 | Accs: [68.3]
+11-20 19:23:31 Epoch 31: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.141] Loss: 1.360 | Lr: 0.1000 | Accs: [68.34]
+11-20 19:23:34 Epoch 31: 500/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.825] Loss: 1.019 | Lr: 0.1000 | Accs: [68.17]
+11-20 19:23:36 Epoch 31: 600/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.068] Loss: 1.316 | Lr: 0.1000 | Accs: [67.99]
+11-20 19:23:39 Epoch 31: 700/782 Loss_ai: [0.15, 0.16] Loss_soft: [1.149] Loss: 1.459 | Lr: 0.1000 | Accs: [67.97]
+Test: best_accs: [59.6] best_epoches: [27] top1s: [58.01] top5s: [85.75] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 32 2019-11-20 19:23:43
+11-20 19:23:43 Epoch 32: 0/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.861] Loss: 1.068 | Lr: 0.1000 | Accs: [74.22]
+11-20 19:23:46 Epoch 32: 100/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.179] Loss: 1.462 | Lr: 0.1000 | Accs: [68.6]
+11-20 19:23:49 Epoch 32: 200/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.267] Loss: 1.554 | Lr: 0.1000 | Accs: [68.56]
+11-20 19:23:52 Epoch 32: 300/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.956] Loss: 1.174 | Lr: 0.1000 | Accs: [68.36]
+11-20 19:23:55 Epoch 32: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.818] Loss: 1.013 | Lr: 0.1000 | Accs: [68.39]
+11-20 19:23:58 Epoch 32: 500/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.188] Loss: 1.439 | Lr: 0.1000 | Accs: [68.38]
+11-20 19:24:01 Epoch 32: 600/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.796] Loss: 1.014 | Lr: 0.1000 | Accs: [68.37]
+11-20 19:24:04 Epoch 32: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.928] Loss: 1.110 | Lr: 0.1000 | Accs: [68.21]
+Test: best_accs: [59.6] best_epoches: [27] top1s: [59.51] top5s: [86.75] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 33 2019-11-20 19:24:08
+11-20 19:24:08 Epoch 33: 0/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.945] Loss: 1.202 | Lr: 0.1000 | Accs: [73.44]
+11-20 19:24:11 Epoch 33: 100/782 Loss_ai: [0.19, 0.17] Loss_soft: [1.351] Loss: 1.710 | Lr: 0.1000 | Accs: [68.39]
+11-20 19:24:14 Epoch 33: 200/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.846] Loss: 1.002 | Lr: 0.1000 | Accs: [68.34]
+11-20 19:24:17 Epoch 33: 300/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.954] Loss: 1.226 | Lr: 0.1000 | Accs: [68.42]
+11-20 19:24:20 Epoch 33: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.797] Loss: 1.018 | Lr: 0.1000 | Accs: [68.34]
+11-20 19:24:23 Epoch 33: 500/782 Loss_ai: [0.17, 0.16] Loss_soft: [0.982] Loss: 1.309 | Lr: 0.1000 | Accs: [68.42]
+11-20 19:24:26 Epoch 33: 600/782 Loss_ai: [0.1, 0.11] Loss_soft: [1.049] Loss: 1.263 | Lr: 0.1000 | Accs: [68.37]
+11-20 19:24:29 Epoch 33: 700/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.13] Loss: 1.378 | Lr: 0.1000 | Accs: [68.32]
+Test: best_accs: [59.6] best_epoches: [27] top1s: [57.45] top5s: [85.94] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 34 2019-11-20 19:24:32
+11-20 19:24:33 Epoch 34: 0/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.901] Loss: 1.160 | Lr: 0.1000 | Accs: [78.91]
+11-20 19:24:36 Epoch 34: 100/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.257] Loss: 1.511 | Lr: 0.1000 | Accs: [70.03]
+11-20 19:24:39 Epoch 34: 200/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.133] Loss: 1.364 | Lr: 0.1000 | Accs: [69.24]
+11-20 19:24:42 Epoch 34: 300/782 Loss_ai: [0.16, 0.16] Loss_soft: [1.239] Loss: 1.566 | Lr: 0.1000 | Accs: [68.82]
+11-20 19:24:45 Epoch 34: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.116] Loss: 1.323 | Lr: 0.1000 | Accs: [68.9]
+11-20 19:24:48 Epoch 34: 500/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.06] Loss: 1.315 | Lr: 0.1000 | Accs: [68.53]
+11-20 19:24:51 Epoch 34: 600/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.064] Loss: 1.301 | Lr: 0.1000 | Accs: [68.46]
+11-20 19:24:54 Epoch 34: 700/782 Loss_ai: [0.11, 0.1] Loss_soft: [1.096] Loss: 1.303 | Lr: 0.1000 | Accs: [68.5]
+Test: best_accs: [59.6] best_epoches: [27] top1s: [57.42] top5s: [85.76] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 35 2019-11-20 19:24:57
+11-20 19:24:58 Epoch 35: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.362] Loss: 1.610 | Lr: 0.1000 | Accs: [57.81]
+11-20 19:25:00 Epoch 35: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.726] Loss: 0.912 | Lr: 0.1000 | Accs: [68.21]
+11-20 19:25:03 Epoch 35: 200/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.131] Loss: 1.414 | Lr: 0.1000 | Accs: [68.79]
+11-20 19:25:06 Epoch 35: 300/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.931] Loss: 1.181 | Lr: 0.1000 | Accs: [68.91]
+11-20 19:25:09 Epoch 35: 400/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.945] Loss: 1.213 | Lr: 0.1000 | Accs: [68.81]
+11-20 19:25:12 Epoch 35: 500/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.031] Loss: 1.288 | Lr: 0.1000 | Accs: [68.67]
+11-20 19:25:15 Epoch 35: 600/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.938] Loss: 1.202 | Lr: 0.1000 | Accs: [68.6]
+11-20 19:25:18 Epoch 35: 700/782 Loss_ai: [0.1, 0.11] Loss_soft: [1.135] Loss: 1.342 | Lr: 0.1000 | Accs: [68.68]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [60.53] top5s: [87.99] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 36 2019-11-20 19:25:22
+11-20 19:25:22 Epoch 36: 0/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.985] Loss: 1.259 | Lr: 0.1000 | Accs: [72.66]
+11-20 19:25:25 Epoch 36: 100/782 Loss_ai: [0.18, 0.18] Loss_soft: [1.089] Loss: 1.448 | Lr: 0.1000 | Accs: [68.94]
+11-20 19:25:28 Epoch 36: 200/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.842] Loss: 1.053 | Lr: 0.1000 | Accs: [68.87]
+11-20 19:25:31 Epoch 36: 300/782 Loss_ai: [0.09, 0.09] Loss_soft: [1.028] Loss: 1.204 | Lr: 0.1000 | Accs: [69.25]
+11-20 19:25:34 Epoch 36: 400/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.759] Loss: 1.015 | Lr: 0.1000 | Accs: [69.16]
+11-20 19:25:37 Epoch 36: 500/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.775] Loss: 1.001 | Lr: 0.1000 | Accs: [68.89]
+11-20 19:25:40 Epoch 36: 600/782 Loss_ai: [0.15, 0.13] Loss_soft: [1.236] Loss: 1.509 | Lr: 0.1000 | Accs: [68.92]
+11-20 19:25:43 Epoch 36: 700/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.059] Loss: 1.354 | Lr: 0.1000 | Accs: [68.78]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [59.78] top5s: [86.53] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 37 2019-11-20 19:25:47
+11-20 19:25:47 Epoch 37: 0/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.211] Loss: 1.436 | Lr: 0.1000 | Accs: [65.62]
+11-20 19:25:50 Epoch 37: 100/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.879] Loss: 1.063 | Lr: 0.1000 | Accs: [69.21]
+11-20 19:25:53 Epoch 37: 200/782 Loss_ai: [0.18, 0.16] Loss_soft: [1.012] Loss: 1.352 | Lr: 0.1000 | Accs: [69.36]
+11-20 19:25:56 Epoch 37: 300/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.905] Loss: 1.127 | Lr: 0.1000 | Accs: [69.45]
+11-20 19:25:59 Epoch 37: 400/782 Loss_ai: [0.16, 0.14] Loss_soft: [1.288] Loss: 1.589 | Lr: 0.1000 | Accs: [69.4]
+11-20 19:26:02 Epoch 37: 500/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.89] Loss: 1.131 | Lr: 0.1000 | Accs: [69.4]
+11-20 19:26:05 Epoch 37: 600/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.074] Loss: 1.351 | Lr: 0.1000 | Accs: [69.39]
+11-20 19:26:08 Epoch 37: 700/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.134] Loss: 1.399 | Lr: 0.1000 | Accs: [69.3]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [58.77] top5s: [87.14] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 38 2019-11-20 19:26:12
+11-20 19:26:12 Epoch 38: 0/782 Loss_ai: [0.16, 0.15] Loss_soft: [1.331] Loss: 1.642 | Lr: 0.1000 | Accs: [62.5]
+11-20 19:26:15 Epoch 38: 100/782 Loss_ai: [0.13, 0.11] Loss_soft: [1.216] Loss: 1.458 | Lr: 0.1000 | Accs: [69.45]
+11-20 19:26:18 Epoch 38: 200/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.238] Loss: 1.523 | Lr: 0.1000 | Accs: [69.14]
+11-20 19:26:21 Epoch 38: 300/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.102] Loss: 1.395 | Lr: 0.1000 | Accs: [69.57]
+11-20 19:26:24 Epoch 38: 400/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.069] Loss: 1.334 | Lr: 0.1000 | Accs: [69.6]
+11-20 19:26:27 Epoch 38: 500/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.938] Loss: 1.185 | Lr: 0.1000 | Accs: [69.4]
+11-20 19:26:30 Epoch 38: 600/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.963] Loss: 1.219 | Lr: 0.1000 | Accs: [69.11]
+11-20 19:26:33 Epoch 38: 700/782 Loss_ai: [0.15, 0.16] Loss_soft: [0.986] Loss: 1.298 | Lr: 0.1000 | Accs: [69.11]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [59.74] top5s: [87.37] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 39 2019-11-20 19:26:37
+11-20 19:26:37 Epoch 39: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.691] Loss: 0.892 | Lr: 0.1000 | Accs: [85.16]
+11-20 19:26:40 Epoch 39: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.114] Loss: 1.314 | Lr: 0.1000 | Accs: [69.92]
+11-20 19:26:43 Epoch 39: 200/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.813] Loss: 0.998 | Lr: 0.1000 | Accs: [69.68]
+11-20 19:26:46 Epoch 39: 300/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.245] Loss: 1.512 | Lr: 0.1000 | Accs: [69.89]
+11-20 19:26:49 Epoch 39: 400/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.02] Loss: 1.292 | Lr: 0.1000 | Accs: [69.78]
+11-20 19:26:52 Epoch 39: 500/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.182] Loss: 1.481 | Lr: 0.1000 | Accs: [69.52]
+11-20 19:26:55 Epoch 39: 600/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.102] Loss: 1.369 | Lr: 0.1000 | Accs: [69.54]
+11-20 19:26:58 Epoch 39: 700/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.168] Loss: 1.420 | Lr: 0.1000 | Accs: [69.47]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [59.88] top5s: [87.02] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 40 2019-11-20 19:27:01
+11-20 19:27:02 Epoch 40: 0/782 Loss_ai: [0.1, 0.09] Loss_soft: [1.054] Loss: 1.243 | Lr: 0.1000 | Accs: [66.41]
+11-20 19:27:05 Epoch 40: 100/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.904] Loss: 1.118 | Lr: 0.1000 | Accs: [70.03]
+11-20 19:27:08 Epoch 40: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.991] Loss: 1.225 | Lr: 0.1000 | Accs: [70.11]
+11-20 19:27:11 Epoch 40: 300/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.125] Loss: 1.393 | Lr: 0.1000 | Accs: [69.77]
+11-20 19:27:14 Epoch 40: 400/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.954] Loss: 1.196 | Lr: 0.1000 | Accs: [69.7]
+11-20 19:27:17 Epoch 40: 500/782 Loss_ai: [0.15, 0.16] Loss_soft: [1.278] Loss: 1.584 | Lr: 0.1000 | Accs: [69.53]
+11-20 19:27:20 Epoch 40: 600/782 Loss_ai: [0.18, 0.16] Loss_soft: [1.33] Loss: 1.669 | Lr: 0.1000 | Accs: [69.43]
+11-20 19:27:23 Epoch 40: 700/782 Loss_ai: [0.16, 0.17] Loss_soft: [0.941] Loss: 1.263 | Lr: 0.1000 | Accs: [69.42]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [59.24] top5s: [86.07] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 41 2019-11-20 19:27:26
+11-20 19:27:26 Epoch 41: 0/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.16] Loss: 1.443 | Lr: 0.1000 | Accs: [64.84]
+11-20 19:27:29 Epoch 41: 100/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.934] Loss: 1.174 | Lr: 0.1000 | Accs: [69.81]
+11-20 19:27:32 Epoch 41: 200/782 Loss_ai: [0.08, 0.09] Loss_soft: [1.109] Loss: 1.282 | Lr: 0.1000 | Accs: [69.64]
+11-20 19:27:35 Epoch 41: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.098] Loss: 1.338 | Lr: 0.1000 | Accs: [69.44]
+11-20 19:27:38 Epoch 41: 400/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.133] Loss: 1.423 | Lr: 0.1000 | Accs: [69.49]
+11-20 19:27:41 Epoch 41: 500/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.975] Loss: 1.228 | Lr: 0.1000 | Accs: [69.6]
+11-20 19:27:44 Epoch 41: 600/782 Loss_ai: [0.17, 0.17] Loss_soft: [1.174] Loss: 1.514 | Lr: 0.1000 | Accs: [69.42]
+11-20 19:27:47 Epoch 41: 700/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.267] Loss: 1.563 | Lr: 0.1000 | Accs: [69.47]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [59.47] top5s: [86.92] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 42 2019-11-20 19:27:51
+11-20 19:27:51 Epoch 42: 0/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.85] Loss: 1.104 | Lr: 0.1000 | Accs: [75.78]
+11-20 19:27:54 Epoch 42: 100/782 Loss_ai: [0.2, 0.17] Loss_soft: [1.187] Loss: 1.559 | Lr: 0.1000 | Accs: [70.0]
+11-20 19:27:57 Epoch 42: 200/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.296] Loss: 1.561 | Lr: 0.1000 | Accs: [70.28]
+11-20 19:28:00 Epoch 42: 300/782 Loss_ai: [0.15, 0.13] Loss_soft: [1.149] Loss: 1.432 | Lr: 0.1000 | Accs: [70.13]
+11-20 19:28:03 Epoch 42: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.965] Loss: 1.158 | Lr: 0.1000 | Accs: [70.1]
+11-20 19:28:06 Epoch 42: 500/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.819] Loss: 1.114 | Lr: 0.1000 | Accs: [69.97]
+11-20 19:28:09 Epoch 42: 600/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.163] Loss: 1.419 | Lr: 0.1000 | Accs: [69.98]
+11-20 19:28:12 Epoch 42: 700/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.917] Loss: 1.168 | Lr: 0.1000 | Accs: [69.89]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [60.36] top5s: [87.08] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 43 2019-11-20 19:28:16
+11-20 19:28:16 Epoch 43: 0/782 Loss_ai: [0.16, 0.16] Loss_soft: [1.154] Loss: 1.471 | Lr: 0.1000 | Accs: [67.19]
+11-20 19:28:19 Epoch 43: 100/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.921] Loss: 1.135 | Lr: 0.1000 | Accs: [70.11]
+11-20 19:28:22 Epoch 43: 200/782 Loss_ai: [0.16, 0.14] Loss_soft: [1.151] Loss: 1.450 | Lr: 0.1000 | Accs: [69.73]
+11-20 19:28:25 Epoch 43: 300/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.94] Loss: 1.210 | Lr: 0.1000 | Accs: [70.01]
+11-20 19:28:28 Epoch 43: 400/782 Loss_ai: [0.18, 0.18] Loss_soft: [1.077] Loss: 1.432 | Lr: 0.1000 | Accs: [69.98]
+11-20 19:28:31 Epoch 43: 500/782 Loss_ai: [0.16, 0.17] Loss_soft: [1.212] Loss: 1.537 | Lr: 0.1000 | Accs: [69.99]
+11-20 19:28:34 Epoch 43: 600/782 Loss_ai: [0.18, 0.18] Loss_soft: [1.403] Loss: 1.754 | Lr: 0.1000 | Accs: [69.93]
+11-20 19:28:37 Epoch 43: 700/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.754] Loss: 0.969 | Lr: 0.1000 | Accs: [69.95]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [58.24] top5s: [85.65] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 44 2019-11-20 19:28:41
+11-20 19:28:41 Epoch 44: 0/782 Loss_ai: [0.13, 0.15] Loss_soft: [1.066] Loss: 1.347 | Lr: 0.1000 | Accs: [70.31]
+11-20 19:28:44 Epoch 44: 100/782 Loss_ai: [0.17, 0.15] Loss_soft: [1.113] Loss: 1.434 | Lr: 0.1000 | Accs: [69.28]
+11-20 19:28:47 Epoch 44: 200/782 Loss_ai: [0.15, 0.14] Loss_soft: [0.938] Loss: 1.227 | Lr: 0.1000 | Accs: [69.67]
+11-20 19:28:50 Epoch 44: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.272] Loss: 1.554 | Lr: 0.1000 | Accs: [69.83]
+11-20 19:28:53 Epoch 44: 400/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.104] Loss: 1.349 | Lr: 0.1000 | Accs: [69.86]
+11-20 19:28:56 Epoch 44: 500/782 Loss_ai: [0.17, 0.16] Loss_soft: [1.188] Loss: 1.512 | Lr: 0.1000 | Accs: [69.94]
+11-20 19:28:59 Epoch 44: 600/782 Loss_ai: [0.16, 0.16] Loss_soft: [0.993] Loss: 1.315 | Lr: 0.1000 | Accs: [69.89]
+11-20 19:29:02 Epoch 44: 700/782 Loss_ai: [0.12, 0.13] Loss_soft: [1.072] Loss: 1.323 | Lr: 0.1000 | Accs: [69.83]
+Test: best_accs: [60.53] best_epoches: [35] top1s: [58.25] top5s: [86.34] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 45 2019-11-20 19:29:05
+11-20 19:29:06 Epoch 45: 0/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.209] Loss: 1.435 | Lr: 0.1000 | Accs: [66.41]
+11-20 19:29:09 Epoch 45: 100/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.966] Loss: 1.154 | Lr: 0.1000 | Accs: [70.92]
+11-20 19:29:12 Epoch 45: 200/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.037] Loss: 1.326 | Lr: 0.1000 | Accs: [70.35]
+11-20 19:29:15 Epoch 45: 300/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.065] Loss: 1.326 | Lr: 0.1000 | Accs: [70.48]
+11-20 19:29:18 Epoch 45: 400/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.116] Loss: 1.414 | Lr: 0.1000 | Accs: [70.3]
+11-20 19:29:21 Epoch 45: 500/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.942] Loss: 1.148 | Lr: 0.1000 | Accs: [70.39]
+11-20 19:29:24 Epoch 45: 600/782 Loss_ai: [0.18, 0.15] Loss_soft: [1.217] Loss: 1.545 | Lr: 0.1000 | Accs: [70.28]
+11-20 19:29:27 Epoch 45: 700/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.157] Loss: 1.454 | Lr: 0.1000 | Accs: [70.18]
+Test: best_accs: [61.06] best_epoches: [45] top1s: [61.06] top5s: [87.38] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 46 2019-11-20 19:29:30
+11-20 19:29:30 Epoch 46: 0/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.933] Loss: 1.228 | Lr: 0.1000 | Accs: [71.88]
+11-20 19:29:33 Epoch 46: 100/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.803] Loss: 1.050 | Lr: 0.1000 | Accs: [69.79]
+11-20 19:29:37 Epoch 46: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.984] Loss: 1.220 | Lr: 0.1000 | Accs: [69.78]
+11-20 19:29:40 Epoch 46: 300/782 Loss_ai: [0.15, 0.16] Loss_soft: [1.215] Loss: 1.521 | Lr: 0.1000 | Accs: [69.61]
+11-20 19:29:43 Epoch 46: 400/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.011] Loss: 1.266 | Lr: 0.1000 | Accs: [69.84]
+11-20 19:29:46 Epoch 46: 500/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.104] Loss: 1.406 | Lr: 0.1000 | Accs: [69.78]
+11-20 19:29:49 Epoch 46: 600/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.226] Loss: 1.484 | Lr: 0.1000 | Accs: [69.8]
+11-20 19:29:52 Epoch 46: 700/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.892] Loss: 1.185 | Lr: 0.1000 | Accs: [69.78]
+Test: best_accs: [61.06] best_epoches: [45] top1s: [58.25] top5s: [87.0] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 47 2019-11-20 19:29:55
+11-20 19:29:55 Epoch 47: 0/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.197] Loss: 1.484 | Lr: 0.1000 | Accs: [67.19]
+11-20 19:29:58 Epoch 47: 100/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.048] Loss: 1.337 | Lr: 0.1000 | Accs: [70.6]
+11-20 19:30:01 Epoch 47: 200/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.167] Loss: 1.400 | Lr: 0.1000 | Accs: [70.47]
+11-20 19:30:04 Epoch 47: 300/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.844] Loss: 1.108 | Lr: 0.1000 | Accs: [70.63]
+11-20 19:30:08 Epoch 47: 400/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.221] Loss: 1.521 | Lr: 0.1000 | Accs: [70.58]
+11-20 19:30:11 Epoch 47: 500/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.026] Loss: 1.295 | Lr: 0.1000 | Accs: [70.44]
+11-20 19:30:14 Epoch 47: 600/782 Loss_ai: [0.17, 0.16] Loss_soft: [0.893] Loss: 1.219 | Lr: 0.1000 | Accs: [70.43]
+11-20 19:30:17 Epoch 47: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.884] Loss: 1.068 | Lr: 0.1000 | Accs: [70.27]
+Test: best_accs: [61.06] best_epoches: [45] top1s: [60.33] top5s: [87.93] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 48 2019-11-20 19:30:20
+11-20 19:30:20 Epoch 48: 0/782 Loss_ai: [0.16, 0.14] Loss_soft: [0.929] Loss: 1.229 | Lr: 0.1000 | Accs: [72.66]
+11-20 19:30:23 Epoch 48: 100/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.028] Loss: 1.326 | Lr: 0.1000 | Accs: [70.76]
+11-20 19:30:26 Epoch 48: 200/782 Loss_ai: [0.1, 0.11] Loss_soft: [1.084] Loss: 1.293 | Lr: 0.1000 | Accs: [71.18]
+11-20 19:30:29 Epoch 48: 300/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.751] Loss: 0.955 | Lr: 0.1000 | Accs: [70.96]
+11-20 19:30:32 Epoch 48: 400/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.133] Loss: 1.424 | Lr: 0.1000 | Accs: [70.93]
+11-20 19:30:35 Epoch 48: 500/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.949] Loss: 1.224 | Lr: 0.1000 | Accs: [70.73]
+11-20 19:30:38 Epoch 48: 600/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.795] Loss: 0.997 | Lr: 0.1000 | Accs: [70.64]
+11-20 19:30:41 Epoch 48: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.885] Loss: 1.079 | Lr: 0.1000 | Accs: [70.53]
+Test: best_accs: [61.06] best_epoches: [45] top1s: [57.12] top5s: [84.83] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 49 2019-11-20 19:30:45
+11-20 19:30:45 Epoch 49: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.795] Loss: 1.001 | Lr: 0.1000 | Accs: [74.22]
+11-20 19:30:48 Epoch 49: 100/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.675] Loss: 0.912 | Lr: 0.1000 | Accs: [70.88]
+11-20 19:30:51 Epoch 49: 200/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.312] Loss: 1.612 | Lr: 0.1000 | Accs: [71.14]
+11-20 19:30:54 Epoch 49: 300/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.97] Loss: 1.201 | Lr: 0.1000 | Accs: [71.05]
+11-20 19:30:57 Epoch 49: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.982] Loss: 1.204 | Lr: 0.1000 | Accs: [71.1]
+11-20 19:31:00 Epoch 49: 500/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.896] Loss: 1.162 | Lr: 0.1000 | Accs: [70.91]
+11-20 19:31:03 Epoch 49: 600/782 Loss_ai: [0.16, 0.16] Loss_soft: [1.211] Loss: 1.533 | Lr: 0.1000 | Accs: [70.8]
+11-20 19:31:07 Epoch 49: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.84] Loss: 1.047 | Lr: 0.1000 | Accs: [70.66]
+Test: best_accs: [61.06] best_epoches: [45] top1s: [60.58] top5s: [87.17] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 50 2019-11-20 19:31:10
+11-20 19:31:10 Epoch 50: 0/782 Loss_ai: [0.13, 0.15] Loss_soft: [1.033] Loss: 1.310 | Lr: 0.1000 | Accs: [73.44]
+11-20 19:31:13 Epoch 50: 100/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.997] Loss: 1.254 | Lr: 0.1000 | Accs: [72.22]
+11-20 19:31:16 Epoch 50: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.008] Loss: 1.250 | Lr: 0.1000 | Accs: [71.56]
+11-20 19:31:19 Epoch 50: 300/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.782] Loss: 0.997 | Lr: 0.1000 | Accs: [71.46]
+11-20 19:31:22 Epoch 50: 400/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.919] Loss: 1.201 | Lr: 0.1000 | Accs: [71.17]
+11-20 19:31:25 Epoch 50: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.048] Loss: 1.289 | Lr: 0.1000 | Accs: [71.13]
+11-20 19:31:28 Epoch 50: 600/782 Loss_ai: [0.11, 0.1] Loss_soft: [1.185] Loss: 1.401 | Lr: 0.1000 | Accs: [70.84]
+11-20 19:31:31 Epoch 50: 700/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.256] Loss: 1.540 | Lr: 0.1000 | Accs: [70.65]
+Test: best_accs: [61.06] best_epoches: [45] top1s: [55.73] top5s: [84.73] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 51 2019-11-20 19:31:35
+11-20 19:31:35 Epoch 51: 0/782 Loss_ai: [0.15, 0.16] Loss_soft: [1.227] Loss: 1.537 | Lr: 0.1000 | Accs: [63.28]
+11-20 19:31:38 Epoch 51: 100/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.871] Loss: 1.123 | Lr: 0.1000 | Accs: [70.38]
+11-20 19:31:41 Epoch 51: 200/782 Loss_ai: [0.15, 0.14] Loss_soft: [0.982] Loss: 1.275 | Lr: 0.1000 | Accs: [70.61]
+11-20 19:31:44 Epoch 51: 300/782 Loss_ai: [0.1, 0.09] Loss_soft: [1.243] Loss: 1.431 | Lr: 0.1000 | Accs: [70.72]
+11-20 19:31:47 Epoch 51: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.02] Loss: 1.214 | Lr: 0.1000 | Accs: [70.79]
+11-20 19:31:50 Epoch 51: 500/782 Loss_ai: [0.21, 0.21] Loss_soft: [1.347] Loss: 1.772 | Lr: 0.1000 | Accs: [71.03]
+11-20 19:31:53 Epoch 51: 600/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.168] Loss: 1.404 | Lr: 0.1000 | Accs: [70.84]
+11-20 19:31:56 Epoch 51: 700/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.813] Loss: 1.002 | Lr: 0.1000 | Accs: [70.73]
+Test: best_accs: [61.3] best_epoches: [51] top1s: [61.3] top5s: [87.54] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 52 2019-11-20 19:32:00
+11-20 19:32:00 Epoch 52: 0/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.828] Loss: 1.093 | Lr: 0.1000 | Accs: [72.66]
+11-20 19:32:03 Epoch 52: 100/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.819] Loss: 1.046 | Lr: 0.1000 | Accs: [72.47]
+11-20 19:32:06 Epoch 52: 200/782 Loss_ai: [0.15, 0.13] Loss_soft: [0.801] Loss: 1.083 | Lr: 0.1000 | Accs: [71.48]
+11-20 19:32:09 Epoch 52: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.048] Loss: 1.285 | Lr: 0.1000 | Accs: [71.24]
+11-20 19:32:12 Epoch 52: 400/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.004] Loss: 1.265 | Lr: 0.1000 | Accs: [70.97]
+11-20 19:32:15 Epoch 52: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.98] Loss: 1.220 | Lr: 0.1000 | Accs: [70.87]
+11-20 19:32:18 Epoch 52: 600/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.094] Loss: 1.366 | Lr: 0.1000 | Accs: [70.69]
+11-20 19:32:21 Epoch 52: 700/782 Loss_ai: [0.1, 0.11] Loss_soft: [1.018] Loss: 1.227 | Lr: 0.1000 | Accs: [70.7]
+Test: best_accs: [61.3] best_epoches: [51] top1s: [59.42] top5s: [86.93] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 53 2019-11-20 19:32:25
+11-20 19:32:25 Epoch 53: 0/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.967] Loss: 1.195 | Lr: 0.1000 | Accs: [70.31]
+11-20 19:32:28 Epoch 53: 100/782 Loss_ai: [0.12, 0.11] Loss_soft: [1.028] Loss: 1.251 | Lr: 0.1000 | Accs: [70.93]
+11-20 19:32:31 Epoch 53: 200/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.003] Loss: 1.217 | Lr: 0.1000 | Accs: [71.55]
+11-20 19:32:34 Epoch 53: 300/782 Loss_ai: [0.18, 0.16] Loss_soft: [1.217] Loss: 1.562 | Lr: 0.1000 | Accs: [71.57]
+11-20 19:32:37 Epoch 53: 400/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.83] Loss: 1.149 | Lr: 0.1000 | Accs: [71.45]
+11-20 19:32:40 Epoch 53: 500/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.228] Loss: 1.489 | Lr: 0.1000 | Accs: [71.03]
+11-20 19:32:43 Epoch 53: 600/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.023] Loss: 1.312 | Lr: 0.1000 | Accs: [71.01]
+11-20 19:32:46 Epoch 53: 700/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.157] Loss: 1.410 | Lr: 0.1000 | Accs: [70.94]
+Test: best_accs: [61.3] best_epoches: [51] top1s: [59.99] top5s: [86.81] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 54 2019-11-20 19:32:50
+11-20 19:32:50 Epoch 54: 0/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.081] Loss: 1.325 | Lr: 0.1000 | Accs: [67.19]
+11-20 19:32:53 Epoch 54: 100/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.887] Loss: 1.162 | Lr: 0.1000 | Accs: [71.49]
+11-20 19:32:56 Epoch 54: 200/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.7] Loss: 0.947 | Lr: 0.1000 | Accs: [71.11]
+11-20 19:32:59 Epoch 54: 300/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.907] Loss: 1.158 | Lr: 0.1000 | Accs: [71.36]
+11-20 19:33:02 Epoch 54: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.089] Loss: 1.304 | Lr: 0.1000 | Accs: [71.26]
+11-20 19:33:05 Epoch 54: 500/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.126] Loss: 1.402 | Lr: 0.1000 | Accs: [71.21]
+11-20 19:33:08 Epoch 54: 600/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.951] Loss: 1.223 | Lr: 0.1000 | Accs: [71.12]
+11-20 19:33:11 Epoch 54: 700/782 Loss_ai: [0.16, 0.18] Loss_soft: [1.066] Loss: 1.402 | Lr: 0.1000 | Accs: [70.99]
+Test: best_accs: [61.3] best_epoches: [51] top1s: [59.93] top5s: [86.62] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 55 2019-11-20 19:33:14
+11-20 19:33:15 Epoch 55: 0/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.742] Loss: 0.996 | Lr: 0.1000 | Accs: [82.03]
+11-20 19:33:18 Epoch 55: 100/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.813] Loss: 1.053 | Lr: 0.1000 | Accs: [72.54]
+11-20 19:33:21 Epoch 55: 200/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.971] Loss: 1.185 | Lr: 0.1000 | Accs: [71.96]
+11-20 19:33:24 Epoch 55: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.948] Loss: 1.191 | Lr: 0.1000 | Accs: [71.58]
+11-20 19:33:27 Epoch 55: 400/782 Loss_ai: [0.15, 0.16] Loss_soft: [1.132] Loss: 1.441 | Lr: 0.1000 | Accs: [71.36]
+11-20 19:33:30 Epoch 55: 500/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.999] Loss: 1.261 | Lr: 0.1000 | Accs: [71.05]
+11-20 19:33:33 Epoch 55: 600/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.85] Loss: 1.074 | Lr: 0.1000 | Accs: [70.94]
+11-20 19:33:36 Epoch 55: 700/782 Loss_ai: [0.16, 0.15] Loss_soft: [1.228] Loss: 1.532 | Lr: 0.1000 | Accs: [70.74]
+Test: best_accs: [61.3] best_epoches: [51] top1s: [59.13] top5s: [86.33] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 56 2019-11-20 19:33:39
+11-20 19:33:39 Epoch 56: 0/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.185] Loss: 1.437 | Lr: 0.1000 | Accs: [67.19]
+11-20 19:33:42 Epoch 56: 100/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.876] Loss: 1.123 | Lr: 0.1000 | Accs: [72.27]
+11-20 19:33:45 Epoch 56: 200/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.9] Loss: 1.161 | Lr: 0.1000 | Accs: [71.32]
+11-20 19:33:48 Epoch 56: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.215] Loss: 1.459 | Lr: 0.1000 | Accs: [71.04]
+11-20 19:33:51 Epoch 56: 400/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.804] Loss: 1.063 | Lr: 0.1000 | Accs: [71.0]
+11-20 19:33:54 Epoch 56: 500/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.906] Loss: 1.150 | Lr: 0.1000 | Accs: [71.1]
+11-20 19:33:57 Epoch 56: 600/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.108] Loss: 1.385 | Lr: 0.1000 | Accs: [70.98]
+11-20 19:34:00 Epoch 56: 700/782 Loss_ai: [0.17, 0.17] Loss_soft: [1.165] Loss: 1.502 | Lr: 0.1000 | Accs: [70.96]
+Test: best_accs: [61.3] best_epoches: [51] top1s: [60.22] top5s: [87.32] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 57 2019-11-20 19:34:04
+11-20 19:34:04 Epoch 57: 0/782 Loss_ai: [0.14, 0.15] Loss_soft: [0.667] Loss: 0.949 | Lr: 0.1000 | Accs: [82.81]
+11-20 19:34:07 Epoch 57: 100/782 Loss_ai: [0.19, 0.21] Loss_soft: [1.274] Loss: 1.677 | Lr: 0.1000 | Accs: [72.23]
+11-20 19:34:10 Epoch 57: 200/782 Loss_ai: [0.15, 0.16] Loss_soft: [1.095] Loss: 1.401 | Lr: 0.1000 | Accs: [72.14]
+11-20 19:34:13 Epoch 57: 300/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.072] Loss: 1.292 | Lr: 0.1000 | Accs: [71.43]
+11-20 19:34:16 Epoch 57: 400/782 Loss_ai: [0.16, 0.18] Loss_soft: [0.909] Loss: 1.255 | Lr: 0.1000 | Accs: [71.28]
+11-20 19:34:19 Epoch 57: 500/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.856] Loss: 1.098 | Lr: 0.1000 | Accs: [71.23]
+11-20 19:34:22 Epoch 57: 600/782 Loss_ai: [0.14, 0.15] Loss_soft: [0.957] Loss: 1.242 | Lr: 0.1000 | Accs: [70.99]
+11-20 19:34:25 Epoch 57: 700/782 Loss_ai: [0.12, 0.09] Loss_soft: [0.741] Loss: 0.947 | Lr: 0.1000 | Accs: [71.0]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [61.49] top5s: [88.16] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 58 2019-11-20 19:34:29
+11-20 19:34:29 Epoch 58: 0/782 Loss_ai: [0.13, 0.16] Loss_soft: [0.996] Loss: 1.284 | Lr: 0.1000 | Accs: [72.66]
+11-20 19:34:32 Epoch 58: 100/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.751] Loss: 1.022 | Lr: 0.1000 | Accs: [72.03]
+11-20 19:34:35 Epoch 58: 200/782 Loss_ai: [0.14, 0.16] Loss_soft: [0.851] Loss: 1.155 | Lr: 0.1000 | Accs: [72.13]
+11-20 19:34:38 Epoch 58: 300/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.758] Loss: 1.061 | Lr: 0.1000 | Accs: [71.86]
+11-20 19:34:41 Epoch 58: 400/782 Loss_ai: [0.16, 0.16] Loss_soft: [1.046] Loss: 1.369 | Lr: 0.1000 | Accs: [71.71]
+11-20 19:34:44 Epoch 58: 500/782 Loss_ai: [0.14, 0.15] Loss_soft: [0.99] Loss: 1.276 | Lr: 0.1000 | Accs: [71.43]
+11-20 19:34:47 Epoch 58: 600/782 Loss_ai: [0.18, 0.19] Loss_soft: [1.009] Loss: 1.375 | Lr: 0.1000 | Accs: [71.14]
+11-20 19:34:50 Epoch 58: 700/782 Loss_ai: [0.14, 0.16] Loss_soft: [1.027] Loss: 1.328 | Lr: 0.1000 | Accs: [71.16]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [60.86] top5s: [87.43] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 59 2019-11-20 19:34:54
+11-20 19:34:54 Epoch 59: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.834] Loss: 1.032 | Lr: 0.1000 | Accs: [75.0]
+11-20 19:34:57 Epoch 59: 100/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.866] Loss: 1.142 | Lr: 0.1000 | Accs: [72.32]
+11-20 19:35:00 Epoch 59: 200/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.927] Loss: 1.175 | Lr: 0.1000 | Accs: [71.37]
+11-20 19:35:03 Epoch 59: 300/782 Loss_ai: [0.12, 0.15] Loss_soft: [0.862] Loss: 1.127 | Lr: 0.1000 | Accs: [71.26]
+11-20 19:35:06 Epoch 59: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.163] Loss: 1.382 | Lr: 0.1000 | Accs: [71.23]
+11-20 19:35:09 Epoch 59: 500/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.659] Loss: 0.935 | Lr: 0.1000 | Accs: [71.26]
+11-20 19:35:12 Epoch 59: 600/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.213] Loss: 1.455 | Lr: 0.1000 | Accs: [71.16]
+11-20 19:35:15 Epoch 59: 700/782 Loss_ai: [0.15, 0.14] Loss_soft: [0.829] Loss: 1.115 | Lr: 0.1000 | Accs: [71.05]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [60.16] top5s: [87.42] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 60 2019-11-20 19:35:18
+11-20 19:35:18 Epoch 60: 0/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.933] Loss: 1.123 | Lr: 0.1000 | Accs: [70.31]
+11-20 19:35:21 Epoch 60: 100/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.109] Loss: 1.386 | Lr: 0.1000 | Accs: [71.88]
+11-20 19:35:24 Epoch 60: 200/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.856] Loss: 1.099 | Lr: 0.1000 | Accs: [71.54]
+11-20 19:35:27 Epoch 60: 300/782 Loss_ai: [0.18, 0.19] Loss_soft: [0.904] Loss: 1.277 | Lr: 0.1000 | Accs: [71.56]
+11-20 19:35:31 Epoch 60: 400/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.108] Loss: 1.397 | Lr: 0.1000 | Accs: [71.15]
+11-20 19:35:34 Epoch 60: 500/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.088] Loss: 1.360 | Lr: 0.1000 | Accs: [71.1]
+11-20 19:35:37 Epoch 60: 600/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.051] Loss: 1.319 | Lr: 0.1000 | Accs: [70.93]
+11-20 19:35:40 Epoch 60: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.946] Loss: 1.126 | Lr: 0.1000 | Accs: [71.0]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [59.94] top5s: [87.22] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 61 2019-11-20 19:35:43
+11-20 19:35:43 Epoch 61: 0/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.832] Loss: 1.080 | Lr: 0.1000 | Accs: [78.91]
+11-20 19:35:46 Epoch 61: 100/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.81] Loss: 1.110 | Lr: 0.1000 | Accs: [73.34]
+11-20 19:35:49 Epoch 61: 200/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.959] Loss: 1.244 | Lr: 0.1000 | Accs: [71.9]
+11-20 19:35:52 Epoch 61: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.016] Loss: 1.305 | Lr: 0.1000 | Accs: [71.6]
+11-20 19:35:55 Epoch 61: 400/782 Loss_ai: [0.16, 0.18] Loss_soft: [1.127] Loss: 1.464 | Lr: 0.1000 | Accs: [71.6]
+11-20 19:35:58 Epoch 61: 500/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.115] Loss: 1.362 | Lr: 0.1000 | Accs: [71.53]
+11-20 19:36:01 Epoch 61: 600/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.911] Loss: 1.153 | Lr: 0.1000 | Accs: [71.36]
+11-20 19:36:04 Epoch 61: 700/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.928] Loss: 1.163 | Lr: 0.1000 | Accs: [71.26]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [59.09] top5s: [86.44] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 62 2019-11-20 19:36:08
+11-20 19:36:08 Epoch 62: 0/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.737] Loss: 0.974 | Lr: 0.1000 | Accs: [77.34]
+11-20 19:36:11 Epoch 62: 100/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.996] Loss: 1.240 | Lr: 0.1000 | Accs: [71.33]
+11-20 19:36:14 Epoch 62: 200/782 Loss_ai: [0.19, 0.19] Loss_soft: [1.034] Loss: 1.416 | Lr: 0.1000 | Accs: [71.6]
+11-20 19:36:17 Epoch 62: 300/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.945] Loss: 1.201 | Lr: 0.1000 | Accs: [71.38]
+11-20 19:36:20 Epoch 62: 400/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.952] Loss: 1.226 | Lr: 0.1000 | Accs: [71.48]
+11-20 19:36:23 Epoch 62: 500/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.823] Loss: 1.025 | Lr: 0.1000 | Accs: [71.36]
+11-20 19:36:26 Epoch 62: 600/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.952] Loss: 1.207 | Lr: 0.1000 | Accs: [71.47]
+11-20 19:36:29 Epoch 62: 700/782 Loss_ai: [0.18, 0.18] Loss_soft: [1.252] Loss: 1.607 | Lr: 0.1000 | Accs: [71.33]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [60.79] top5s: [87.47] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 63 2019-11-20 19:36:33
+11-20 19:36:33 Epoch 63: 0/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.008] Loss: 1.262 | Lr: 0.1000 | Accs: [70.31]
+11-20 19:36:36 Epoch 63: 100/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.802] Loss: 1.018 | Lr: 0.1000 | Accs: [71.12]
+11-20 19:36:39 Epoch 63: 200/782 Loss_ai: [0.15, 0.16] Loss_soft: [0.874] Loss: 1.182 | Lr: 0.1000 | Accs: [71.42]
+11-20 19:36:42 Epoch 63: 300/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.834] Loss: 1.095 | Lr: 0.1000 | Accs: [71.34]
+11-20 19:36:45 Epoch 63: 400/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.002] Loss: 1.231 | Lr: 0.1000 | Accs: [71.58]
+11-20 19:36:48 Epoch 63: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.951] Loss: 1.189 | Lr: 0.1000 | Accs: [71.35]
+11-20 19:36:51 Epoch 63: 600/782 Loss_ai: [0.15, 0.17] Loss_soft: [0.999] Loss: 1.316 | Lr: 0.1000 | Accs: [71.38]
+11-20 19:36:54 Epoch 63: 700/782 Loss_ai: [0.17, 0.19] Loss_soft: [1.011] Loss: 1.371 | Lr: 0.1000 | Accs: [71.32]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [59.05] top5s: [86.96] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 64 2019-11-20 19:36:58
+11-20 19:36:58 Epoch 64: 0/782 Loss_ai: [0.17, 0.17] Loss_soft: [1.136] Loss: 1.480 | Lr: 0.1000 | Accs: [68.75]
+11-20 19:37:01 Epoch 64: 100/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.056] Loss: 1.352 | Lr: 0.1000 | Accs: [71.7]
+11-20 19:37:04 Epoch 64: 200/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.378] Loss: 1.672 | Lr: 0.1000 | Accs: [71.47]
+11-20 19:37:07 Epoch 64: 300/782 Loss_ai: [0.2, 0.17] Loss_soft: [1.225] Loss: 1.587 | Lr: 0.1000 | Accs: [71.55]
+11-20 19:37:10 Epoch 64: 400/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.068] Loss: 1.318 | Lr: 0.1000 | Accs: [71.38]
+11-20 19:37:13 Epoch 64: 500/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.833] Loss: 1.042 | Lr: 0.1000 | Accs: [71.4]
+11-20 19:37:16 Epoch 64: 600/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.839] Loss: 1.131 | Lr: 0.1000 | Accs: [71.39]
+11-20 19:37:19 Epoch 64: 700/782 Loss_ai: [0.21, 0.21] Loss_soft: [1.178] Loss: 1.593 | Lr: 0.1000 | Accs: [71.4]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [60.01] top5s: [87.14] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 65 2019-11-20 19:37:22
+11-20 19:37:23 Epoch 65: 0/782 Loss_ai: [0.15, 0.14] Loss_soft: [1.211] Loss: 1.501 | Lr: 0.1000 | Accs: [65.62]
+11-20 19:37:26 Epoch 65: 100/782 Loss_ai: [0.14, 0.15] Loss_soft: [0.777] Loss: 1.063 | Lr: 0.1000 | Accs: [71.84]
+11-20 19:37:29 Epoch 65: 200/782 Loss_ai: [0.15, 0.16] Loss_soft: [0.985] Loss: 1.291 | Lr: 0.1000 | Accs: [71.56]
+11-20 19:37:32 Epoch 65: 300/782 Loss_ai: [0.17, 0.17] Loss_soft: [0.909] Loss: 1.249 | Lr: 0.1000 | Accs: [71.19]
+11-20 19:37:35 Epoch 65: 400/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.074] Loss: 1.335 | Lr: 0.1000 | Accs: [71.05]
+11-20 19:37:38 Epoch 65: 500/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.806] Loss: 1.014 | Lr: 0.1000 | Accs: [71.11]
+11-20 19:37:41 Epoch 65: 600/782 Loss_ai: [0.11, 0.11] Loss_soft: [1.036] Loss: 1.257 | Lr: 0.1000 | Accs: [71.17]
+11-20 19:37:44 Epoch 65: 700/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.939] Loss: 1.195 | Lr: 0.1000 | Accs: [71.13]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [58.6] top5s: [86.82] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 66 2019-11-20 19:37:47
+11-20 19:37:48 Epoch 66: 0/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.039] Loss: 1.295 | Lr: 0.1000 | Accs: [72.66]
+11-20 19:37:51 Epoch 66: 100/782 Loss_ai: [0.12, 0.14] Loss_soft: [0.669] Loss: 0.925 | Lr: 0.1000 | Accs: [72.25]
+11-20 19:37:53 Epoch 66: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.943] Loss: 1.182 | Lr: 0.1000 | Accs: [72.13]
+11-20 19:37:57 Epoch 66: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.001] Loss: 1.284 | Lr: 0.1000 | Accs: [72.04]
+11-20 19:38:00 Epoch 66: 400/782 Loss_ai: [0.16, 0.15] Loss_soft: [1.211] Loss: 1.517 | Lr: 0.1000 | Accs: [71.83]
+11-20 19:38:03 Epoch 66: 500/782 Loss_ai: [0.18, 0.18] Loss_soft: [1.068] Loss: 1.436 | Lr: 0.1000 | Accs: [71.67]
+11-20 19:38:06 Epoch 66: 600/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.879] Loss: 1.113 | Lr: 0.1000 | Accs: [71.44]
+11-20 19:38:09 Epoch 66: 700/782 Loss_ai: [0.17, 0.19] Loss_soft: [1.179] Loss: 1.545 | Lr: 0.1000 | Accs: [71.45]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [59.13] top5s: [86.99] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 67 2019-11-20 19:38:12
+11-20 19:38:12 Epoch 67: 0/782 Loss_ai: [0.11, 0.13] Loss_soft: [1.053] Loss: 1.298 | Lr: 0.1000 | Accs: [69.53]
+11-20 19:38:15 Epoch 67: 100/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.231] Loss: 1.527 | Lr: 0.1000 | Accs: [71.88]
+11-20 19:38:18 Epoch 67: 200/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.102] Loss: 1.365 | Lr: 0.1000 | Accs: [71.74]
+11-20 19:38:22 Epoch 67: 300/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.893] Loss: 1.069 | Lr: 0.1000 | Accs: [71.85]
+11-20 19:38:25 Epoch 67: 400/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.857] Loss: 1.128 | Lr: 0.1000 | Accs: [71.57]
+11-20 19:38:28 Epoch 67: 500/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.143] Loss: 1.371 | Lr: 0.1000 | Accs: [71.41]
+11-20 19:38:31 Epoch 67: 600/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.975] Loss: 1.242 | Lr: 0.1000 | Accs: [71.63]
+11-20 19:38:34 Epoch 67: 700/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.179] Loss: 1.473 | Lr: 0.1000 | Accs: [71.71]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [59.15] top5s: [86.45] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 68 2019-11-20 19:38:37
+11-20 19:38:37 Epoch 68: 0/782 Loss_ai: [0.14, 0.15] Loss_soft: [1.303] Loss: 1.590 | Lr: 0.1000 | Accs: [67.97]
+11-20 19:38:40 Epoch 68: 100/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.847] Loss: 1.072 | Lr: 0.1000 | Accs: [72.27]
+11-20 19:38:43 Epoch 68: 200/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.037] Loss: 1.309 | Lr: 0.1000 | Accs: [72.48]
+11-20 19:38:46 Epoch 68: 300/782 Loss_ai: [0.16, 0.17] Loss_soft: [1.096] Loss: 1.423 | Lr: 0.1000 | Accs: [72.01]
+11-20 19:38:49 Epoch 68: 400/782 Loss_ai: [0.16, 0.13] Loss_soft: [0.87] Loss: 1.157 | Lr: 0.1000 | Accs: [71.72]
+11-20 19:38:52 Epoch 68: 500/782 Loss_ai: [0.17, 0.18] Loss_soft: [1.109] Loss: 1.455 | Lr: 0.1000 | Accs: [71.66]
+11-20 19:38:55 Epoch 68: 600/782 Loss_ai: [0.2, 0.18] Loss_soft: [0.99] Loss: 1.364 | Lr: 0.1000 | Accs: [71.74]
+11-20 19:38:58 Epoch 68: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [1.048] Loss: 1.234 | Lr: 0.1000 | Accs: [71.64]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [61.19] top5s: [87.8] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 69 2019-11-20 19:39:02
+11-20 19:39:02 Epoch 69: 0/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.818] Loss: 1.006 | Lr: 0.1000 | Accs: [82.03]
+11-20 19:39:05 Epoch 69: 100/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.993] Loss: 1.297 | Lr: 0.1000 | Accs: [72.4]
+11-20 19:39:08 Epoch 69: 200/782 Loss_ai: [0.17, 0.17] Loss_soft: [0.884] Loss: 1.225 | Lr: 0.1000 | Accs: [72.11]
+11-20 19:39:11 Epoch 69: 300/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.903] Loss: 1.122 | Lr: 0.1000 | Accs: [72.21]
+11-20 19:39:14 Epoch 69: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [1.013] Loss: 1.210 | Lr: 0.1000 | Accs: [71.87]
+11-20 19:39:17 Epoch 69: 500/782 Loss_ai: [0.13, 0.14] Loss_soft: [1.034] Loss: 1.303 | Lr: 0.1000 | Accs: [71.8]
+11-20 19:39:20 Epoch 69: 600/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.679] Loss: 0.881 | Lr: 0.1000 | Accs: [71.84]
+11-20 19:39:23 Epoch 69: 700/782 Loss_ai: [0.17, 0.17] Loss_soft: [1.071] Loss: 1.406 | Lr: 0.1000 | Accs: [71.83]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [60.81] top5s: [87.29] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 70 2019-11-20 19:39:27
+11-20 19:39:27 Epoch 70: 0/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.784] Loss: 0.959 | Lr: 0.1000 | Accs: [73.44]
+11-20 19:39:30 Epoch 70: 100/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.243] Loss: 1.505 | Lr: 0.1000 | Accs: [72.12]
+11-20 19:39:33 Epoch 70: 200/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.89] Loss: 1.133 | Lr: 0.1000 | Accs: [72.4]
+11-20 19:39:36 Epoch 70: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.002] Loss: 1.284 | Lr: 0.1000 | Accs: [71.9]
+11-20 19:39:39 Epoch 70: 400/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.75] Loss: 0.994 | Lr: 0.1000 | Accs: [71.92]
+11-20 19:39:42 Epoch 70: 500/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.781] Loss: 1.041 | Lr: 0.1000 | Accs: [71.63]
+11-20 19:39:45 Epoch 70: 600/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.76] Loss: 1.006 | Lr: 0.1000 | Accs: [71.56]
+11-20 19:39:48 Epoch 70: 700/782 Loss_ai: [0.17, 0.17] Loss_soft: [0.779] Loss: 1.117 | Lr: 0.1000 | Accs: [71.38]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [59.47] top5s: [87.56] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 71 2019-11-20 19:39:51
+11-20 19:39:52 Epoch 71: 0/782 Loss_ai: [0.15, 0.17] Loss_soft: [1.166] Loss: 1.488 | Lr: 0.1000 | Accs: [65.62]
+11-20 19:39:55 Epoch 71: 100/782 Loss_ai: [0.17, 0.17] Loss_soft: [0.97] Loss: 1.309 | Lr: 0.1000 | Accs: [72.11]
+11-20 19:39:58 Epoch 71: 200/782 Loss_ai: [0.17, 0.16] Loss_soft: [0.932] Loss: 1.259 | Lr: 0.1000 | Accs: [72.24]
+11-20 19:40:01 Epoch 71: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.639] Loss: 0.876 | Lr: 0.1000 | Accs: [71.88]
+11-20 19:40:04 Epoch 71: 400/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.092] Loss: 1.367 | Lr: 0.1000 | Accs: [71.7]
+11-20 19:40:07 Epoch 71: 500/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.922] Loss: 1.142 | Lr: 0.1000 | Accs: [71.75]
+11-20 19:40:10 Epoch 71: 600/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.946] Loss: 1.202 | Lr: 0.1000 | Accs: [71.79]
+11-20 19:40:13 Epoch 71: 700/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.82] Loss: 1.043 | Lr: 0.1000 | Accs: [71.72]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [60.47] top5s: [87.14] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 72 2019-11-20 19:40:16
+11-20 19:40:17 Epoch 72: 0/782 Loss_ai: [0.1, 0.09] Loss_soft: [1.105] Loss: 1.296 | Lr: 0.1000 | Accs: [69.53]
+11-20 19:40:19 Epoch 72: 100/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.047] Loss: 1.291 | Lr: 0.1000 | Accs: [73.16]
+11-20 19:40:22 Epoch 72: 200/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.916] Loss: 1.126 | Lr: 0.1000 | Accs: [73.01]
+11-20 19:40:25 Epoch 72: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [1.064] Loss: 1.348 | Lr: 0.1000 | Accs: [72.64]
+11-20 19:40:28 Epoch 72: 400/782 Loss_ai: [0.15, 0.13] Loss_soft: [0.924] Loss: 1.199 | Lr: 0.1000 | Accs: [72.61]
+11-20 19:40:32 Epoch 72: 500/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.971] Loss: 1.201 | Lr: 0.1000 | Accs: [72.37]
+11-20 19:40:35 Epoch 72: 600/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.897] Loss: 1.137 | Lr: 0.1000 | Accs: [72.1]
+11-20 19:40:38 Epoch 72: 700/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.84] Loss: 1.082 | Lr: 0.1000 | Accs: [72.11]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [61.44] top5s: [87.59] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 73 2019-11-20 19:40:41
+11-20 19:40:41 Epoch 73: 0/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.095] Loss: 1.360 | Lr: 0.1000 | Accs: [69.53]
+11-20 19:40:44 Epoch 73: 100/782 Loss_ai: [0.16, 0.15] Loss_soft: [1.05] Loss: 1.358 | Lr: 0.1000 | Accs: [71.62]
+11-20 19:40:47 Epoch 73: 200/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.172] Loss: 1.438 | Lr: 0.1000 | Accs: [72.06]
+11-20 19:40:50 Epoch 73: 300/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.878] Loss: 1.106 | Lr: 0.1000 | Accs: [72.29]
+11-20 19:40:53 Epoch 73: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.932] Loss: 1.156 | Lr: 0.1000 | Accs: [72.04]
+11-20 19:40:56 Epoch 73: 500/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.742] Loss: 0.887 | Lr: 0.1000 | Accs: [71.93]
+11-20 19:40:59 Epoch 73: 600/782 Loss_ai: [0.17, 0.15] Loss_soft: [1.019] Loss: 1.345 | Lr: 0.1000 | Accs: [71.83]
+11-20 19:41:02 Epoch 73: 700/782 Loss_ai: [0.16, 0.14] Loss_soft: [1.203] Loss: 1.511 | Lr: 0.1000 | Accs: [71.87]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [58.13] top5s: [85.63] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 74 2019-11-20 19:41:06
+11-20 19:41:06 Epoch 74: 0/782 Loss_ai: [0.14, 0.13] Loss_soft: [1.001] Loss: 1.270 | Lr: 0.1000 | Accs: [74.22]
+11-20 19:41:09 Epoch 74: 100/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.927] Loss: 1.154 | Lr: 0.1000 | Accs: [72.34]
+11-20 19:41:12 Epoch 74: 200/782 Loss_ai: [0.16, 0.16] Loss_soft: [1.048] Loss: 1.370 | Lr: 0.1000 | Accs: [72.01]
+11-20 19:41:15 Epoch 74: 300/782 Loss_ai: [0.11, 0.12] Loss_soft: [1.01] Loss: 1.240 | Lr: 0.1000 | Accs: [71.88]
+11-20 19:41:18 Epoch 74: 400/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.175] Loss: 1.435 | Lr: 0.1000 | Accs: [71.88]
+11-20 19:41:21 Epoch 74: 500/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.959] Loss: 1.231 | Lr: 0.1000 | Accs: [71.54]
+11-20 19:41:24 Epoch 74: 600/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.852] Loss: 1.073 | Lr: 0.1000 | Accs: [71.74]
+11-20 19:41:27 Epoch 74: 700/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.796] Loss: 1.052 | Lr: 0.1000 | Accs: [71.8]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [58.82] top5s: [86.15] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 75 2019-11-20 19:41:31
+11-20 19:41:31 Epoch 75: 0/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.913] Loss: 1.138 | Lr: 0.1000 | Accs: [74.22]
+11-20 19:41:34 Epoch 75: 100/782 Loss_ai: [0.13, 0.12] Loss_soft: [1.095] Loss: 1.349 | Lr: 0.1000 | Accs: [70.99]
+11-20 19:41:37 Epoch 75: 200/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.923] Loss: 1.231 | Lr: 0.1000 | Accs: [71.51]
+11-20 19:41:40 Epoch 75: 300/782 Loss_ai: [0.12, 0.14] Loss_soft: [0.926] Loss: 1.185 | Lr: 0.1000 | Accs: [71.78]
+11-20 19:41:43 Epoch 75: 400/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.953] Loss: 1.205 | Lr: 0.1000 | Accs: [71.97]
+11-20 19:41:46 Epoch 75: 500/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.83] Loss: 1.123 | Lr: 0.1000 | Accs: [72.1]
+11-20 19:41:49 Epoch 75: 600/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.932] Loss: 1.244 | Lr: 0.1000 | Accs: [72.06]
+11-20 19:41:52 Epoch 75: 700/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.136] Loss: 1.399 | Lr: 0.1000 | Accs: [72.18]
+Test: best_accs: [61.49] best_epoches: [57] top1s: [60.92] top5s: [87.5] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 76 2019-11-20 19:41:55
+11-20 19:41:56 Epoch 76: 0/782 Loss_ai: [0.15, 0.13] Loss_soft: [0.965] Loss: 1.246 | Lr: 0.1000 | Accs: [72.66]
+11-20 19:41:59 Epoch 76: 100/782 Loss_ai: [0.13, 0.15] Loss_soft: [0.858] Loss: 1.140 | Lr: 0.1000 | Accs: [72.77]
+11-20 19:42:02 Epoch 76: 200/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.985] Loss: 1.288 | Lr: 0.1000 | Accs: [73.17]
+11-20 19:42:05 Epoch 76: 300/782 Loss_ai: [0.15, 0.14] Loss_soft: [0.938] Loss: 1.228 | Lr: 0.1000 | Accs: [72.92]
+11-20 19:42:08 Epoch 76: 400/782 Loss_ai: [0.1, 0.12] Loss_soft: [1.046] Loss: 1.272 | Lr: 0.1000 | Accs: [72.5]
+11-20 19:42:11 Epoch 76: 500/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.243] Loss: 1.547 | Lr: 0.1000 | Accs: [72.33]
+11-20 19:42:14 Epoch 76: 600/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.877] Loss: 1.087 | Lr: 0.1000 | Accs: [72.2]
+11-20 19:42:17 Epoch 76: 700/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.969] Loss: 1.197 | Lr: 0.1000 | Accs: [72.21]
+Test: best_accs: [62.06] best_epoches: [76] top1s: [62.06] top5s: [87.98] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 77 2019-11-20 19:42:20
+11-20 19:42:21 Epoch 77: 0/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.822] Loss: 1.137 | Lr: 0.1000 | Accs: [75.78]
+11-20 19:42:24 Epoch 77: 100/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.788] Loss: 1.034 | Lr: 0.1000 | Accs: [71.61]
+11-20 19:42:27 Epoch 77: 200/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.884] Loss: 1.147 | Lr: 0.1000 | Accs: [71.51]
+11-20 19:42:30 Epoch 77: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.871] Loss: 1.109 | Lr: 0.1000 | Accs: [71.79]
+11-20 19:42:33 Epoch 77: 400/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.982] Loss: 1.213 | Lr: 0.1000 | Accs: [71.62]
+11-20 19:42:36 Epoch 77: 500/782 Loss_ai: [0.14, 0.15] Loss_soft: [0.811] Loss: 1.104 | Lr: 0.1000 | Accs: [71.61]
+11-20 19:42:39 Epoch 77: 600/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.796] Loss: 1.011 | Lr: 0.1000 | Accs: [71.66]
+11-20 19:42:42 Epoch 77: 700/782 Loss_ai: [0.13, 0.11] Loss_soft: [1.084] Loss: 1.326 | Lr: 0.1000 | Accs: [71.67]
+Test: best_accs: [62.06] best_epoches: [76] top1s: [61.38] top5s: [88.1] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 78 2019-11-20 19:42:45
+11-20 19:42:45 Epoch 78: 0/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.925] Loss: 1.191 | Lr: 0.1000 | Accs: [66.41]
+11-20 19:42:48 Epoch 78: 100/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.725] Loss: 0.931 | Lr: 0.1000 | Accs: [72.97]
+11-20 19:42:51 Epoch 78: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [1.154] Loss: 1.403 | Lr: 0.1000 | Accs: [72.27]
+11-20 19:42:54 Epoch 78: 300/782 Loss_ai: [0.15, 0.15] Loss_soft: [1.198] Loss: 1.492 | Lr: 0.1000 | Accs: [71.93]
+11-20 19:42:57 Epoch 78: 400/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.928] Loss: 1.137 | Lr: 0.1000 | Accs: [71.72]
+11-20 19:43:00 Epoch 78: 500/782 Loss_ai: [0.13, 0.13] Loss_soft: [1.062] Loss: 1.315 | Lr: 0.1000 | Accs: [71.83]
+11-20 19:43:03 Epoch 78: 600/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.942] Loss: 1.193 | Lr: 0.1000 | Accs: [71.76]
+11-20 19:43:06 Epoch 78: 700/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.769] Loss: 0.978 | Lr: 0.1000 | Accs: [71.59]
+Test: best_accs: [63.16] best_epoches: [78] top1s: [63.16] top5s: [89.05] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 79 2019-11-20 19:43:10
+11-20 19:43:10 Epoch 79: 0/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.998] Loss: 1.247 | Lr: 0.0100 | Accs: [69.53]
+11-20 19:43:13 Epoch 79: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.795] Loss: 0.993 | Lr: 0.0100 | Accs: [77.59]
+11-20 19:43:16 Epoch 79: 200/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.694] Loss: 0.884 | Lr: 0.0100 | Accs: [78.79]
+11-20 19:43:19 Epoch 79: 300/782 Loss_ai: [0.1, 0.08] Loss_soft: [0.62] Loss: 0.805 | Lr: 0.0100 | Accs: [79.32]
+11-20 19:43:22 Epoch 79: 400/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.783] Loss: 0.974 | Lr: 0.0100 | Accs: [79.93]
+11-20 19:43:25 Epoch 79: 500/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.68] Loss: 0.950 | Lr: 0.0100 | Accs: [80.32]
+11-20 19:43:28 Epoch 79: 600/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.652] Loss: 0.821 | Lr: 0.0100 | Accs: [80.61]
+11-20 19:43:31 Epoch 79: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.63] Loss: 0.806 | Lr: 0.0100 | Accs: [80.84]
+Test: best_accs: [71.2] best_epoches: [79] top1s: [71.2] top5s: [92.61] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 80 2019-11-20 19:43:35
+11-20 19:43:35 Epoch 80: 0/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.514] Loss: 0.742 | Lr: 0.0100 | Accs: [87.5]
+11-20 19:43:38 Epoch 80: 100/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.583] Loss: 0.757 | Lr: 0.0100 | Accs: [82.78]
+11-20 19:43:41 Epoch 80: 200/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.573] Loss: 0.731 | Lr: 0.0100 | Accs: [82.9]
+11-20 19:43:44 Epoch 80: 300/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.551] Loss: 0.756 | Lr: 0.0100 | Accs: [82.93]
+11-20 19:43:47 Epoch 80: 400/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.522] Loss: 0.709 | Lr: 0.0100 | Accs: [83.09]
+11-20 19:43:50 Epoch 80: 500/782 Loss_ai: [0.1, 0.13] Loss_soft: [0.539] Loss: 0.766 | Lr: 0.0100 | Accs: [83.08]
+11-20 19:43:53 Epoch 80: 600/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.586] Loss: 0.817 | Lr: 0.0100 | Accs: [83.22]
+11-20 19:43:56 Epoch 80: 700/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.782] Loss: 1.038 | Lr: 0.0100 | Accs: [83.45]
+Test: best_accs: [71.2] best_epoches: [79] top1s: [71.11] top5s: [92.62] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 81 2019-11-20 19:43:59
+11-20 19:44:00 Epoch 81: 0/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.626] Loss: 0.853 | Lr: 0.0100 | Accs: [82.81]
+11-20 19:44:03 Epoch 81: 100/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.669] Loss: 0.911 | Lr: 0.0100 | Accs: [84.44]
+11-20 19:44:06 Epoch 81: 200/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.698] Loss: 0.883 | Lr: 0.0100 | Accs: [84.48]
+11-20 19:44:09 Epoch 81: 300/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.642] Loss: 0.901 | Lr: 0.0100 | Accs: [84.34]
+11-20 19:44:12 Epoch 81: 400/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.415] Loss: 0.586 | Lr: 0.0100 | Accs: [84.42]
+11-20 19:44:15 Epoch 81: 500/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.533] Loss: 0.674 | Lr: 0.0100 | Accs: [84.54]
+11-20 19:44:18 Epoch 81: 600/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.407] Loss: 0.603 | Lr: 0.0100 | Accs: [84.56]
+11-20 19:44:21 Epoch 81: 700/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.497] Loss: 0.667 | Lr: 0.0100 | Accs: [84.56]
+Test: best_accs: [71.25] best_epoches: [81] top1s: [71.25] top5s: [92.57] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 82 2019-11-20 19:44:24
+11-20 19:44:25 Epoch 82: 0/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.638] Loss: 0.789 | Lr: 0.0100 | Accs: [79.69]
+11-20 19:44:28 Epoch 82: 100/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.524] Loss: 0.795 | Lr: 0.0100 | Accs: [85.29]
+11-20 19:44:31 Epoch 82: 200/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.321] Loss: 0.460 | Lr: 0.0100 | Accs: [85.52]
+11-20 19:44:34 Epoch 82: 300/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.609] Loss: 0.874 | Lr: 0.0100 | Accs: [85.18]
+11-20 19:44:37 Epoch 82: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.556] Loss: 0.752 | Lr: 0.0100 | Accs: [85.05]
+11-20 19:44:40 Epoch 82: 500/782 Loss_ai: [0.13, 0.1] Loss_soft: [0.416] Loss: 0.650 | Lr: 0.0100 | Accs: [85.09]
+11-20 19:44:43 Epoch 82: 600/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.554] Loss: 0.750 | Lr: 0.0100 | Accs: [85.02]
+11-20 19:44:46 Epoch 82: 700/782 Loss_ai: [0.15, 0.19] Loss_soft: [0.44] Loss: 0.779 | Lr: 0.0100 | Accs: [85.04]
+Test: best_accs: [71.29] best_epoches: [82] top1s: [71.29] top5s: [92.63] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 83 2019-11-20 19:44:49
+11-20 19:44:50 Epoch 83: 0/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.347] Loss: 0.513 | Lr: 0.0100 | Accs: [89.84]
+11-20 19:44:53 Epoch 83: 100/782 Loss_ai: [0.12, 0.14] Loss_soft: [0.629] Loss: 0.882 | Lr: 0.0100 | Accs: [85.68]
+11-20 19:44:56 Epoch 83: 200/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.521] Loss: 0.718 | Lr: 0.0100 | Accs: [86.09]
+11-20 19:44:59 Epoch 83: 300/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.384] Loss: 0.539 | Lr: 0.0100 | Accs: [85.75]
+11-20 19:45:02 Epoch 83: 400/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.489] Loss: 0.661 | Lr: 0.0100 | Accs: [85.69]
+11-20 19:45:05 Epoch 83: 500/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.565] Loss: 0.788 | Lr: 0.0100 | Accs: [85.84]
+11-20 19:45:08 Epoch 83: 600/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.653] Loss: 0.798 | Lr: 0.0100 | Accs: [85.84]
+11-20 19:45:11 Epoch 83: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.29] Loss: 0.470 | Lr: 0.0100 | Accs: [85.81]
+Test: best_accs: [71.8] best_epoches: [83] top1s: [71.8] top5s: [93.01] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 84 2019-11-20 19:45:14
+11-20 19:45:14 Epoch 84: 0/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.478] Loss: 0.676 | Lr: 0.0100 | Accs: [86.72]
+11-20 19:45:17 Epoch 84: 100/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.538] Loss: 0.734 | Lr: 0.0100 | Accs: [86.3]
+11-20 19:45:20 Epoch 84: 200/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.575] Loss: 0.745 | Lr: 0.0100 | Accs: [86.0]
+11-20 19:45:23 Epoch 84: 300/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.611] Loss: 0.834 | Lr: 0.0100 | Accs: [85.97]
+11-20 19:45:26 Epoch 84: 400/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.449] Loss: 0.605 | Lr: 0.0100 | Accs: [86.02]
+11-20 19:45:30 Epoch 84: 500/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.651] Loss: 0.792 | Lr: 0.0100 | Accs: [86.06]
+11-20 19:45:32 Epoch 84: 600/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.279] Loss: 0.411 | Lr: 0.0100 | Accs: [86.15]
+11-20 19:45:36 Epoch 84: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.529] Loss: 0.730 | Lr: 0.0100 | Accs: [86.1]
+Test: best_accs: [71.8] best_epoches: [83] top1s: [71.73] top5s: [92.91] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 85 2019-11-20 19:45:39
+11-20 19:45:39 Epoch 85: 0/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.489] Loss: 0.706 | Lr: 0.0100 | Accs: [85.94]
+11-20 19:45:42 Epoch 85: 100/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.528] Loss: 0.662 | Lr: 0.0100 | Accs: [86.98]
+11-20 19:45:45 Epoch 85: 200/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.364] Loss: 0.510 | Lr: 0.0100 | Accs: [86.97]
+11-20 19:45:48 Epoch 85: 300/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.538] Loss: 0.730 | Lr: 0.0100 | Accs: [86.79]
+11-20 19:45:51 Epoch 85: 400/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.392] Loss: 0.583 | Lr: 0.0100 | Accs: [86.67]
+11-20 19:45:54 Epoch 85: 500/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.414] Loss: 0.563 | Lr: 0.0100 | Accs: [86.65]
+11-20 19:45:57 Epoch 85: 600/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.411] Loss: 0.618 | Lr: 0.0100 | Accs: [86.65]
+11-20 19:46:00 Epoch 85: 700/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.37] Loss: 0.533 | Lr: 0.0100 | Accs: [86.74]
+Test: best_accs: [71.8] best_epoches: [83] top1s: [71.26] top5s: [92.82] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 86 2019-11-20 19:46:04
+11-20 19:46:04 Epoch 86: 0/782 Loss_ai: [0.08, 0.1] Loss_soft: [0.436] Loss: 0.615 | Lr: 0.0100 | Accs: [90.62]
+11-20 19:46:07 Epoch 86: 100/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.574] Loss: 0.795 | Lr: 0.0100 | Accs: [87.21]
+11-20 19:46:10 Epoch 86: 200/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.435] Loss: 0.720 | Lr: 0.0100 | Accs: [87.08]
+11-20 19:46:13 Epoch 86: 300/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.603] Loss: 0.902 | Lr: 0.0100 | Accs: [86.99]
+11-20 19:46:16 Epoch 86: 400/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.738] Loss: 0.980 | Lr: 0.0100 | Accs: [86.91]
+11-20 19:46:19 Epoch 86: 500/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.502] Loss: 0.693 | Lr: 0.0100 | Accs: [86.9]
+11-20 19:46:22 Epoch 86: 600/782 Loss_ai: [0.15, 0.16] Loss_soft: [0.587] Loss: 0.892 | Lr: 0.0100 | Accs: [86.81]
+11-20 19:46:25 Epoch 86: 700/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.426] Loss: 0.586 | Lr: 0.0100 | Accs: [86.86]
+Test: best_accs: [71.8] best_epoches: [83] top1s: [71.73] top5s: [92.83] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 87 2019-11-20 19:46:29
+11-20 19:46:29 Epoch 87: 0/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.335] Loss: 0.455 | Lr: 0.0100 | Accs: [88.28]
+11-20 19:46:32 Epoch 87: 100/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.443] Loss: 0.596 | Lr: 0.0100 | Accs: [87.64]
+11-20 19:46:35 Epoch 87: 200/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.371] Loss: 0.565 | Lr: 0.0100 | Accs: [87.38]
+11-20 19:46:38 Epoch 87: 300/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.308] Loss: 0.512 | Lr: 0.0100 | Accs: [87.52]
+11-20 19:46:41 Epoch 87: 400/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.435] Loss: 0.628 | Lr: 0.0100 | Accs: [87.49]
+11-20 19:46:44 Epoch 87: 500/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.486] Loss: 0.688 | Lr: 0.0100 | Accs: [87.42]
+11-20 19:46:47 Epoch 87: 600/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.656] Loss: 0.877 | Lr: 0.0100 | Accs: [87.49]
+11-20 19:46:50 Epoch 87: 700/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.463] Loss: 0.649 | Lr: 0.0100 | Accs: [87.47]
+Test: best_accs: [71.8] best_epoches: [83] top1s: [71.79] top5s: [92.56] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 88 2019-11-20 19:46:54
+11-20 19:46:54 Epoch 88: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.527] Loss: 0.765 | Lr: 0.0100 | Accs: [86.72]
+11-20 19:46:57 Epoch 88: 100/782 Loss_ai: [0.15, 0.12] Loss_soft: [0.427] Loss: 0.696 | Lr: 0.0100 | Accs: [88.19]
+11-20 19:47:00 Epoch 88: 200/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.461] Loss: 0.726 | Lr: 0.0100 | Accs: [88.26]
+11-20 19:47:03 Epoch 88: 300/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.405] Loss: 0.560 | Lr: 0.0100 | Accs: [87.95]
+11-20 19:47:06 Epoch 88: 400/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.406] Loss: 0.623 | Lr: 0.0100 | Accs: [87.81]
+11-20 19:47:09 Epoch 88: 500/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.263] Loss: 0.404 | Lr: 0.0100 | Accs: [87.67]
+11-20 19:47:12 Epoch 88: 600/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.607] Loss: 0.786 | Lr: 0.0100 | Accs: [87.69]
+11-20 19:47:15 Epoch 88: 700/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.446] Loss: 0.598 | Lr: 0.0100 | Accs: [87.69]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [72.02] top5s: [92.94] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 89 2019-11-20 19:47:19
+11-20 19:47:19 Epoch 89: 0/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.376] Loss: 0.521 | Lr: 0.0100 | Accs: [89.06]
+11-20 19:47:22 Epoch 89: 100/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.513] Loss: 0.703 | Lr: 0.0100 | Accs: [87.98]
+11-20 19:47:25 Epoch 89: 200/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.388] Loss: 0.612 | Lr: 0.0100 | Accs: [87.72]
+11-20 19:47:28 Epoch 89: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.539] Loss: 0.785 | Lr: 0.0100 | Accs: [87.71]
+11-20 19:47:31 Epoch 89: 400/782 Loss_ai: [0.06, 0.08] Loss_soft: [0.369] Loss: 0.508 | Lr: 0.0100 | Accs: [87.85]
+11-20 19:47:34 Epoch 89: 500/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.471] Loss: 0.641 | Lr: 0.0100 | Accs: [87.84]
+11-20 19:47:37 Epoch 89: 600/782 Loss_ai: [0.07, 0.09] Loss_soft: [0.368] Loss: 0.528 | Lr: 0.0100 | Accs: [87.89]
+11-20 19:47:40 Epoch 89: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.464] Loss: 0.664 | Lr: 0.0100 | Accs: [87.88]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.36] top5s: [92.61] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 90 2019-11-20 19:47:43
+11-20 19:47:43 Epoch 90: 0/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.474] Loss: 0.690 | Lr: 0.0100 | Accs: [89.84]
+11-20 19:47:46 Epoch 90: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.487] Loss: 0.670 | Lr: 0.0100 | Accs: [88.54]
+11-20 19:47:49 Epoch 90: 200/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.312] Loss: 0.523 | Lr: 0.0100 | Accs: [88.37]
+11-20 19:47:53 Epoch 90: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.517] Loss: 0.758 | Lr: 0.0100 | Accs: [88.31]
+11-20 19:47:55 Epoch 90: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.383] Loss: 0.583 | Lr: 0.0100 | Accs: [88.3]
+11-20 19:47:58 Epoch 90: 500/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.478] Loss: 0.660 | Lr: 0.0100 | Accs: [88.18]
+11-20 19:48:01 Epoch 90: 600/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.426] Loss: 0.589 | Lr: 0.0100 | Accs: [88.25]
+11-20 19:48:05 Epoch 90: 700/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.331] Loss: 0.581 | Lr: 0.0100 | Accs: [88.23]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.62] top5s: [92.75] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 91 2019-11-20 19:48:08
+11-20 19:48:08 Epoch 91: 0/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.377] Loss: 0.581 | Lr: 0.0100 | Accs: [89.84]
+11-20 19:48:11 Epoch 91: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.375] Loss: 0.576 | Lr: 0.0100 | Accs: [88.62]
+11-20 19:48:14 Epoch 91: 200/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.438] Loss: 0.655 | Lr: 0.0100 | Accs: [88.69]
+11-20 19:48:17 Epoch 91: 300/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.424] Loss: 0.675 | Lr: 0.0100 | Accs: [88.62]
+11-20 19:48:20 Epoch 91: 400/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.437] Loss: 0.651 | Lr: 0.0100 | Accs: [88.57]
+11-20 19:48:23 Epoch 91: 500/782 Loss_ai: [0.1, 0.08] Loss_soft: [0.415] Loss: 0.599 | Lr: 0.0100 | Accs: [88.42]
+11-20 19:48:26 Epoch 91: 600/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.463] Loss: 0.659 | Lr: 0.0100 | Accs: [88.29]
+11-20 19:48:29 Epoch 91: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.359] Loss: 0.538 | Lr: 0.0100 | Accs: [88.24]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.3] top5s: [92.68] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 92 2019-11-20 19:48:33
+11-20 19:48:33 Epoch 92: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.392] Loss: 0.598 | Lr: 0.0100 | Accs: [89.84]
+11-20 19:48:36 Epoch 92: 100/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.433] Loss: 0.656 | Lr: 0.0100 | Accs: [88.99]
+11-20 19:48:39 Epoch 92: 200/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.434] Loss: 0.661 | Lr: 0.0100 | Accs: [89.21]
+11-20 19:48:42 Epoch 92: 300/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.468] Loss: 0.620 | Lr: 0.0100 | Accs: [88.95]
+11-20 19:48:45 Epoch 92: 400/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.37] Loss: 0.630 | Lr: 0.0100 | Accs: [88.69]
+11-20 19:48:48 Epoch 92: 500/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.38] Loss: 0.573 | Lr: 0.0100 | Accs: [88.71]
+11-20 19:48:51 Epoch 92: 600/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.575] Loss: 0.803 | Lr: 0.0100 | Accs: [88.72]
+11-20 19:48:54 Epoch 92: 700/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.41] Loss: 0.592 | Lr: 0.0100 | Accs: [88.67]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.19] top5s: [92.71] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 93 2019-11-20 19:48:58
+11-20 19:48:58 Epoch 93: 0/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.303] Loss: 0.485 | Lr: 0.0100 | Accs: [92.97]
+11-20 19:49:01 Epoch 93: 100/782 Loss_ai: [0.1, 0.08] Loss_soft: [0.336] Loss: 0.518 | Lr: 0.0100 | Accs: [89.08]
+11-20 19:49:04 Epoch 93: 200/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.461] Loss: 0.715 | Lr: 0.0100 | Accs: [89.01]
+11-20 19:49:07 Epoch 93: 300/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.519] Loss: 0.722 | Lr: 0.0100 | Accs: [88.81]
+11-20 19:49:10 Epoch 93: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.374] Loss: 0.583 | Lr: 0.0100 | Accs: [88.9]
+11-20 19:49:13 Epoch 93: 500/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.273] Loss: 0.420 | Lr: 0.0100 | Accs: [88.79]
+11-20 19:49:16 Epoch 93: 600/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.484] Loss: 0.708 | Lr: 0.0100 | Accs: [88.87]
+11-20 19:49:19 Epoch 93: 700/782 Loss_ai: [0.17, 0.19] Loss_soft: [0.804] Loss: 1.164 | Lr: 0.0100 | Accs: [88.89]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.29] top5s: [92.76] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 94 2019-11-20 19:49:23
+11-20 19:49:23 Epoch 94: 0/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.457] Loss: 0.670 | Lr: 0.0100 | Accs: [87.5]
+11-20 19:49:26 Epoch 94: 100/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.532] Loss: 0.771 | Lr: 0.0100 | Accs: [89.63]
+11-20 19:49:29 Epoch 94: 200/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.458] Loss: 0.690 | Lr: 0.0100 | Accs: [89.23]
+11-20 19:49:32 Epoch 94: 300/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.37] Loss: 0.558 | Lr: 0.0100 | Accs: [89.07]
+11-20 19:49:35 Epoch 94: 400/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.291] Loss: 0.476 | Lr: 0.0100 | Accs: [89.05]
+11-20 19:49:38 Epoch 94: 500/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.326] Loss: 0.545 | Lr: 0.0100 | Accs: [89.05]
+11-20 19:49:41 Epoch 94: 600/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.423] Loss: 0.687 | Lr: 0.0100 | Accs: [88.94]
+11-20 19:49:44 Epoch 94: 700/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.47] Loss: 0.713 | Lr: 0.0100 | Accs: [88.84]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.05] top5s: [92.61] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 95 2019-11-20 19:49:48
+11-20 19:49:48 Epoch 95: 0/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.43] Loss: 0.657 | Lr: 0.0100 | Accs: [85.94]
+11-20 19:49:51 Epoch 95: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.47] Loss: 0.670 | Lr: 0.0100 | Accs: [89.31]
+11-20 19:49:54 Epoch 95: 200/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.36] Loss: 0.657 | Lr: 0.0100 | Accs: [89.35]
+11-20 19:49:57 Epoch 95: 300/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.33] Loss: 0.541 | Lr: 0.0100 | Accs: [89.29]
+11-20 19:50:00 Epoch 95: 400/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.436] Loss: 0.646 | Lr: 0.0100 | Accs: [89.21]
+11-20 19:50:03 Epoch 95: 500/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.57] Loss: 0.760 | Lr: 0.0100 | Accs: [89.16]
+11-20 19:50:06 Epoch 95: 600/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.548] Loss: 0.795 | Lr: 0.0100 | Accs: [89.1]
+11-20 19:50:09 Epoch 95: 700/782 Loss_ai: [0.05, 0.05] Loss_soft: [0.227] Loss: 0.331 | Lr: 0.0100 | Accs: [89.18]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.05] top5s: [92.29] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 96 2019-11-20 19:50:13
+11-20 19:50:13 Epoch 96: 0/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.38] Loss: 0.587 | Lr: 0.0100 | Accs: [93.75]
+11-20 19:50:16 Epoch 96: 100/782 Loss_ai: [0.08, 0.06] Loss_soft: [0.242] Loss: 0.386 | Lr: 0.0100 | Accs: [89.66]
+11-20 19:50:19 Epoch 96: 200/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.445] Loss: 0.661 | Lr: 0.0100 | Accs: [89.47]
+11-20 19:50:22 Epoch 96: 300/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.501] Loss: 0.709 | Lr: 0.0100 | Accs: [89.31]
+11-20 19:50:25 Epoch 96: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.381] Loss: 0.606 | Lr: 0.0100 | Accs: [89.33]
+11-20 19:50:28 Epoch 96: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.42] Loss: 0.658 | Lr: 0.0100 | Accs: [89.41]
+11-20 19:50:31 Epoch 96: 600/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.343] Loss: 0.574 | Lr: 0.0100 | Accs: [89.37]
+11-20 19:50:34 Epoch 96: 700/782 Loss_ai: [0.14, 0.11] Loss_soft: [0.334] Loss: 0.585 | Lr: 0.0100 | Accs: [89.3]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.0] top5s: [92.75] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 97 2019-11-20 19:50:38
+11-20 19:50:38 Epoch 97: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.299] Loss: 0.499 | Lr: 0.0100 | Accs: [90.62]
+11-20 19:50:41 Epoch 97: 100/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.388] Loss: 0.548 | Lr: 0.0100 | Accs: [89.29]
+11-20 19:50:44 Epoch 97: 200/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.341] Loss: 0.553 | Lr: 0.0100 | Accs: [89.62]
+11-20 19:50:47 Epoch 97: 300/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.25] Loss: 0.403 | Lr: 0.0100 | Accs: [89.56]
+11-20 19:50:50 Epoch 97: 400/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.514] Loss: 0.741 | Lr: 0.0100 | Accs: [89.39]
+11-20 19:50:53 Epoch 97: 500/782 Loss_ai: [0.13, 0.16] Loss_soft: [0.379] Loss: 0.677 | Lr: 0.0100 | Accs: [89.23]
+11-20 19:50:56 Epoch 97: 600/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.453] Loss: 0.650 | Lr: 0.0100 | Accs: [89.36]
+11-20 19:50:59 Epoch 97: 700/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.38] Loss: 0.599 | Lr: 0.0100 | Accs: [89.31]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.38] top5s: [92.52] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 98 2019-11-20 19:51:02
+11-20 19:51:03 Epoch 98: 0/782 Loss_ai: [0.16, 0.16] Loss_soft: [0.378] Loss: 0.696 | Lr: 0.0100 | Accs: [92.19]
+11-20 19:51:06 Epoch 98: 100/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.442] Loss: 0.698 | Lr: 0.0100 | Accs: [90.2]
+11-20 19:51:09 Epoch 98: 200/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.433] Loss: 0.638 | Lr: 0.0100 | Accs: [89.86]
+11-20 19:51:12 Epoch 98: 300/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.397] Loss: 0.587 | Lr: 0.0100 | Accs: [89.91]
+11-20 19:51:15 Epoch 98: 400/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.257] Loss: 0.380 | Lr: 0.0100 | Accs: [89.86]
+11-20 19:51:18 Epoch 98: 500/782 Loss_ai: [0.14, 0.11] Loss_soft: [0.324] Loss: 0.578 | Lr: 0.0100 | Accs: [89.8]
+11-20 19:51:21 Epoch 98: 600/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.336] Loss: 0.486 | Lr: 0.0100 | Accs: [89.8]
+11-20 19:51:24 Epoch 98: 700/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.506] Loss: 0.691 | Lr: 0.0100 | Accs: [89.78]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.06] top5s: [92.62] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 99 2019-11-20 19:51:27
+11-20 19:51:28 Epoch 99: 0/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.283] Loss: 0.452 | Lr: 0.0100 | Accs: [92.19]
+11-20 19:51:30 Epoch 99: 100/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.328] Loss: 0.536 | Lr: 0.0100 | Accs: [90.06]
+11-20 19:51:33 Epoch 99: 200/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.447] Loss: 0.638 | Lr: 0.0100 | Accs: [90.09]
+11-20 19:51:36 Epoch 99: 300/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.256] Loss: 0.425 | Lr: 0.0100 | Accs: [89.82]
+11-20 19:51:39 Epoch 99: 400/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.445] Loss: 0.678 | Lr: 0.0100 | Accs: [89.69]
+11-20 19:51:42 Epoch 99: 500/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.379] Loss: 0.545 | Lr: 0.0100 | Accs: [89.73]
+11-20 19:51:46 Epoch 99: 600/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.497] Loss: 0.794 | Lr: 0.0100 | Accs: [89.69]
+11-20 19:51:49 Epoch 99: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.398] Loss: 0.592 | Lr: 0.0100 | Accs: [89.7]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.22] top5s: [92.49] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 100 2019-11-20 19:51:52
+11-20 19:51:52 Epoch 100: 0/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.337] Loss: 0.516 | Lr: 0.0100 | Accs: [92.97]
+11-20 19:51:55 Epoch 100: 100/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.274] Loss: 0.490 | Lr: 0.0100 | Accs: [90.36]
+11-20 19:51:58 Epoch 100: 200/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.286] Loss: 0.403 | Lr: 0.0100 | Accs: [90.38]
+11-20 19:52:01 Epoch 100: 300/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.402] Loss: 0.655 | Lr: 0.0100 | Accs: [90.43]
+11-20 19:52:04 Epoch 100: 400/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.377] Loss: 0.615 | Lr: 0.0100 | Accs: [90.14]
+11-20 19:52:07 Epoch 100: 500/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.281] Loss: 0.436 | Lr: 0.0100 | Accs: [90.04]
+11-20 19:52:10 Epoch 100: 600/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.388] Loss: 0.558 | Lr: 0.0100 | Accs: [90.03]
+11-20 19:52:13 Epoch 100: 700/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.391] Loss: 0.651 | Lr: 0.0100 | Accs: [89.91]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.4] top5s: [92.44] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 101 2019-11-20 19:52:17
+11-20 19:52:17 Epoch 101: 0/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.374] Loss: 0.598 | Lr: 0.0100 | Accs: [91.41]
+11-20 19:52:20 Epoch 101: 100/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.273] Loss: 0.450 | Lr: 0.0100 | Accs: [90.96]
+11-20 19:52:23 Epoch 101: 200/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.437] Loss: 0.586 | Lr: 0.0100 | Accs: [90.71]
+11-20 19:52:26 Epoch 101: 300/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.466] Loss: 0.715 | Lr: 0.0100 | Accs: [90.26]
+11-20 19:52:29 Epoch 101: 400/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.36] Loss: 0.576 | Lr: 0.0100 | Accs: [90.36]
+11-20 19:52:32 Epoch 101: 500/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.377] Loss: 0.584 | Lr: 0.0100 | Accs: [90.27]
+11-20 19:52:35 Epoch 101: 600/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.324] Loss: 0.461 | Lr: 0.0100 | Accs: [90.17]
+11-20 19:52:38 Epoch 101: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.287] Loss: 0.471 | Lr: 0.0100 | Accs: [90.13]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.02] top5s: [92.62] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 102 2019-11-20 19:52:42
+11-20 19:52:42 Epoch 102: 0/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.351] Loss: 0.546 | Lr: 0.0100 | Accs: [94.53]
+11-20 19:52:45 Epoch 102: 100/782 Loss_ai: [0.17, 0.17] Loss_soft: [0.396] Loss: 0.737 | Lr: 0.0100 | Accs: [90.22]
+11-20 19:52:48 Epoch 102: 200/782 Loss_ai: [0.11, 0.08] Loss_soft: [0.238] Loss: 0.437 | Lr: 0.0100 | Accs: [90.28]
+11-20 19:52:51 Epoch 102: 300/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.177] Loss: 0.291 | Lr: 0.0100 | Accs: [90.23]
+11-20 19:52:54 Epoch 102: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.385] Loss: 0.585 | Lr: 0.0100 | Accs: [90.33]
+11-20 19:52:57 Epoch 102: 500/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.297] Loss: 0.432 | Lr: 0.0100 | Accs: [90.18]
+11-20 19:53:00 Epoch 102: 600/782 Loss_ai: [0.15, 0.14] Loss_soft: [0.368] Loss: 0.653 | Lr: 0.0100 | Accs: [90.19]
+11-20 19:53:03 Epoch 102: 700/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.333] Loss: 0.537 | Lr: 0.0100 | Accs: [90.16]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.74] top5s: [92.58] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 103 2019-11-20 19:53:06
+11-20 19:53:07 Epoch 103: 0/782 Loss_ai: [0.17, 0.16] Loss_soft: [0.479] Loss: 0.808 | Lr: 0.0100 | Accs: [85.16]
+11-20 19:53:10 Epoch 103: 100/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.269] Loss: 0.455 | Lr: 0.0100 | Accs: [90.66]
+11-20 19:53:13 Epoch 103: 200/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.312] Loss: 0.513 | Lr: 0.0100 | Accs: [90.58]
+11-20 19:53:16 Epoch 103: 300/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.338] Loss: 0.529 | Lr: 0.0100 | Accs: [90.42]
+11-20 19:53:19 Epoch 103: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.357] Loss: 0.557 | Lr: 0.0100 | Accs: [90.47]
+11-20 19:53:22 Epoch 103: 500/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.42] Loss: 0.681 | Lr: 0.0100 | Accs: [90.48]
+11-20 19:53:25 Epoch 103: 600/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.421] Loss: 0.629 | Lr: 0.0100 | Accs: [90.43]
+11-20 19:53:28 Epoch 103: 700/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.292] Loss: 0.506 | Lr: 0.0100 | Accs: [90.32]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.22] top5s: [92.49] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 104 2019-11-20 19:53:31
+11-20 19:53:32 Epoch 104: 0/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.318] Loss: 0.563 | Lr: 0.0100 | Accs: [90.62]
+11-20 19:53:35 Epoch 104: 100/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.379] Loss: 0.532 | Lr: 0.0100 | Accs: [91.05]
+11-20 19:53:38 Epoch 104: 200/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.411] Loss: 0.638 | Lr: 0.0100 | Accs: [90.72]
+11-20 19:53:41 Epoch 104: 300/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.301] Loss: 0.513 | Lr: 0.0100 | Accs: [90.87]
+11-20 19:53:44 Epoch 104: 400/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.289] Loss: 0.475 | Lr: 0.0100 | Accs: [90.89]
+11-20 19:53:47 Epoch 104: 500/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.249] Loss: 0.455 | Lr: 0.0100 | Accs: [90.68]
+11-20 19:53:50 Epoch 104: 600/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.356] Loss: 0.606 | Lr: 0.0100 | Accs: [90.57]
+11-20 19:53:53 Epoch 104: 700/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.513] Loss: 0.749 | Lr: 0.0100 | Accs: [90.56]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.97] top5s: [92.51] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 105 2019-11-20 19:53:56
+11-20 19:53:56 Epoch 105: 0/782 Loss_ai: [0.06, 0.07] Loss_soft: [0.24] Loss: 0.376 | Lr: 0.0100 | Accs: [95.31]
+11-20 19:53:59 Epoch 105: 100/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.412] Loss: 0.657 | Lr: 0.0100 | Accs: [90.77]
+11-20 19:54:02 Epoch 105: 200/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.249] Loss: 0.408 | Lr: 0.0100 | Accs: [90.69]
+11-20 19:54:05 Epoch 105: 300/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.441] Loss: 0.753 | Lr: 0.0100 | Accs: [90.5]
+11-20 19:54:08 Epoch 105: 400/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.256] Loss: 0.471 | Lr: 0.0100 | Accs: [90.57]
+11-20 19:54:11 Epoch 105: 500/782 Loss_ai: [0.13, 0.14] Loss_soft: [0.337] Loss: 0.609 | Lr: 0.0100 | Accs: [90.61]
+11-20 19:54:15 Epoch 105: 600/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.333] Loss: 0.580 | Lr: 0.0100 | Accs: [90.53]
+11-20 19:54:18 Epoch 105: 700/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.411] Loss: 0.718 | Lr: 0.0100 | Accs: [90.51]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.53] top5s: [92.5] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 106 2019-11-20 19:54:21
+11-20 19:54:21 Epoch 106: 0/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.313] Loss: 0.530 | Lr: 0.0100 | Accs: [92.97]
+11-20 19:54:24 Epoch 106: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.348] Loss: 0.542 | Lr: 0.0100 | Accs: [90.57]
+11-20 19:54:27 Epoch 106: 200/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.406] Loss: 0.594 | Lr: 0.0100 | Accs: [90.71]
+11-20 19:54:30 Epoch 106: 300/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.298] Loss: 0.548 | Lr: 0.0100 | Accs: [90.77]
+11-20 19:54:33 Epoch 106: 400/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.261] Loss: 0.452 | Lr: 0.0100 | Accs: [90.62]
+11-20 19:54:36 Epoch 106: 500/782 Loss_ai: [0.18, 0.17] Loss_soft: [0.431] Loss: 0.781 | Lr: 0.0100 | Accs: [90.69]
+11-20 19:54:39 Epoch 106: 600/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.476] Loss: 0.762 | Lr: 0.0100 | Accs: [90.71]
+11-20 19:54:42 Epoch 106: 700/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.259] Loss: 0.497 | Lr: 0.0100 | Accs: [90.67]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.41] top5s: [92.43] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 107 2019-11-20 19:54:46
+11-20 19:54:46 Epoch 107: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.295] Loss: 0.491 | Lr: 0.0100 | Accs: [92.97]
+11-20 19:54:49 Epoch 107: 100/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.343] Loss: 0.483 | Lr: 0.0100 | Accs: [91.0]
+11-20 19:54:52 Epoch 107: 200/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.255] Loss: 0.440 | Lr: 0.0100 | Accs: [91.32]
+11-20 19:54:55 Epoch 107: 300/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.309] Loss: 0.515 | Lr: 0.0100 | Accs: [90.98]
+11-20 19:54:58 Epoch 107: 400/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.479] Loss: 0.794 | Lr: 0.0100 | Accs: [90.89]
+11-20 19:55:01 Epoch 107: 500/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.41] Loss: 0.611 | Lr: 0.0100 | Accs: [90.93]
+11-20 19:55:04 Epoch 107: 600/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.348] Loss: 0.583 | Lr: 0.0100 | Accs: [90.85]
+11-20 19:55:07 Epoch 107: 700/782 Loss_ai: [0.16, 0.19] Loss_soft: [0.304] Loss: 0.655 | Lr: 0.0100 | Accs: [90.79]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.84] top5s: [92.3] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 108 2019-11-20 19:55:11
+11-20 19:55:11 Epoch 108: 0/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.282] Loss: 0.451 | Lr: 0.0100 | Accs: [92.19]
+11-20 19:55:14 Epoch 108: 100/782 Loss_ai: [0.15, 0.16] Loss_soft: [0.444] Loss: 0.747 | Lr: 0.0100 | Accs: [90.83]
+11-20 19:55:17 Epoch 108: 200/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.4] Loss: 0.594 | Lr: 0.0100 | Accs: [90.77]
+11-20 19:55:20 Epoch 108: 300/782 Loss_ai: [0.08, 0.1] Loss_soft: [0.342] Loss: 0.521 | Lr: 0.0100 | Accs: [90.72]
+11-20 19:55:23 Epoch 108: 400/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.375] Loss: 0.627 | Lr: 0.0100 | Accs: [90.73]
+11-20 19:55:26 Epoch 108: 500/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.281] Loss: 0.472 | Lr: 0.0100 | Accs: [90.82]
+11-20 19:55:29 Epoch 108: 600/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.346] Loss: 0.590 | Lr: 0.0100 | Accs: [90.76]
+11-20 19:55:32 Epoch 108: 700/782 Loss_ai: [0.14, 0.11] Loss_soft: [0.357] Loss: 0.601 | Lr: 0.0100 | Accs: [90.77]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.44] top5s: [92.37] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 109 2019-11-20 19:55:36
+11-20 19:55:36 Epoch 109: 0/782 Loss_ai: [0.15, 0.17] Loss_soft: [0.269] Loss: 0.591 | Lr: 0.0100 | Accs: [93.75]
+11-20 19:55:39 Epoch 109: 100/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.405] Loss: 0.620 | Lr: 0.0100 | Accs: [90.68]
+11-20 19:55:42 Epoch 109: 200/782 Loss_ai: [0.05, 0.05] Loss_soft: [0.231] Loss: 0.335 | Lr: 0.0100 | Accs: [90.89]
+11-20 19:55:45 Epoch 109: 300/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.498] Loss: 0.722 | Lr: 0.0100 | Accs: [90.6]
+11-20 19:55:48 Epoch 109: 400/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.312] Loss: 0.543 | Lr: 0.0100 | Accs: [90.62]
+11-20 19:55:51 Epoch 109: 500/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.197] Loss: 0.398 | Lr: 0.0100 | Accs: [90.75]
+11-20 19:55:54 Epoch 109: 600/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.39] Loss: 0.592 | Lr: 0.0100 | Accs: [90.77]
+11-20 19:55:57 Epoch 109: 700/782 Loss_ai: [0.15, 0.12] Loss_soft: [0.333] Loss: 0.602 | Lr: 0.0100 | Accs: [90.74]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.76] top5s: [92.23] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 110 2019-11-20 19:56:01
+11-20 19:56:01 Epoch 110: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.426] Loss: 0.657 | Lr: 0.0100 | Accs: [88.28]
+11-20 19:56:04 Epoch 110: 100/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.441] Loss: 0.631 | Lr: 0.0100 | Accs: [91.03]
+11-20 19:56:07 Epoch 110: 200/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.266] Loss: 0.456 | Lr: 0.0100 | Accs: [91.15]
+11-20 19:56:10 Epoch 110: 300/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.231] Loss: 0.409 | Lr: 0.0100 | Accs: [91.26]
+11-20 19:56:13 Epoch 110: 400/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.46] Loss: 0.719 | Lr: 0.0100 | Accs: [91.23]
+11-20 19:56:16 Epoch 110: 500/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.295] Loss: 0.535 | Lr: 0.0100 | Accs: [91.3]
+11-20 19:56:19 Epoch 110: 600/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.278] Loss: 0.481 | Lr: 0.0100 | Accs: [91.3]
+11-20 19:56:22 Epoch 110: 700/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.349] Loss: 0.539 | Lr: 0.0100 | Accs: [91.29]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.44] top5s: [92.46] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 111 2019-11-20 19:56:25
+11-20 19:56:26 Epoch 111: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.25] Loss: 0.446 | Lr: 0.0100 | Accs: [96.09]
+11-20 19:56:29 Epoch 111: 100/782 Loss_ai: [0.14, 0.1] Loss_soft: [0.395] Loss: 0.635 | Lr: 0.0100 | Accs: [91.91]
+11-20 19:56:32 Epoch 111: 200/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.255] Loss: 0.403 | Lr: 0.0100 | Accs: [91.63]
+11-20 19:56:35 Epoch 111: 300/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.345] Loss: 0.532 | Lr: 0.0100 | Accs: [91.45]
+11-20 19:56:38 Epoch 111: 400/782 Loss_ai: [0.13, 0.13] Loss_soft: [0.379] Loss: 0.641 | Lr: 0.0100 | Accs: [91.36]
+11-20 19:56:41 Epoch 111: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.512] Loss: 0.749 | Lr: 0.0100 | Accs: [91.25]
+11-20 19:56:44 Epoch 111: 600/782 Loss_ai: [0.13, 0.16] Loss_soft: [0.333] Loss: 0.623 | Lr: 0.0100 | Accs: [91.23]
+11-20 19:56:47 Epoch 111: 700/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.347] Loss: 0.626 | Lr: 0.0100 | Accs: [91.09]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.87] top5s: [92.32] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 112 2019-11-20 19:56:50
+11-20 19:56:50 Epoch 112: 0/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.234] Loss: 0.404 | Lr: 0.0100 | Accs: [94.53]
+11-20 19:56:53 Epoch 112: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.356] Loss: 0.552 | Lr: 0.0100 | Accs: [92.06]
+11-20 19:56:56 Epoch 112: 200/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.244] Loss: 0.405 | Lr: 0.0100 | Accs: [91.51]
+11-20 19:56:59 Epoch 112: 300/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.356] Loss: 0.585 | Lr: 0.0100 | Accs: [91.42]
+11-20 19:57:03 Epoch 112: 400/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.338] Loss: 0.597 | Lr: 0.0100 | Accs: [91.19]
+11-20 19:57:06 Epoch 112: 500/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.289] Loss: 0.497 | Lr: 0.0100 | Accs: [91.14]
+11-20 19:57:09 Epoch 112: 600/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.376] Loss: 0.602 | Lr: 0.0100 | Accs: [91.16]
+11-20 19:57:12 Epoch 112: 700/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.381] Loss: 0.624 | Lr: 0.0100 | Accs: [91.19]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.56] top5s: [92.09] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 113 2019-11-20 19:57:15
+11-20 19:57:15 Epoch 113: 0/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.245] Loss: 0.478 | Lr: 0.0100 | Accs: [96.88]
+11-20 19:57:18 Epoch 113: 100/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.265] Loss: 0.460 | Lr: 0.0100 | Accs: [91.67]
+11-20 19:57:21 Epoch 113: 200/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.388] Loss: 0.594 | Lr: 0.0100 | Accs: [91.64]
+11-20 19:57:24 Epoch 113: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.502] Loss: 0.783 | Lr: 0.0100 | Accs: [91.68]
+11-20 19:57:27 Epoch 113: 400/782 Loss_ai: [0.15, 0.19] Loss_soft: [0.291] Loss: 0.630 | Lr: 0.0100 | Accs: [91.64]
+11-20 19:57:30 Epoch 113: 500/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.315] Loss: 0.499 | Lr: 0.0100 | Accs: [91.56]
+11-20 19:57:33 Epoch 113: 600/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.289] Loss: 0.571 | Lr: 0.0100 | Accs: [91.48]
+11-20 19:57:36 Epoch 113: 700/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.483] Loss: 0.687 | Lr: 0.0100 | Accs: [91.46]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.47] top5s: [92.16] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 114 2019-11-20 19:57:40
+11-20 19:57:40 Epoch 114: 0/782 Loss_ai: [0.15, 0.14] Loss_soft: [0.428] Loss: 0.719 | Lr: 0.0100 | Accs: [88.28]
+11-20 19:57:43 Epoch 114: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.277] Loss: 0.477 | Lr: 0.0100 | Accs: [91.92]
+11-20 19:57:46 Epoch 114: 200/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.352] Loss: 0.547 | Lr: 0.0100 | Accs: [91.46]
+11-20 19:57:49 Epoch 114: 300/782 Loss_ai: [0.15, 0.14] Loss_soft: [0.285] Loss: 0.571 | Lr: 0.0100 | Accs: [91.42]
+11-20 19:57:52 Epoch 114: 400/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.413] Loss: 0.652 | Lr: 0.0100 | Accs: [91.43]
+11-20 19:57:55 Epoch 114: 500/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.361] Loss: 0.549 | Lr: 0.0100 | Accs: [91.37]
+11-20 19:57:58 Epoch 114: 600/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.453] Loss: 0.665 | Lr: 0.0100 | Accs: [91.28]
+11-20 19:58:01 Epoch 114: 700/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.577] Loss: 0.847 | Lr: 0.0100 | Accs: [91.24]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.58] top5s: [92.41] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 115 2019-11-20 19:58:05
+11-20 19:58:05 Epoch 115: 0/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.275] Loss: 0.509 | Lr: 0.0100 | Accs: [93.75]
+11-20 19:58:08 Epoch 115: 100/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.442] Loss: 0.740 | Lr: 0.0100 | Accs: [91.78]
+11-20 19:58:11 Epoch 115: 200/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.228] Loss: 0.405 | Lr: 0.0100 | Accs: [91.76]
+11-20 19:58:14 Epoch 115: 300/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.295] Loss: 0.540 | Lr: 0.0100 | Accs: [91.66]
+11-20 19:58:17 Epoch 115: 400/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.246] Loss: 0.434 | Lr: 0.0100 | Accs: [91.62]
+11-20 19:58:20 Epoch 115: 500/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.238] Loss: 0.404 | Lr: 0.0100 | Accs: [91.48]
+11-20 19:58:23 Epoch 115: 600/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.334] Loss: 0.522 | Lr: 0.0100 | Accs: [91.3]
+11-20 19:58:26 Epoch 115: 700/782 Loss_ai: [0.12, 0.15] Loss_soft: [0.296] Loss: 0.561 | Lr: 0.0100 | Accs: [91.28]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.02] top5s: [92.12] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 116 2019-11-20 19:58:30
+11-20 19:58:30 Epoch 116: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.305] Loss: 0.506 | Lr: 0.0100 | Accs: [92.97]
+11-20 19:58:33 Epoch 116: 100/782 Loss_ai: [0.16, 0.16] Loss_soft: [0.369] Loss: 0.697 | Lr: 0.0100 | Accs: [91.94]
+11-20 19:58:36 Epoch 116: 200/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.328] Loss: 0.577 | Lr: 0.0100 | Accs: [91.63]
+11-20 19:58:39 Epoch 116: 300/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.349] Loss: 0.531 | Lr: 0.0100 | Accs: [91.84]
+11-20 19:58:42 Epoch 116: 400/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.436] Loss: 0.631 | Lr: 0.0100 | Accs: [91.83]
+11-20 19:58:45 Epoch 116: 500/782 Loss_ai: [0.16, 0.13] Loss_soft: [0.291] Loss: 0.577 | Lr: 0.0100 | Accs: [91.75]
+11-20 19:58:48 Epoch 116: 600/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.278] Loss: 0.431 | Lr: 0.0100 | Accs: [91.71]
+11-20 19:58:51 Epoch 116: 700/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.326] Loss: 0.641 | Lr: 0.0100 | Accs: [91.6]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.59] top5s: [92.45] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 117 2019-11-20 19:58:55
+11-20 19:58:55 Epoch 117: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.303] Loss: 0.537 | Lr: 0.0100 | Accs: [95.31]
+11-20 19:58:58 Epoch 117: 100/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.212] Loss: 0.453 | Lr: 0.0100 | Accs: [92.07]
+11-20 19:59:01 Epoch 117: 200/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.254] Loss: 0.382 | Lr: 0.0100 | Accs: [91.92]
+11-20 19:59:04 Epoch 117: 300/782 Loss_ai: [0.11, 0.14] Loss_soft: [0.293] Loss: 0.542 | Lr: 0.0100 | Accs: [91.8]
+11-20 19:59:07 Epoch 117: 400/782 Loss_ai: [0.07, 0.09] Loss_soft: [0.204] Loss: 0.362 | Lr: 0.0100 | Accs: [91.7]
+11-20 19:59:10 Epoch 117: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.298] Loss: 0.540 | Lr: 0.0100 | Accs: [91.7]
+11-20 19:59:13 Epoch 117: 600/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.322] Loss: 0.518 | Lr: 0.0100 | Accs: [91.55]
+11-20 19:59:16 Epoch 117: 700/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.339] Loss: 0.617 | Lr: 0.0100 | Accs: [91.49]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.0] top5s: [92.47] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 118 2019-11-20 19:59:19
+11-20 19:59:20 Epoch 118: 0/782 Loss_ai: [0.14, 0.15] Loss_soft: [0.363] Loss: 0.652 | Lr: 0.0100 | Accs: [92.97]
+11-20 19:59:23 Epoch 118: 100/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.394] Loss: 0.559 | Lr: 0.0100 | Accs: [92.0]
+11-20 19:59:26 Epoch 118: 200/782 Loss_ai: [0.14, 0.11] Loss_soft: [0.333] Loss: 0.584 | Lr: 0.0100 | Accs: [91.9]
+11-20 19:59:29 Epoch 118: 300/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.346] Loss: 0.631 | Lr: 0.0100 | Accs: [91.65]
+11-20 19:59:32 Epoch 118: 400/782 Loss_ai: [0.18, 0.19] Loss_soft: [0.405] Loss: 0.777 | Lr: 0.0100 | Accs: [91.62]
+11-20 19:59:35 Epoch 118: 500/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.187] Loss: 0.340 | Lr: 0.0100 | Accs: [91.66]
+11-20 19:59:38 Epoch 118: 600/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.264] Loss: 0.482 | Lr: 0.0100 | Accs: [91.62]
+11-20 19:59:41 Epoch 118: 700/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.452] Loss: 0.696 | Lr: 0.0100 | Accs: [91.55]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [70.35] top5s: [92.29] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 119 2019-11-20 19:59:45
+11-20 19:59:45 Epoch 119: 0/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.471] Loss: 0.751 | Lr: 0.0010 | Accs: [85.94]
+11-20 19:59:48 Epoch 119: 100/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.266] Loss: 0.446 | Lr: 0.0010 | Accs: [92.23]
+11-20 19:59:51 Epoch 119: 200/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.31] Loss: 0.485 | Lr: 0.0010 | Accs: [92.68]
+11-20 19:59:54 Epoch 119: 300/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.248] Loss: 0.462 | Lr: 0.0010 | Accs: [93.07]
+11-20 19:59:57 Epoch 119: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.315] Loss: 0.540 | Lr: 0.0010 | Accs: [93.19]
+11-20 20:00:00 Epoch 119: 500/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.31] Loss: 0.510 | Lr: 0.0010 | Accs: [93.3]
+11-20 20:00:03 Epoch 119: 600/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.379] Loss: 0.567 | Lr: 0.0010 | Accs: [93.24]
+11-20 20:00:06 Epoch 119: 700/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.334] Loss: 0.550 | Lr: 0.0010 | Accs: [93.28]
+Test: best_accs: [72.02] best_epoches: [88] top1s: [71.71] top5s: [92.67] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 120 2019-11-20 20:00:09
+11-20 20:00:10 Epoch 120: 0/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.211] Loss: 0.381 | Lr: 0.0010 | Accs: [95.31]
+11-20 20:00:13 Epoch 120: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.3] Loss: 0.489 | Lr: 0.0010 | Accs: [93.99]
+11-20 20:00:16 Epoch 120: 200/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.295] Loss: 0.454 | Lr: 0.0010 | Accs: [93.78]
+11-20 20:00:19 Epoch 120: 300/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.31] Loss: 0.464 | Lr: 0.0010 | Accs: [93.86]
+11-20 20:00:22 Epoch 120: 400/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.248] Loss: 0.436 | Lr: 0.0010 | Accs: [93.89]
+11-20 20:00:25 Epoch 120: 500/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.226] Loss: 0.432 | Lr: 0.0010 | Accs: [93.91]
+11-20 20:00:28 Epoch 120: 600/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.236] Loss: 0.400 | Lr: 0.0010 | Accs: [93.91]
+11-20 20:00:31 Epoch 120: 700/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.323] Loss: 0.488 | Lr: 0.0010 | Accs: [93.89]
+Test: best_accs: [72.07] best_epoches: [120] top1s: [72.07] top5s: [92.77] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 121 2019-11-20 20:00:34
+11-20 20:00:35 Epoch 121: 0/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.306] Loss: 0.560 | Lr: 0.0010 | Accs: [94.53]
+11-20 20:00:38 Epoch 121: 100/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.26] Loss: 0.427 | Lr: 0.0010 | Accs: [94.29]
+11-20 20:00:41 Epoch 121: 200/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.242] Loss: 0.371 | Lr: 0.0010 | Accs: [94.34]
+11-20 20:00:44 Epoch 121: 300/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.184] Loss: 0.340 | Lr: 0.0010 | Accs: [94.31]
+11-20 20:00:47 Epoch 121: 400/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.213] Loss: 0.374 | Lr: 0.0010 | Accs: [94.24]
+11-20 20:00:50 Epoch 121: 500/782 Loss_ai: [0.08, 0.1] Loss_soft: [0.347] Loss: 0.525 | Lr: 0.0010 | Accs: [94.32]
+11-20 20:00:53 Epoch 121: 600/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.34] Loss: 0.569 | Lr: 0.0010 | Accs: [94.31]
+11-20 20:00:56 Epoch 121: 700/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.265] Loss: 0.485 | Lr: 0.0010 | Accs: [94.28]
+Test: best_accs: [72.07] best_epoches: [120] top1s: [72.01] top5s: [92.63] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 122 2019-11-20 20:00:59
+11-20 20:00:59 Epoch 122: 0/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.32] Loss: 0.533 | Lr: 0.0010 | Accs: [89.06]
+11-20 20:01:02 Epoch 122: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.328] Loss: 0.525 | Lr: 0.0010 | Accs: [94.22]
+11-20 20:01:05 Epoch 122: 200/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.233] Loss: 0.437 | Lr: 0.0010 | Accs: [94.33]
+11-20 20:01:08 Epoch 122: 300/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.403] Loss: 0.653 | Lr: 0.0010 | Accs: [94.33]
+11-20 20:01:11 Epoch 122: 400/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.322] Loss: 0.567 | Lr: 0.0010 | Accs: [94.36]
+11-20 20:01:14 Epoch 122: 500/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.236] Loss: 0.435 | Lr: 0.0010 | Accs: [94.41]
+11-20 20:01:17 Epoch 122: 600/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.268] Loss: 0.452 | Lr: 0.0010 | Accs: [94.39]
+11-20 20:01:21 Epoch 122: 700/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.225] Loss: 0.444 | Lr: 0.0010 | Accs: [94.39]
+Test: best_accs: [72.07] best_epoches: [120] top1s: [71.84] top5s: [92.63] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 123 2019-11-20 20:01:24
+11-20 20:01:24 Epoch 123: 0/782 Loss_ai: [0.1, 0.13] Loss_soft: [0.283] Loss: 0.516 | Lr: 0.0010 | Accs: [96.88]
+11-20 20:01:27 Epoch 123: 100/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.258] Loss: 0.500 | Lr: 0.0010 | Accs: [94.12]
+11-20 20:01:30 Epoch 123: 200/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.225] Loss: 0.373 | Lr: 0.0010 | Accs: [94.25]
+11-20 20:01:33 Epoch 123: 300/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.166] Loss: 0.313 | Lr: 0.0010 | Accs: [94.37]
+11-20 20:01:36 Epoch 123: 400/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.282] Loss: 0.482 | Lr: 0.0010 | Accs: [94.28]
+11-20 20:01:39 Epoch 123: 500/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.239] Loss: 0.456 | Lr: 0.0010 | Accs: [94.35]
+11-20 20:01:42 Epoch 123: 600/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.274] Loss: 0.474 | Lr: 0.0010 | Accs: [94.41]
+11-20 20:01:45 Epoch 123: 700/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.252] Loss: 0.466 | Lr: 0.0010 | Accs: [94.38]
+Test: best_accs: [72.07] best_epoches: [120] top1s: [71.98] top5s: [92.72] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 124 2019-11-20 20:01:49
+11-20 20:01:49 Epoch 124: 0/782 Loss_ai: [0.05, 0.05] Loss_soft: [0.18] Loss: 0.285 | Lr: 0.0010 | Accs: [96.88]
+11-20 20:01:52 Epoch 124: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.312] Loss: 0.503 | Lr: 0.0010 | Accs: [94.99]
+11-20 20:01:55 Epoch 124: 200/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.312] Loss: 0.505 | Lr: 0.0010 | Accs: [94.9]
+11-20 20:01:58 Epoch 124: 300/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.262] Loss: 0.472 | Lr: 0.0010 | Accs: [94.8]
+11-20 20:02:01 Epoch 124: 400/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.303] Loss: 0.497 | Lr: 0.0010 | Accs: [94.7]
+11-20 20:02:04 Epoch 124: 500/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.216] Loss: 0.423 | Lr: 0.0010 | Accs: [94.62]
+11-20 20:02:07 Epoch 124: 600/782 Loss_ai: [0.1, 0.14] Loss_soft: [0.233] Loss: 0.472 | Lr: 0.0010 | Accs: [94.58]
+11-20 20:02:10 Epoch 124: 700/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.24] Loss: 0.407 | Lr: 0.0010 | Accs: [94.6]
+Test: best_accs: [72.07] best_epoches: [120] top1s: [71.96] top5s: [92.63] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 125 2019-11-20 20:02:13
+11-20 20:02:14 Epoch 125: 0/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.304] Loss: 0.447 | Lr: 0.0010 | Accs: [92.19]
+11-20 20:02:17 Epoch 125: 100/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.267] Loss: 0.482 | Lr: 0.0010 | Accs: [94.9]
+11-20 20:02:20 Epoch 125: 200/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.294] Loss: 0.572 | Lr: 0.0010 | Accs: [94.7]
+11-20 20:02:23 Epoch 125: 300/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.215] Loss: 0.387 | Lr: 0.0010 | Accs: [94.45]
+11-20 20:02:26 Epoch 125: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.262] Loss: 0.489 | Lr: 0.0010 | Accs: [94.48]
+11-20 20:02:29 Epoch 125: 500/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.297] Loss: 0.460 | Lr: 0.0010 | Accs: [94.51]
+11-20 20:02:32 Epoch 125: 600/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.259] Loss: 0.427 | Lr: 0.0010 | Accs: [94.52]
+11-20 20:02:35 Epoch 125: 700/782 Loss_ai: [0.07, 0.09] Loss_soft: [0.348] Loss: 0.499 | Lr: 0.0010 | Accs: [94.53]
+Test: best_accs: [72.07] best_epoches: [120] top1s: [72.02] top5s: [92.76] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 126 2019-11-20 20:02:38
+11-20 20:02:39 Epoch 126: 0/782 Loss_ai: [0.1, 0.08] Loss_soft: [0.241] Loss: 0.427 | Lr: 0.0010 | Accs: [95.31]
+11-20 20:02:42 Epoch 126: 100/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.206] Loss: 0.349 | Lr: 0.0010 | Accs: [94.56]
+11-20 20:02:45 Epoch 126: 200/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.203] Loss: 0.392 | Lr: 0.0010 | Accs: [94.61]
+11-20 20:02:48 Epoch 126: 300/782 Loss_ai: [0.13, 0.09] Loss_soft: [0.248] Loss: 0.473 | Lr: 0.0010 | Accs: [94.68]
+11-20 20:02:51 Epoch 126: 400/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.256] Loss: 0.406 | Lr: 0.0010 | Accs: [94.75]
+11-20 20:02:54 Epoch 126: 500/782 Loss_ai: [0.05, 0.05] Loss_soft: [0.109] Loss: 0.200 | Lr: 0.0010 | Accs: [94.82]
+11-20 20:02:57 Epoch 126: 600/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.234] Loss: 0.408 | Lr: 0.0010 | Accs: [94.83]
+11-20 20:03:00 Epoch 126: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.234] Loss: 0.415 | Lr: 0.0010 | Accs: [94.8]
+Test: best_accs: [72.07] best_epoches: [120] top1s: [71.95] top5s: [92.85] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 127 2019-11-20 20:03:03
+11-20 20:03:04 Epoch 127: 0/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.246] Loss: 0.424 | Lr: 0.0010 | Accs: [93.75]
+11-20 20:03:06 Epoch 127: 100/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.258] Loss: 0.524 | Lr: 0.0010 | Accs: [95.05]
+11-20 20:03:09 Epoch 127: 200/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.172] Loss: 0.335 | Lr: 0.0010 | Accs: [94.84]
+11-20 20:03:12 Epoch 127: 300/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.276] Loss: 0.396 | Lr: 0.0010 | Accs: [94.88]
+11-20 20:03:16 Epoch 127: 400/782 Loss_ai: [0.1, 0.07] Loss_soft: [0.212] Loss: 0.381 | Lr: 0.0010 | Accs: [94.87]
+11-20 20:03:19 Epoch 127: 500/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.188] Loss: 0.359 | Lr: 0.0010 | Accs: [94.81]
+11-20 20:03:22 Epoch 127: 600/782 Loss_ai: [0.08, 0.1] Loss_soft: [0.194] Loss: 0.372 | Lr: 0.0010 | Accs: [94.82]
+11-20 20:03:25 Epoch 127: 700/782 Loss_ai: [0.04, 0.05] Loss_soft: [0.164] Loss: 0.259 | Lr: 0.0010 | Accs: [94.79]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [72.13] top5s: [92.69] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 128 2019-11-20 20:03:28
+11-20 20:03:28 Epoch 128: 0/782 Loss_ai: [0.07, 0.06] Loss_soft: [0.2] Loss: 0.323 | Lr: 0.0010 | Accs: [96.88]
+11-20 20:03:31 Epoch 128: 100/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.298] Loss: 0.555 | Lr: 0.0010 | Accs: [94.75]
+11-20 20:03:34 Epoch 128: 200/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.19] Loss: 0.382 | Lr: 0.0010 | Accs: [94.9]
+11-20 20:03:37 Epoch 128: 300/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.24] Loss: 0.419 | Lr: 0.0010 | Accs: [94.85]
+11-20 20:03:40 Epoch 128: 400/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.284] Loss: 0.507 | Lr: 0.0010 | Accs: [94.86]
+11-20 20:03:43 Epoch 128: 500/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.295] Loss: 0.503 | Lr: 0.0010 | Accs: [94.9]
+11-20 20:03:46 Epoch 128: 600/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.322] Loss: 0.539 | Lr: 0.0010 | Accs: [94.86]
+11-20 20:03:49 Epoch 128: 700/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.22] Loss: 0.403 | Lr: 0.0010 | Accs: [94.82]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [72.07] top5s: [92.5] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 129 2019-11-20 20:03:53
+11-20 20:03:53 Epoch 129: 0/782 Loss_ai: [0.1, 0.08] Loss_soft: [0.184] Loss: 0.365 | Lr: 0.0010 | Accs: [96.88]
+11-20 20:03:56 Epoch 129: 100/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.246] Loss: 0.448 | Lr: 0.0010 | Accs: [95.06]
+11-20 20:03:59 Epoch 129: 200/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.236] Loss: 0.402 | Lr: 0.0010 | Accs: [94.96]
+11-20 20:04:02 Epoch 129: 300/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.279] Loss: 0.462 | Lr: 0.0010 | Accs: [94.85]
+11-20 20:04:05 Epoch 129: 400/782 Loss_ai: [0.07, 0.06] Loss_soft: [0.171] Loss: 0.301 | Lr: 0.0010 | Accs: [94.83]
+11-20 20:04:08 Epoch 129: 500/782 Loss_ai: [0.15, 0.21] Loss_soft: [0.352] Loss: 0.716 | Lr: 0.0010 | Accs: [94.89]
+11-20 20:04:11 Epoch 129: 600/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.293] Loss: 0.515 | Lr: 0.0010 | Accs: [94.89]
+11-20 20:04:14 Epoch 129: 700/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.295] Loss: 0.519 | Lr: 0.0010 | Accs: [94.88]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.96] top5s: [92.74] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 130 2019-11-20 20:04:18
+11-20 20:04:18 Epoch 130: 0/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.178] Loss: 0.369 | Lr: 0.0010 | Accs: [97.66]
+11-20 20:04:21 Epoch 130: 100/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.216] Loss: 0.372 | Lr: 0.0010 | Accs: [94.89]
+11-20 20:04:24 Epoch 130: 200/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.183] Loss: 0.317 | Lr: 0.0010 | Accs: [94.88]
+11-20 20:04:27 Epoch 130: 300/782 Loss_ai: [0.05, 0.06] Loss_soft: [0.183] Loss: 0.292 | Lr: 0.0010 | Accs: [94.9]
+11-20 20:04:30 Epoch 130: 400/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.309] Loss: 0.511 | Lr: 0.0010 | Accs: [94.85]
+11-20 20:04:33 Epoch 130: 500/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.26] Loss: 0.478 | Lr: 0.0010 | Accs: [94.81]
+11-20 20:04:36 Epoch 130: 600/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.261] Loss: 0.539 | Lr: 0.0010 | Accs: [94.9]
+11-20 20:04:39 Epoch 130: 700/782 Loss_ai: [0.14, 0.15] Loss_soft: [0.224] Loss: 0.517 | Lr: 0.0010 | Accs: [94.93]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.93] top5s: [92.72] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 131 2019-11-20 20:04:43
+11-20 20:04:43 Epoch 131: 0/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.234] Loss: 0.434 | Lr: 0.0010 | Accs: [96.88]
+11-20 20:04:46 Epoch 131: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.258] Loss: 0.454 | Lr: 0.0010 | Accs: [95.0]
+11-20 20:04:49 Epoch 131: 200/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.231] Loss: 0.404 | Lr: 0.0010 | Accs: [95.19]
+11-20 20:04:52 Epoch 131: 300/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.239] Loss: 0.402 | Lr: 0.0010 | Accs: [95.14]
+11-20 20:04:55 Epoch 131: 400/782 Loss_ai: [0.05, 0.06] Loss_soft: [0.171] Loss: 0.278 | Lr: 0.0010 | Accs: [95.1]
+11-20 20:04:58 Epoch 131: 500/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.214] Loss: 0.385 | Lr: 0.0010 | Accs: [95.15]
+11-20 20:05:01 Epoch 131: 600/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.21] Loss: 0.415 | Lr: 0.0010 | Accs: [95.07]
+11-20 20:05:04 Epoch 131: 700/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.274] Loss: 0.487 | Lr: 0.0010 | Accs: [95.07]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [72.03] top5s: [92.62] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 132 2019-11-20 20:05:08
+11-20 20:05:08 Epoch 132: 0/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.21] Loss: 0.475 | Lr: 0.0010 | Accs: [98.44]
+11-20 20:05:11 Epoch 132: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.222] Loss: 0.415 | Lr: 0.0010 | Accs: [94.92]
+11-20 20:05:14 Epoch 132: 200/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.245] Loss: 0.424 | Lr: 0.0010 | Accs: [94.9]
+11-20 20:05:17 Epoch 132: 300/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.159] Loss: 0.367 | Lr: 0.0010 | Accs: [94.81]
+11-20 20:05:20 Epoch 132: 400/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.196] Loss: 0.385 | Lr: 0.0010 | Accs: [94.94]
+11-20 20:05:23 Epoch 132: 500/782 Loss_ai: [0.13, 0.15] Loss_soft: [0.234] Loss: 0.522 | Lr: 0.0010 | Accs: [94.94]
+11-20 20:05:26 Epoch 132: 600/782 Loss_ai: [0.04, 0.04] Loss_soft: [0.232] Loss: 0.317 | Lr: 0.0010 | Accs: [94.87]
+11-20 20:05:29 Epoch 132: 700/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.238] Loss: 0.386 | Lr: 0.0010 | Accs: [94.92]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.85] top5s: [92.64] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 133 2019-11-20 20:05:32
+11-20 20:05:33 Epoch 133: 0/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.264] Loss: 0.437 | Lr: 0.0010 | Accs: [93.75]
+11-20 20:05:36 Epoch 133: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.145] Loss: 0.340 | Lr: 0.0010 | Accs: [95.46]
+11-20 20:05:39 Epoch 133: 200/782 Loss_ai: [0.07, 0.06] Loss_soft: [0.179] Loss: 0.312 | Lr: 0.0010 | Accs: [95.16]
+11-20 20:05:42 Epoch 133: 300/782 Loss_ai: [0.08, 0.06] Loss_soft: [0.164] Loss: 0.304 | Lr: 0.0010 | Accs: [95.13]
+11-20 20:05:45 Epoch 133: 400/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.274] Loss: 0.535 | Lr: 0.0010 | Accs: [95.15]
+11-20 20:05:48 Epoch 133: 500/782 Loss_ai: [0.13, 0.11] Loss_soft: [0.322] Loss: 0.563 | Lr: 0.0010 | Accs: [95.04]
+11-20 20:05:51 Epoch 133: 600/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.175] Loss: 0.327 | Lr: 0.0010 | Accs: [95.04]
+11-20 20:05:54 Epoch 133: 700/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.195] Loss: 0.358 | Lr: 0.0010 | Accs: [95.07]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.97] top5s: [92.54] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 134 2019-11-20 20:05:57
+11-20 20:05:57 Epoch 134: 0/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.357] Loss: 0.573 | Lr: 0.0010 | Accs: [92.97]
+11-20 20:06:00 Epoch 134: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.245] Loss: 0.440 | Lr: 0.0010 | Accs: [95.06]
+11-20 20:06:03 Epoch 134: 200/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.219] Loss: 0.428 | Lr: 0.0010 | Accs: [95.22]
+11-20 20:06:06 Epoch 134: 300/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.203] Loss: 0.387 | Lr: 0.0010 | Accs: [95.16]
+11-20 20:06:09 Epoch 134: 400/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.236] Loss: 0.384 | Lr: 0.0010 | Accs: [95.05]
+11-20 20:06:12 Epoch 134: 500/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.219] Loss: 0.434 | Lr: 0.0010 | Accs: [95.06]
+11-20 20:06:15 Epoch 134: 600/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.336] Loss: 0.575 | Lr: 0.0010 | Accs: [95.03]
+11-20 20:06:18 Epoch 134: 700/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.279] Loss: 0.424 | Lr: 0.0010 | Accs: [95.0]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [72.11] top5s: [92.7] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 135 2019-11-20 20:06:22
+11-20 20:06:22 Epoch 135: 0/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.191] Loss: 0.377 | Lr: 0.0010 | Accs: [100.0]
+11-20 20:06:25 Epoch 135: 100/782 Loss_ai: [0.11, 0.16] Loss_soft: [0.269] Loss: 0.536 | Lr: 0.0010 | Accs: [95.08]
+11-20 20:06:28 Epoch 135: 200/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.251] Loss: 0.443 | Lr: 0.0010 | Accs: [95.26]
+11-20 20:06:31 Epoch 135: 300/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.225] Loss: 0.451 | Lr: 0.0010 | Accs: [95.08]
+11-20 20:06:34 Epoch 135: 400/782 Loss_ai: [0.16, 0.15] Loss_soft: [0.408] Loss: 0.714 | Lr: 0.0010 | Accs: [95.07]
+11-20 20:06:37 Epoch 135: 500/782 Loss_ai: [0.07, 0.06] Loss_soft: [0.164] Loss: 0.295 | Lr: 0.0010 | Accs: [95.11]
+11-20 20:06:40 Epoch 135: 600/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.195] Loss: 0.370 | Lr: 0.0010 | Accs: [95.02]
+11-20 20:06:43 Epoch 135: 700/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.238] Loss: 0.492 | Lr: 0.0010 | Accs: [95.07]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.73] top5s: [92.7] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 136 2019-11-20 20:06:47
+11-20 20:06:47 Epoch 136: 0/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.276] Loss: 0.523 | Lr: 0.0010 | Accs: [93.75]
+11-20 20:06:50 Epoch 136: 100/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.281] Loss: 0.453 | Lr: 0.0010 | Accs: [95.14]
+11-20 20:06:53 Epoch 136: 200/782 Loss_ai: [0.13, 0.1] Loss_soft: [0.264] Loss: 0.494 | Lr: 0.0010 | Accs: [95.15]
+11-20 20:06:56 Epoch 136: 300/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.313] Loss: 0.506 | Lr: 0.0010 | Accs: [95.17]
+11-20 20:06:59 Epoch 136: 400/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.201] Loss: 0.403 | Lr: 0.0010 | Accs: [95.17]
+11-20 20:07:02 Epoch 136: 500/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.194] Loss: 0.438 | Lr: 0.0010 | Accs: [95.22]
+11-20 20:07:05 Epoch 136: 600/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.295] Loss: 0.502 | Lr: 0.0010 | Accs: [95.25]
+11-20 20:07:08 Epoch 136: 700/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.211] Loss: 0.375 | Lr: 0.0010 | Accs: [95.2]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.87] top5s: [92.63] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 137 2019-11-20 20:07:12
+11-20 20:07:12 Epoch 137: 0/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.281] Loss: 0.510 | Lr: 0.0010 | Accs: [96.09]
+11-20 20:07:15 Epoch 137: 100/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.244] Loss: 0.369 | Lr: 0.0010 | Accs: [95.09]
+11-20 20:07:18 Epoch 137: 200/782 Loss_ai: [0.1, 0.08] Loss_soft: [0.213] Loss: 0.393 | Lr: 0.0010 | Accs: [94.99]
+11-20 20:07:21 Epoch 137: 300/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.197] Loss: 0.409 | Lr: 0.0010 | Accs: [95.03]
+11-20 20:07:24 Epoch 137: 400/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.241] Loss: 0.407 | Lr: 0.0010 | Accs: [95.07]
+11-20 20:07:27 Epoch 137: 500/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.261] Loss: 0.439 | Lr: 0.0010 | Accs: [95.0]
+11-20 20:07:30 Epoch 137: 600/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.114] Loss: 0.228 | Lr: 0.0010 | Accs: [95.06]
+11-20 20:07:33 Epoch 137: 700/782 Loss_ai: [0.14, 0.15] Loss_soft: [0.333] Loss: 0.625 | Lr: 0.0010 | Accs: [95.05]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.95] top5s: [92.48] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 138 2019-11-20 20:07:36
+11-20 20:07:37 Epoch 138: 0/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.218] Loss: 0.396 | Lr: 0.0010 | Accs: [97.66]
+11-20 20:07:40 Epoch 138: 100/782 Loss_ai: [0.08, 0.12] Loss_soft: [0.175] Loss: 0.370 | Lr: 0.0010 | Accs: [95.59]
+11-20 20:07:43 Epoch 138: 200/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.21] Loss: 0.373 | Lr: 0.0010 | Accs: [95.45]
+11-20 20:07:46 Epoch 138: 300/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.275] Loss: 0.492 | Lr: 0.0010 | Accs: [95.39]
+11-20 20:07:49 Epoch 138: 400/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.18] Loss: 0.346 | Lr: 0.0010 | Accs: [95.26]
+11-20 20:07:52 Epoch 138: 500/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.413] Loss: 0.646 | Lr: 0.0010 | Accs: [95.23]
+11-20 20:07:55 Epoch 138: 600/782 Loss_ai: [0.14, 0.14] Loss_soft: [0.355] Loss: 0.626 | Lr: 0.0010 | Accs: [95.28]
+11-20 20:07:58 Epoch 138: 700/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.175] Loss: 0.331 | Lr: 0.0010 | Accs: [95.23]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.92] top5s: [92.53] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 139 2019-11-20 20:08:01
+11-20 20:08:01 Epoch 139: 0/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.319] Loss: 0.478 | Lr: 0.0010 | Accs: [93.75]
+11-20 20:08:04 Epoch 139: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.201] Loss: 0.391 | Lr: 0.0010 | Accs: [94.87]
+11-20 20:08:07 Epoch 139: 200/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.202] Loss: 0.319 | Lr: 0.0010 | Accs: [95.16]
+11-20 20:08:10 Epoch 139: 300/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.301] Loss: 0.533 | Lr: 0.0010 | Accs: [95.16]
+11-20 20:08:13 Epoch 139: 400/782 Loss_ai: [0.15, 0.14] Loss_soft: [0.21] Loss: 0.493 | Lr: 0.0010 | Accs: [95.2]
+11-20 20:08:16 Epoch 139: 500/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.245] Loss: 0.438 | Lr: 0.0010 | Accs: [95.23]
+11-20 20:08:19 Epoch 139: 600/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.225] Loss: 0.444 | Lr: 0.0010 | Accs: [95.22]
+11-20 20:08:22 Epoch 139: 700/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.286] Loss: 0.508 | Lr: 0.0010 | Accs: [95.27]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.85] top5s: [92.57] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 140 2019-11-20 20:08:26
+11-20 20:08:26 Epoch 140: 0/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.312] Loss: 0.531 | Lr: 0.0010 | Accs: [94.53]
+11-20 20:08:29 Epoch 140: 100/782 Loss_ai: [0.17, 0.13] Loss_soft: [0.316] Loss: 0.620 | Lr: 0.0010 | Accs: [95.03]
+11-20 20:08:32 Epoch 140: 200/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.202] Loss: 0.359 | Lr: 0.0010 | Accs: [95.11]
+11-20 20:08:35 Epoch 140: 300/782 Loss_ai: [0.09, 0.07] Loss_soft: [0.15] Loss: 0.310 | Lr: 0.0010 | Accs: [95.24]
+11-20 20:08:38 Epoch 140: 400/782 Loss_ai: [0.07, 0.06] Loss_soft: [0.178] Loss: 0.302 | Lr: 0.0010 | Accs: [95.28]
+11-20 20:08:41 Epoch 140: 500/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.195] Loss: 0.315 | Lr: 0.0010 | Accs: [95.29]
+11-20 20:08:44 Epoch 140: 600/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.212] Loss: 0.355 | Lr: 0.0010 | Accs: [95.31]
+11-20 20:08:47 Epoch 140: 700/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.257] Loss: 0.418 | Lr: 0.0010 | Accs: [95.29]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.83] top5s: [92.61] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 141 2019-11-20 20:08:51
+11-20 20:08:51 Epoch 141: 0/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.256] Loss: 0.506 | Lr: 0.0010 | Accs: [95.31]
+11-20 20:08:54 Epoch 141: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.242] Loss: 0.440 | Lr: 0.0010 | Accs: [95.0]
+11-20 20:08:57 Epoch 141: 200/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.235] Loss: 0.378 | Lr: 0.0010 | Accs: [95.1]
+11-20 20:09:00 Epoch 141: 300/782 Loss_ai: [0.09, 0.07] Loss_soft: [0.23] Loss: 0.386 | Lr: 0.0010 | Accs: [95.29]
+11-20 20:09:03 Epoch 141: 400/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.172] Loss: 0.339 | Lr: 0.0010 | Accs: [95.39]
+11-20 20:09:06 Epoch 141: 500/782 Loss_ai: [0.08, 0.1] Loss_soft: [0.183] Loss: 0.361 | Lr: 0.0010 | Accs: [95.42]
+11-20 20:09:09 Epoch 141: 600/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.17] Loss: 0.328 | Lr: 0.0010 | Accs: [95.44]
+11-20 20:09:12 Epoch 141: 700/782 Loss_ai: [0.12, 0.14] Loss_soft: [0.317] Loss: 0.584 | Lr: 0.0010 | Accs: [95.43]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [72.1] top5s: [92.62] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 142 2019-11-20 20:09:16
+11-20 20:09:16 Epoch 142: 0/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.282] Loss: 0.476 | Lr: 0.0010 | Accs: [90.62]
+11-20 20:09:19 Epoch 142: 100/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.263] Loss: 0.514 | Lr: 0.0010 | Accs: [95.36]
+11-20 20:09:22 Epoch 142: 200/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.221] Loss: 0.465 | Lr: 0.0010 | Accs: [95.09]
+11-20 20:09:25 Epoch 142: 300/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.264] Loss: 0.435 | Lr: 0.0010 | Accs: [95.21]
+11-20 20:09:28 Epoch 142: 400/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.209] Loss: 0.366 | Lr: 0.0010 | Accs: [95.33]
+11-20 20:09:31 Epoch 142: 500/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.128] Loss: 0.248 | Lr: 0.0010 | Accs: [95.34]
+11-20 20:09:34 Epoch 142: 600/782 Loss_ai: [0.05, 0.05] Loss_soft: [0.18] Loss: 0.285 | Lr: 0.0010 | Accs: [95.35]
+11-20 20:09:37 Epoch 142: 700/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.264] Loss: 0.447 | Lr: 0.0010 | Accs: [95.36]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.89] top5s: [92.69] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 143 2019-11-20 20:09:41
+11-20 20:09:41 Epoch 143: 0/782 Loss_ai: [0.05, 0.05] Loss_soft: [0.198] Loss: 0.307 | Lr: 0.0010 | Accs: [95.31]
+11-20 20:09:44 Epoch 143: 100/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.255] Loss: 0.446 | Lr: 0.0010 | Accs: [95.57]
+11-20 20:09:47 Epoch 143: 200/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.286] Loss: 0.522 | Lr: 0.0010 | Accs: [95.5]
+11-20 20:09:50 Epoch 143: 300/782 Loss_ai: [0.1, 0.08] Loss_soft: [0.165] Loss: 0.342 | Lr: 0.0010 | Accs: [95.56]
+11-20 20:09:53 Epoch 143: 400/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.188] Loss: 0.342 | Lr: 0.0010 | Accs: [95.47]
+11-20 20:09:56 Epoch 143: 500/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.2] Loss: 0.404 | Lr: 0.0010 | Accs: [95.43]
+11-20 20:09:59 Epoch 143: 600/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.138] Loss: 0.359 | Lr: 0.0010 | Accs: [95.39]
+11-20 20:10:02 Epoch 143: 700/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.25] Loss: 0.391 | Lr: 0.0010 | Accs: [95.34]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.63] top5s: [92.68] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 144 2019-11-20 20:10:05
+11-20 20:10:06 Epoch 144: 0/782 Loss_ai: [0.17, 0.15] Loss_soft: [0.221] Loss: 0.539 | Lr: 0.0010 | Accs: [96.09]
+11-20 20:10:09 Epoch 144: 100/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.195] Loss: 0.401 | Lr: 0.0010 | Accs: [95.72]
+11-20 20:10:12 Epoch 144: 200/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.2] Loss: 0.387 | Lr: 0.0010 | Accs: [95.61]
+11-20 20:10:15 Epoch 144: 300/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.207] Loss: 0.387 | Lr: 0.0010 | Accs: [95.47]
+11-20 20:10:18 Epoch 144: 400/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.161] Loss: 0.381 | Lr: 0.0010 | Accs: [95.42]
+11-20 20:10:21 Epoch 144: 500/782 Loss_ai: [0.12, 0.11] Loss_soft: [0.255] Loss: 0.493 | Lr: 0.0010 | Accs: [95.32]
+11-20 20:10:24 Epoch 144: 600/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.163] Loss: 0.275 | Lr: 0.0010 | Accs: [95.39]
+11-20 20:10:27 Epoch 144: 700/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.276] Loss: 0.438 | Lr: 0.0010 | Accs: [95.4]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.76] top5s: [92.52] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 145 2019-11-20 20:10:30
+11-20 20:10:30 Epoch 145: 0/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.231] Loss: 0.422 | Lr: 0.0010 | Accs: [93.75]
+11-20 20:10:33 Epoch 145: 100/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.339] Loss: 0.605 | Lr: 0.0010 | Accs: [95.61]
+11-20 20:10:36 Epoch 145: 200/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.224] Loss: 0.382 | Lr: 0.0010 | Accs: [95.63]
+11-20 20:10:39 Epoch 145: 300/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.261] Loss: 0.440 | Lr: 0.0010 | Accs: [95.57]
+11-20 20:10:42 Epoch 145: 400/782 Loss_ai: [0.09, 0.07] Loss_soft: [0.214] Loss: 0.377 | Lr: 0.0010 | Accs: [95.6]
+11-20 20:10:46 Epoch 145: 500/782 Loss_ai: [0.06, 0.09] Loss_soft: [0.132] Loss: 0.284 | Lr: 0.0010 | Accs: [95.65]
+11-20 20:10:49 Epoch 145: 600/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.202] Loss: 0.378 | Lr: 0.0010 | Accs: [95.5]
+11-20 20:10:52 Epoch 145: 700/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.253] Loss: 0.524 | Lr: 0.0010 | Accs: [95.48]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [72.05] top5s: [92.64] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 146 2019-11-20 20:10:55
+11-20 20:10:55 Epoch 146: 0/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.232] Loss: 0.373 | Lr: 0.0010 | Accs: [94.53]
+11-20 20:10:58 Epoch 146: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.275] Loss: 0.478 | Lr: 0.0010 | Accs: [95.59]
+11-20 20:11:01 Epoch 146: 200/782 Loss_ai: [0.15, 0.15] Loss_soft: [0.281] Loss: 0.585 | Lr: 0.0010 | Accs: [95.57]
+11-20 20:11:05 Epoch 146: 300/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.297] Loss: 0.475 | Lr: 0.0010 | Accs: [95.34]
+11-20 20:11:08 Epoch 146: 400/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.224] Loss: 0.460 | Lr: 0.0010 | Accs: [95.37]
+11-20 20:11:11 Epoch 146: 500/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.226] Loss: 0.430 | Lr: 0.0010 | Accs: [95.38]
+11-20 20:11:14 Epoch 146: 600/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.246] Loss: 0.436 | Lr: 0.0010 | Accs: [95.44]
+11-20 20:11:17 Epoch 146: 700/782 Loss_ai: [0.1, 0.07] Loss_soft: [0.167] Loss: 0.336 | Lr: 0.0010 | Accs: [95.45]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.81] top5s: [92.53] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 147 2019-11-20 20:11:20
+11-20 20:11:21 Epoch 147: 0/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.257] Loss: 0.476 | Lr: 0.0010 | Accs: [93.75]
+11-20 20:11:23 Epoch 147: 100/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.204] Loss: 0.400 | Lr: 0.0010 | Accs: [95.58]
+11-20 20:11:26 Epoch 147: 200/782 Loss_ai: [0.12, 0.16] Loss_soft: [0.251] Loss: 0.530 | Lr: 0.0010 | Accs: [95.55]
+11-20 20:11:29 Epoch 147: 300/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.127] Loss: 0.281 | Lr: 0.0010 | Accs: [95.64]
+11-20 20:11:32 Epoch 147: 400/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.225] Loss: 0.357 | Lr: 0.0010 | Accs: [95.56]
+11-20 20:11:36 Epoch 147: 500/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.244] Loss: 0.428 | Lr: 0.0010 | Accs: [95.55]
+11-20 20:11:39 Epoch 147: 600/782 Loss_ai: [0.09, 0.07] Loss_soft: [0.206] Loss: 0.365 | Lr: 0.0010 | Accs: [95.54]
+11-20 20:11:42 Epoch 147: 700/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.186] Loss: 0.397 | Lr: 0.0010 | Accs: [95.55]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [72.07] top5s: [92.78] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 148 2019-11-20 20:11:45
+11-20 20:11:45 Epoch 148: 0/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.241] Loss: 0.463 | Lr: 0.0010 | Accs: [94.53]
+11-20 20:11:48 Epoch 148: 100/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.237] Loss: 0.411 | Lr: 0.0010 | Accs: [95.54]
+11-20 20:11:51 Epoch 148: 200/782 Loss_ai: [0.16, 0.14] Loss_soft: [0.301] Loss: 0.600 | Lr: 0.0010 | Accs: [95.58]
+11-20 20:11:54 Epoch 148: 300/782 Loss_ai: [0.07, 0.09] Loss_soft: [0.113] Loss: 0.275 | Lr: 0.0010 | Accs: [95.61]
+11-20 20:11:57 Epoch 148: 400/782 Loss_ai: [0.06, 0.07] Loss_soft: [0.157] Loss: 0.293 | Lr: 0.0010 | Accs: [95.62]
+11-20 20:12:00 Epoch 148: 500/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.221] Loss: 0.453 | Lr: 0.0010 | Accs: [95.6]
+11-20 20:12:03 Epoch 148: 600/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.238] Loss: 0.422 | Lr: 0.0010 | Accs: [95.62]
+11-20 20:12:07 Epoch 148: 700/782 Loss_ai: [0.08, 0.1] Loss_soft: [0.182] Loss: 0.365 | Lr: 0.0010 | Accs: [95.65]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.97] top5s: [92.65] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 149 2019-11-20 20:12:10
+11-20 20:12:10 Epoch 149: 0/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.221] Loss: 0.385 | Lr: 0.0010 | Accs: [95.31]
+11-20 20:12:13 Epoch 149: 100/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.175] Loss: 0.329 | Lr: 0.0010 | Accs: [95.69]
+11-20 20:12:16 Epoch 149: 200/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.196] Loss: 0.376 | Lr: 0.0010 | Accs: [95.57]
+11-20 20:12:19 Epoch 149: 300/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.256] Loss: 0.463 | Lr: 0.0010 | Accs: [95.59]
+11-20 20:12:22 Epoch 149: 400/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.21] Loss: 0.436 | Lr: 0.0010 | Accs: [95.58]
+11-20 20:12:25 Epoch 149: 500/782 Loss_ai: [0.08, 0.1] Loss_soft: [0.266] Loss: 0.452 | Lr: 0.0010 | Accs: [95.48]
+11-20 20:12:28 Epoch 149: 600/782 Loss_ai: [0.11, 0.14] Loss_soft: [0.282] Loss: 0.533 | Lr: 0.0010 | Accs: [95.53]
+11-20 20:12:31 Epoch 149: 700/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.284] Loss: 0.492 | Lr: 0.0010 | Accs: [95.53]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.83] top5s: [92.61] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 150 2019-11-20 20:12:35
+11-20 20:12:35 Epoch 150: 0/782 Loss_ai: [0.06, 0.05] Loss_soft: [0.156] Loss: 0.268 | Lr: 0.0010 | Accs: [96.88]
+11-20 20:12:38 Epoch 150: 100/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.195] Loss: 0.353 | Lr: 0.0010 | Accs: [95.54]
+11-20 20:12:41 Epoch 150: 200/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.267] Loss: 0.473 | Lr: 0.0010 | Accs: [95.53]
+11-20 20:12:44 Epoch 150: 300/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.228] Loss: 0.453 | Lr: 0.0010 | Accs: [95.54]
+11-20 20:12:47 Epoch 150: 400/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.255] Loss: 0.481 | Lr: 0.0010 | Accs: [95.53]
+11-20 20:12:50 Epoch 150: 500/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.184] Loss: 0.422 | Lr: 0.0010 | Accs: [95.65]
+11-20 20:12:53 Epoch 150: 600/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.203] Loss: 0.419 | Lr: 0.0010 | Accs: [95.61]
+11-20 20:12:56 Epoch 150: 700/782 Loss_ai: [0.16, 0.12] Loss_soft: [0.235] Loss: 0.519 | Lr: 0.0010 | Accs: [95.59]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.8] top5s: [92.67] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 151 2019-11-20 20:13:00
+11-20 20:13:00 Epoch 151: 0/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.227] Loss: 0.352 | Lr: 0.0010 | Accs: [95.31]
+11-20 20:13:03 Epoch 151: 100/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.259] Loss: 0.499 | Lr: 0.0010 | Accs: [95.58]
+11-20 20:13:06 Epoch 151: 200/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.219] Loss: 0.435 | Lr: 0.0010 | Accs: [95.65]
+11-20 20:13:09 Epoch 151: 300/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.311] Loss: 0.515 | Lr: 0.0010 | Accs: [95.69]
+11-20 20:13:12 Epoch 151: 400/782 Loss_ai: [0.07, 0.06] Loss_soft: [0.185] Loss: 0.308 | Lr: 0.0010 | Accs: [95.64]
+11-20 20:13:15 Epoch 151: 500/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.175] Loss: 0.383 | Lr: 0.0010 | Accs: [95.64]
+11-20 20:13:18 Epoch 151: 600/782 Loss_ai: [0.05, 0.05] Loss_soft: [0.144] Loss: 0.242 | Lr: 0.0010 | Accs: [95.7]
+11-20 20:13:21 Epoch 151: 700/782 Loss_ai: [0.07, 0.09] Loss_soft: [0.301] Loss: 0.460 | Lr: 0.0010 | Accs: [95.65]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.74] top5s: [92.52] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 152 2019-11-20 20:13:25
+11-20 20:13:25 Epoch 152: 0/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.302] Loss: 0.494 | Lr: 0.0010 | Accs: [94.53]
+11-20 20:13:28 Epoch 152: 100/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.212] Loss: 0.416 | Lr: 0.0010 | Accs: [95.8]
+11-20 20:13:31 Epoch 152: 200/782 Loss_ai: [0.06, 0.07] Loss_soft: [0.213] Loss: 0.336 | Lr: 0.0010 | Accs: [95.73]
+11-20 20:13:34 Epoch 152: 300/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.162] Loss: 0.302 | Lr: 0.0010 | Accs: [95.74]
+11-20 20:13:37 Epoch 152: 400/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.206] Loss: 0.361 | Lr: 0.0010 | Accs: [95.73]
+11-20 20:13:40 Epoch 152: 500/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.23] Loss: 0.501 | Lr: 0.0010 | Accs: [95.72]
+11-20 20:13:43 Epoch 152: 600/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.198] Loss: 0.394 | Lr: 0.0010 | Accs: [95.72]
+11-20 20:13:46 Epoch 152: 700/782 Loss_ai: [0.08, 0.11] Loss_soft: [0.164] Loss: 0.359 | Lr: 0.0010 | Accs: [95.78]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.67] top5s: [92.62] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 153 2019-11-20 20:13:49
+11-20 20:13:50 Epoch 153: 0/782 Loss_ai: [0.06, 0.07] Loss_soft: [0.152] Loss: 0.288 | Lr: 0.0010 | Accs: [98.44]
+11-20 20:13:53 Epoch 153: 100/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.253] Loss: 0.434 | Lr: 0.0010 | Accs: [95.88]
+11-20 20:13:56 Epoch 153: 200/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.291] Loss: 0.518 | Lr: 0.0010 | Accs: [95.72]
+11-20 20:13:59 Epoch 153: 300/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.182] Loss: 0.333 | Lr: 0.0010 | Accs: [95.7]
+11-20 20:14:02 Epoch 153: 400/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.176] Loss: 0.331 | Lr: 0.0010 | Accs: [95.74]
+11-20 20:14:05 Epoch 153: 500/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.33] Loss: 0.582 | Lr: 0.0010 | Accs: [95.76]
+11-20 20:14:08 Epoch 153: 600/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.192] Loss: 0.395 | Lr: 0.0010 | Accs: [95.72]
+11-20 20:14:11 Epoch 153: 700/782 Loss_ai: [0.09, 0.11] Loss_soft: [0.216] Loss: 0.416 | Lr: 0.0010 | Accs: [95.71]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.8] top5s: [92.73] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 154 2019-11-20 20:14:14
+11-20 20:14:14 Epoch 154: 0/782 Loss_ai: [0.1, 0.12] Loss_soft: [0.198] Loss: 0.415 | Lr: 0.0010 | Accs: [96.88]
+11-20 20:14:17 Epoch 154: 100/782 Loss_ai: [0.08, 0.11] Loss_soft: [0.233] Loss: 0.427 | Lr: 0.0010 | Accs: [95.81]
+11-20 20:14:20 Epoch 154: 200/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.27] Loss: 0.512 | Lr: 0.0010 | Accs: [95.75]
+11-20 20:14:23 Epoch 154: 300/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.178] Loss: 0.311 | Lr: 0.0010 | Accs: [95.86]
+11-20 20:14:26 Epoch 154: 400/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.219] Loss: 0.381 | Lr: 0.0010 | Accs: [95.79]
+11-20 20:14:29 Epoch 154: 500/782 Loss_ai: [0.12, 0.13] Loss_soft: [0.174] Loss: 0.420 | Lr: 0.0010 | Accs: [95.81]
+11-20 20:14:32 Epoch 154: 600/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.156] Loss: 0.308 | Lr: 0.0010 | Accs: [95.78]
+11-20 20:14:35 Epoch 154: 700/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.19] Loss: 0.329 | Lr: 0.0010 | Accs: [95.78]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.94] top5s: [92.58] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 155 2019-11-20 20:14:38
+11-20 20:14:39 Epoch 155: 0/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.205] Loss: 0.363 | Lr: 0.0010 | Accs: [95.31]
+11-20 20:14:41 Epoch 155: 100/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.149] Loss: 0.270 | Lr: 0.0010 | Accs: [95.82]
+11-20 20:14:44 Epoch 155: 200/782 Loss_ai: [0.14, 0.12] Loss_soft: [0.281] Loss: 0.544 | Lr: 0.0010 | Accs: [95.92]
+11-20 20:14:47 Epoch 155: 300/782 Loss_ai: [0.05, 0.07] Loss_soft: [0.172] Loss: 0.292 | Lr: 0.0010 | Accs: [95.83]
+11-20 20:14:50 Epoch 155: 400/782 Loss_ai: [0.13, 0.12] Loss_soft: [0.234] Loss: 0.476 | Lr: 0.0010 | Accs: [95.76]
+11-20 20:14:53 Epoch 155: 500/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.215] Loss: 0.349 | Lr: 0.0010 | Accs: [95.75]
+11-20 20:14:56 Epoch 155: 600/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.211] Loss: 0.356 | Lr: 0.0010 | Accs: [95.7]
+11-20 20:14:59 Epoch 155: 700/782 Loss_ai: [0.11, 0.13] Loss_soft: [0.184] Loss: 0.418 | Lr: 0.0010 | Accs: [95.74]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.53] top5s: [92.67] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 156 2019-11-20 20:15:03
+11-20 20:15:03 Epoch 156: 0/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.202] Loss: 0.441 | Lr: 0.0010 | Accs: [96.88]
+11-20 20:15:06 Epoch 156: 100/782 Loss_ai: [0.06, 0.07] Loss_soft: [0.15] Loss: 0.278 | Lr: 0.0010 | Accs: [95.85]
+11-20 20:15:09 Epoch 156: 200/782 Loss_ai: [0.08, 0.08] Loss_soft: [0.196] Loss: 0.355 | Lr: 0.0010 | Accs: [95.79]
+11-20 20:15:12 Epoch 156: 300/782 Loss_ai: [0.08, 0.07] Loss_soft: [0.267] Loss: 0.418 | Lr: 0.0010 | Accs: [95.92]
+11-20 20:15:15 Epoch 156: 400/782 Loss_ai: [0.1, 0.11] Loss_soft: [0.25] Loss: 0.470 | Lr: 0.0010 | Accs: [95.85]
+11-20 20:15:17 Epoch 156: 500/782 Loss_ai: [0.04, 0.04] Loss_soft: [0.112] Loss: 0.198 | Lr: 0.0010 | Accs: [95.8]
+11-20 20:15:20 Epoch 156: 600/782 Loss_ai: [0.12, 0.14] Loss_soft: [0.217] Loss: 0.478 | Lr: 0.0010 | Accs: [95.75]
+11-20 20:15:23 Epoch 156: 700/782 Loss_ai: [0.14, 0.13] Loss_soft: [0.287] Loss: 0.555 | Lr: 0.0010 | Accs: [95.73]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.79] top5s: [92.77] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 157 2019-11-20 20:15:27
+11-20 20:15:27 Epoch 157: 0/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.167] Loss: 0.336 | Lr: 0.0010 | Accs: [96.88]
+11-20 20:15:30 Epoch 157: 100/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.246] Loss: 0.415 | Lr: 0.0010 | Accs: [95.63]
+11-20 20:15:33 Epoch 157: 200/782 Loss_ai: [0.11, 0.11] Loss_soft: [0.252] Loss: 0.473 | Lr: 0.0010 | Accs: [95.46]
+11-20 20:15:36 Epoch 157: 300/782 Loss_ai: [0.11, 0.09] Loss_soft: [0.206] Loss: 0.407 | Lr: 0.0010 | Accs: [95.59]
+11-20 20:15:39 Epoch 157: 400/782 Loss_ai: [0.12, 0.14] Loss_soft: [0.205] Loss: 0.460 | Lr: 0.0010 | Accs: [95.64]
+11-20 20:15:42 Epoch 157: 500/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.218] Loss: 0.420 | Lr: 0.0010 | Accs: [95.72]
+11-20 20:15:45 Epoch 157: 600/782 Loss_ai: [0.12, 0.12] Loss_soft: [0.24] Loss: 0.482 | Lr: 0.0010 | Accs: [95.77]
+11-20 20:15:48 Epoch 157: 700/782 Loss_ai: [0.11, 0.12] Loss_soft: [0.265] Loss: 0.495 | Lr: 0.0010 | Accs: [95.71]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.8] top5s: [92.73] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 158 2019-11-20 20:15:51
+11-20 20:15:51 Epoch 158: 0/782 Loss_ai: [0.09, 0.1] Loss_soft: [0.273] Loss: 0.457 | Lr: 0.0010 | Accs: [94.53]
+11-20 20:15:54 Epoch 158: 100/782 Loss_ai: [0.07, 0.07] Loss_soft: [0.151] Loss: 0.297 | Lr: 0.0010 | Accs: [95.71]
+11-20 20:15:57 Epoch 158: 200/782 Loss_ai: [0.09, 0.09] Loss_soft: [0.287] Loss: 0.459 | Lr: 0.0010 | Accs: [95.87]
+11-20 20:16:00 Epoch 158: 300/782 Loss_ai: [0.09, 0.12] Loss_soft: [0.182] Loss: 0.397 | Lr: 0.0010 | Accs: [95.86]
+11-20 20:16:03 Epoch 158: 400/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.152] Loss: 0.353 | Lr: 0.0010 | Accs: [95.81]
+11-20 20:16:06 Epoch 158: 500/782 Loss_ai: [0.07, 0.08] Loss_soft: [0.148] Loss: 0.300 | Lr: 0.0010 | Accs: [95.77]
+11-20 20:16:09 Epoch 158: 600/782 Loss_ai: [0.12, 0.1] Loss_soft: [0.154] Loss: 0.375 | Lr: 0.0010 | Accs: [95.77]
+11-20 20:16:12 Epoch 158: 700/782 Loss_ai: [0.07, 0.05] Loss_soft: [0.136] Loss: 0.257 | Lr: 0.0010 | Accs: [95.79]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.73] top5s: [92.76] algo: resnet32_rp,rp_cifar100_1._2_11201910
+
+Epoch: 159 2019-11-20 20:16:15
+11-20 20:16:15 Epoch 159: 0/782 Loss_ai: [0.1, 0.13] Loss_soft: [0.268] Loss: 0.496 | Lr: 0.0010 | Accs: [92.19]
+11-20 20:16:18 Epoch 159: 100/782 Loss_ai: [0.1, 0.14] Loss_soft: [0.323] Loss: 0.570 | Lr: 0.0010 | Accs: [95.63]
+11-20 20:16:21 Epoch 159: 200/782 Loss_ai: [0.1, 0.1] Loss_soft: [0.179] Loss: 0.383 | Lr: 0.0010 | Accs: [95.79]
+11-20 20:16:24 Epoch 159: 300/782 Loss_ai: [0.06, 0.06] Loss_soft: [0.179] Loss: 0.305 | Lr: 0.0010 | Accs: [95.71]
+11-20 20:16:27 Epoch 159: 400/782 Loss_ai: [0.08, 0.09] Loss_soft: [0.167] Loss: 0.337 | Lr: 0.0010 | Accs: [95.76]
+11-20 20:16:30 Epoch 159: 500/782 Loss_ai: [0.1, 0.09] Loss_soft: [0.23] Loss: 0.420 | Lr: 0.0010 | Accs: [95.77]
+11-20 20:16:33 Epoch 159: 600/782 Loss_ai: [0.09, 0.08] Loss_soft: [0.186] Loss: 0.355 | Lr: 0.0010 | Accs: [95.77]
+11-20 20:16:36 Epoch 159: 700/782 Loss_ai: [0.11, 0.1] Loss_soft: [0.261] Loss: 0.480 | Lr: 0.0010 | Accs: [95.77]
+Test: best_accs: [72.13] best_epoches: [127] top1s: [71.74] top5s: [92.69] algo: resnet32_rp,rp_cifar100_1._2_11201910
